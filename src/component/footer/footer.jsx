@@ -66,11 +66,11 @@ const Footer = () => {
         </div>
       </div>
       <hr className="text-gray-600 my-6" />
-      <div className="flex justify-between items-center ">
+      <div className="flex flex-wrap justify-center md:justify-between items-center gap-4">
         <p className="text-primary text-sm ">
           Copyright 2025 ITEKDIGIT | All Rights Reserved
         </p>
-        <div className="text-primary flex gap-6 flex-wrap ">
+        <div className="text-primary flex justify-center gap-6 flex-wrap ">
           <Link href="site-map">Site Map</Link>
           <Link href="privacy-policy">Privacy Policy</Link>
           <Link href="site-map">Terms & Conditions</Link>
