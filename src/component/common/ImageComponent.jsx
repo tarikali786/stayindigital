@@ -8,7 +8,7 @@ const ImageComponent = ({ src, alt, imgCss, cardCss, variant }) => {
 
   return (
     <div
-      className={`relative flex items-center justify-center ${
+      className={`relative flex items-center overflow-hidden justify-center ${
         cardCss || "w-full h-auto"
       }`}
     >
@@ -27,7 +27,9 @@ const ImageComponent = ({ src, alt, imgCss, cardCss, variant }) => {
         <Image
           src={src}
           alt={alt || "Image"}
-          className={`rounded-lg ${imgCss || "object-cover"} 
+          height={"100%"}
+          width={"100%"}
+          className={`rounded-lg ${imgCss || "object-cover "} 
             transition-opacity duration-500 
             ${loading ? "opacity-0" : "opacity-100"}`}
           onLoadingComplete={() => setLoading(false)}
