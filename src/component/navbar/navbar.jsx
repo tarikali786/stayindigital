@@ -7,16 +7,25 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <div className=" bg-[#0f0a18] px-2 py-2.5 md:px-[10%] lg:px-[16%] sm:px-10 h-11 z-50 sticky top-0 left-0 flex justify-between shadow-md gap-2 flex-wrap ">
-      <div className="flex  md:gap-20 sm:gap-10 gap-4">
-        <p className="text-primary text-sm font-semibold flex items-center gap-1">
-          <EmailIcon />
+    <div className=" bg-[#0f0a18] py-2.5 common-padding h-11 z-50 sticky top-0 left-0 flex justify-between shadow-md gap-2 flex-wrap ">
+      <div className="flex md:gap-20 sm:gap-10 gap-4">
+        {/* Clickable Email */}
+        <a
+          href="mailto:info@itechdigit.com"
+          className="text-primary text-sm font-semibold flex items-center gap-1"
+        >
+          <EmailIcon />:
           info@itechdigit.com
-        </p>
-        <p className="text-primary text-sm font-semibold  flex items-center gap-1">
-          <LocalPhoneIcon />
+        </a>
+
+        {/* Clickable Phone */}
+        <a
+          href="tel:7010189969"
+          className="text-primary text-sm font-semibold flex items-center gap-1"
+        >
+          <LocalPhoneIcon />:
           7010189969
-        </p>
+        </a>
       </div>
 
       <div className="flex gap-6 text-primary">

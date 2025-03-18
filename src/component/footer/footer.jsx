@@ -7,8 +7,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 const Footer = () => {
   return (
-    <div className="bg-black px-2 py-4 lg:py-8 md:px-[6%] lg:px-[10%] xl:px-[16%] sm:px-6 text-white sticky top-11 z-50 ">
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-12 sm:items-start    ">
+    <div className="bg-black common-padding py-8 text-white sticky top-11 z-50 ">
+      <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr] md:grid-cols-2 sm:grid-cols-1 gap-12 sm:items-start    ">
         <div>
           <h1 className="lg:text-[28px] font-['lato'] md:text-[26px] sm:text-[20px] text-xl text-primary">
             ITEKDIGIT

@@ -3,18 +3,17 @@
 
 body {
   /* font-family: "Poppins", "Roboto", "PT Sans", sans-serif; */
-  font-family: 'lato';
+  font-family: "lato";
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #11162d;
+  --foreground: #3a52bda3;
 }
 
 @theme inline {
   --color-primary: #716af2;
 }
-
 
 h1,
 h2,
@@ -23,4 +22,8 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+}
+
+.common-padding {
+  @apply px-2  md:px-[6%] lg:px-[10%] xl:px-[16%] sm:px-6;
 }
