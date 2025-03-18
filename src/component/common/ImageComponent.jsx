@@ -2,16 +2,9 @@ import { useState } from "react";
 import Skeleton from "@mui/material/Skeleton";
 import Image from "next/image";
 
-const ImageComponent = ({
-  src,
-  alt,
-  imgCss,
-  cardCss,
-  variant,
-  width,
-  height,
-}) => {
+const ImageComponent = ({ src, alt, imgCss, cardCss, variant }) => {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   return (
     <div
@@ -20,28 +13,32 @@ const ImageComponent = ({
       }`}
     >
       {/* Skeleton Loader */}
-      {loading && (
+      {loading && !error && (
         <Skeleton
           variant={variant || "rounded"}
-          width={ "100%"}
-          height={ "100%"}
+          width={"100%"}
+          height={"100%"}
           className="absolute inset-0"
         />
       )}
 
       {/* Next.js Image Component */}
-      <Image
-        src={src}
-        alt={alt || "Image"}
-        // width={width || 300} 
-        // height={height || 200} 
-        className={`rounded-lg ${imgCss || "object-cover"} 
-          transition-opacity duration-500 
-          ${loading ? "opacity-0" : "opacity-100"}`}
-        onLoadingComplete={() => setLoading(true)}
-        placeholder="empty" 
-        loading="lazy"
-      />
+      {!error && src ? (
+        <Image
+          src={src}
+          alt={alt || "Image"}
+          className={`rounded-lg ${imgCss || "object-cover"} 
+            transition-opacity duration-500 
+            ${loading ? "opacity-0" : "opacity-100"}`}
+          onLoadingComplete={() => setLoading(false)}
+          onError={() => {
+            setError(true);
+            setLoading(false);
+          }}
+          placeholder="empty"
+          loading="lazy"
+        />
+      ) : null}
     </div>
   );
 };

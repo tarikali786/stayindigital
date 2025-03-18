@@ -5,25 +5,25 @@ import { BarChart, Language, Brush, GridView } from "@mui/icons-material";
 
 const services = [
   {
-    icon: <BarChart className="text-blue-500 text-5xl" />,
+    icon: <BarChart sx={{ fontSize: 60 }} className="text-black" />, // Increase size
     title: "Social Media Marketing",
     description:
       "Boost your brand’s presence on social media platforms with targeted campaigns that engage and convert.",
   },
   {
-    icon: <Language className="text-blue-500 text-5xl" />,
+    icon: <Language sx={{ fontSize: 60 }} className="text-black" />,
     title: "SEO",
     description:
       "Improve your website’s visibility on search engines and attract organic traffic with our SEO expertise.",
   },
   {
-    icon: <Brush className="text-blue-500 text-5xl" />,
+    icon: <Brush sx={{ fontSize: 60 }} className="text-black" />,
     title: "Website Development",
     description:
       "Create a stunning, user-friendly website that reflects your brand’s identity and converts visitors into customers.",
   },
   {
-    icon: <GridView className="text-blue-500 text-[100px]" />,
+    icon: <GridView sx={{ fontSize: 60 }} className="text-black" />,
     title: "Graphic Design",
     description:
       "Elevate your brand’s visual identity with professional graphic design services that captivate and inspire.",
@@ -33,7 +33,7 @@ const services = [
 export default function HomeServices() {
   return (
     <section className="py-16 bg-black text-white">
-      <div className="container mx-auto px-6">
+      <div className=" common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,9 +73,9 @@ export default function HomeServices() {
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
               }}
-              className="bg-gray-900 border border-gray-800 rounded-lg p-6 flex flex-col items-center text-center hover:border-blue-500 transition-all duration-300"
+              className="bg-gray-900  border border-gray-800 rounded-lg p-6 flex flex-col items-center text-center hover:border-blue-500 transition-all duration-300"
             >
-              <div className="bg-gray-800 p-4 size-16 rounded-full mb-4">
+              <div className="p-4 md:size-28 size-20  flex items-center justify-center bg-white rounded-full mb-4">
                 {service.icon}
               </div>
               <h4 className="text-xl font-bold mb-2">{service.title}</h4>

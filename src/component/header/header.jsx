@@ -7,11 +7,11 @@ import ButtonCard from "../common/button";
 import { HeaderData } from "@/data/data";
 const Header = () => {
   return (
-    <div className=" bg-black  py-4 common-padding  text-white sticky top-11 z-50 flex items-center gap-4  justify-between ">
+    <div className=" bg-black  py-4 common-padding   text-white sticky top-11 z-50 flex items-center gap-4  justify-between ">
       <h1 className="lg:text-[34px] font-['lato'] md:text-[30px] sm:text-[26px] text-xl">
         ITEKDIGIT
       </h1>
-      <div className="flex items-center lg:gap-10 md:gap-6 sm:gap-4 gap-4">
+      <div className=" hidden md:flex items-center lg:gap-10 md:gap-6 sm:gap-4 gap-4">
         {HeaderData?.map((item) => (
           <Link
             className="text-[16px] text-white text-nowrap"

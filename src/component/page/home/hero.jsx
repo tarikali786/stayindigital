@@ -2,7 +2,7 @@
 
 import ButtonCard from "@/component/common/button";
 import { motion } from "framer-motion";
-import Img from "../../../public/2 I.jpg";
+import Img from "../../../../public/2 I.jpg";
 import Image from "next/image";
 
 const Hero = () => {
@@ -21,7 +21,7 @@ const Hero = () => {
       />
 
       {/* Hero Content */}
-      <div className="z-30 container px-2 md:absolute md:left-10 left-4 lg:left-[48%] lg:-mt-16 flex flex-col justify-center">
+      <div className="z-30 px-2 md:absolute md:left-10 left-4 lg:left-[48%] lg:-mt-16 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
