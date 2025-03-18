@@ -75,7 +75,7 @@ export default function HomeServices() {
               }}
               className="bg-gray-900  border border-gray-800 rounded-lg p-6 flex flex-col items-center text-center hover:border-blue-500 transition-all duration-300"
             >
-              <div className="p-4 md:size-18 size-16  flex items-center justify-center bg-white rounded-full mb-4">
+              <div className="p-4 md:size-20 size-16  flex items-center justify-center bg-white rounded-full mb-4">
                 {service.icon}
               </div>
               <h4 className="text-lg font-semibold mb-2">{service.title}</h4>

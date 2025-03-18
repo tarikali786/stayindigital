@@ -6,7 +6,7 @@ import Img1 from "../../../../public/4 I.jpg";
 import ImageComponent from "@/component/common/ImageComponent";
 const HomeAbout = () => {
   return (
-    <section className="py-16 common-padding  bg-black text-white   flex flex-col md:flex-row gap-6   overflow-hidden w-full ">
+    <section className="py-16 common-padding  bg-black text-white   flex flex-col md:flex-row gap-6  items-start  overflow-hidden w-full ">
       {/* Image Section */}
 
       {/* Floating Card */}

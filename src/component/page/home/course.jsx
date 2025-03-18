@@ -88,7 +88,7 @@ export const HomeCourses = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0 }}
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -96,14 +96,14 @@ export const HomeCourses = () => {
               transition: { staggerChildren: 0.2 },
             },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 md:gap-6 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-10 md:gap-6 gap-4"
         >
           {courses.map((course, index) => (
             <motion.div
               key={index}
               variants={{
                 hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
               }}
               className="bg-gray-100 border border-gray-800 rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
