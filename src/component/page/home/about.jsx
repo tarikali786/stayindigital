@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import Img1 from "../../../../public/4 I.jpg";
 import ImageComponent from "@/component/common/ImageComponent";
 const HomeAbout = () => {

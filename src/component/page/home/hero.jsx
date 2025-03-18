@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Img from "../../../../public/2 I.jpg";
 import Image from "next/image";
 
-const Hero = () => {
+const HomeHero = () => {
   return (
     <div className="relative min-h-[50vh] md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
       {/* Gradient Overlay */}
@@ -87,4 +87,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHero;

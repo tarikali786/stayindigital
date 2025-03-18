@@ -8,11 +8,12 @@ body {
 
 :root {
   --background: #ffffff;
-  --foreground: #3a52bda3;
+  --foreground: #212037;
 }
 
 @theme inline {
   --color-primary: #716af2;
+  --color-secondry: #212037;
 }
 
 h1,
