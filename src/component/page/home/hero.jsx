@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
             BECOME A DIGITAL MARKETING EXPERT
           </motion.h2>
@@ -43,7 +43,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-gray-100 my-8 text-lg"
+            className="text-gray-100 my-8 "
           >
             Ready to take your Digital Marketing to the next level?
             <br />
@@ -76,7 +76,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 + index * 0.2 }}
-              className="border-2 border-white flex items-center justify-center  text-white text-lg font-semibold px-6 py-4 min-w-44 max-w-52 text-center rounded-lg bg-black/60 backdrop-blur-md shadow-lg hover:bg-white hover:text-black transition"
+              className="border-2 border-white flex items-center justify-center  text-white  font-semibold px-6 py-4 min-w-44 max-w-52 text-center rounded-lg bg-black/60 backdrop-blur-md shadow-lg hover:bg-white hover:text-black transition"
             >
               {item}
             </motion.div>

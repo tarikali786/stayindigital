@@ -5,25 +5,25 @@ import { BarChart, Language, Brush, GridView } from "@mui/icons-material";
 
 const services = [
   {
-    icon: <BarChart sx={{ fontSize: 60 }} className="text-black" />, // Increase size
+    icon: <BarChart sx={{ fontSize: 44 }} className="text-black" />, // Increase size
     title: "Social Media Marketing",
     description:
       "Boost your brand’s presence on social media platforms with targeted campaigns that engage and convert.",
   },
   {
-    icon: <Language sx={{ fontSize: 60 }} className="text-black" />,
+    icon: <Language sx={{ fontSize: 44 }} className="text-black" />,
     title: "SEO",
     description:
       "Improve your website’s visibility on search engines and attract organic traffic with our SEO expertise.",
   },
   {
-    icon: <Brush sx={{ fontSize: 60 }} className="text-black" />,
+    icon: <Brush sx={{ fontSize: 44 }} className="text-black" />,
     title: "Website Development",
     description:
       "Create a stunning, user-friendly website that reflects your brand’s identity and converts visitors into customers.",
   },
   {
-    icon: <GridView sx={{ fontSize: 60 }} className="text-black" />,
+    icon: <GridView sx={{ fontSize: 36 }} className="text-black" />,
     title: "Graphic Design",
     description:
       "Elevate your brand’s visual identity with professional graphic design services that captivate and inspire.",
@@ -42,10 +42,10 @@ export default function HomeServices() {
           className="text-center mb-12"
         >
           <h2 className="text-xl font-bold text-white">Services</h2>
-          <h3 className="text-4xl font-bold my-3 text-primary">
+          <h3 className="md:text-4xl text-3xl font-bold my-3 text-primary">
             Service We Provide
           </h3>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto ">
             Your brand deserves to be seen, heard, and remembered. Let us craft
             your digital success story with expert marketing, design, and
             content creation.
@@ -75,11 +75,11 @@ export default function HomeServices() {
               }}
               className="bg-gray-900  border border-gray-800 rounded-lg p-6 flex flex-col items-center text-center hover:border-blue-500 transition-all duration-300"
             >
-              <div className="p-4 md:size-28 size-20  flex items-center justify-center bg-white rounded-full mb-4">
+              <div className="p-4 md:size-18 size-16  flex items-center justify-center bg-white rounded-full mb-4">
                 {service.icon}
               </div>
-              <h4 className="text-xl font-bold mb-2">{service.title}</h4>
-              <p className="text-gray-400 text-lg">{service.description}</p>
+              <h4 className="text-lg font-semibold mb-2">{service.title}</h4>
+              <p className="text-gray-400 text-sm">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

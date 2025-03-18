@@ -16,9 +16,9 @@ const HomeAbout = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className=" bg-white md:w-1/2 w-full text-black p-8  md:mt-0 mt-6 rounded-lg shadow-lg "
       >
-        <h2 className="text-3xl md:text-4xl ">About Us</h2>
-        <h3 className="text-xl text-primary my-3">We Do with Creativity</h3>
-        <p className="text-lg text-gray-600">
+        <h2 className="text-2xl md:text-3xl ">About Us</h2>
+        <h3 className="text-lg text-primary my-3">We Do with Creativity</h3>
+        <p className=" text-gray-600">
           itekdigit is a forward-thinking digital marketing company dedicated to
           empowering individuals and businesses in navigating the fast-evolving
           digital landscape. Our mission is to provide top-notch digital

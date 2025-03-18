@@ -78,8 +78,8 @@ export const HomeCourses = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-xl font-bold ">Courses</h2>
-          <h3 className="text-4xl font-bold my-3 text-primary">
+          <h2 className="text-lg font-bold ">Courses</h2>
+          <h3 className="md:text-3xl text-2xl font-bold my-3 text-primary">
             Courses We Provide!
           </h3>
         </motion.div>
@@ -109,7 +109,7 @@ export const HomeCourses = () => {
             >
               <ImageComponent cardCss="h-[26vh] w-full" />
               <div className="p-5">
-                <h4 className="text-lg text-center font-bold mb-2 text-black ">
+                <h4 className=" text-center font-bold mb-2 text-black ">
                   {course.title}
                 </h4>
                 <p className="text-gray-500 text-sm">{course.description}</p>

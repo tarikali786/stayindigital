@@ -14,7 +14,7 @@ const WhyTrust = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-semibold text-primary"
+          className="text-2xl md:text-3xl font-semibold text-primary"
         >
           Why Trust Us
         </motion.h2>
@@ -22,7 +22,7 @@ const WhyTrust = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-400 max-w-2xl mx-auto mt-3 text-lg"
+          className="text-gray-400 max-w-2xl mx-auto mt-3 "
         >
           Results-Driven Digital Solutions – Elevate Your Brand with Expert
           Social Media, SEO, Web Design & More.
@@ -45,7 +45,7 @@ const WhyTrust = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg space-y-4 md:w-1/2 "
+          className=" space-y-4 md:w-1/2 "
         >
           <li className="flex items-center gap-2">
             <TaskAltIcon className="text-primary" /> Only 15 students per batch
@@ -72,7 +72,7 @@ const WhyTrust = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="  md:absolute md:bottom-0 md:left-[45%] bg-white text-black p-8  md:mt-0 mt-6 rounded-lg shadow-lg md:max-w-lg"
       >
-        <p className="text-lg">
+        <p className="">
           Why trust us? Because we don’t just market—we create impact. From
           Social Media and Content Marketing to SEO, Website Development, Email
           Campaigns, and Graphic Design, we craft strategies that drive real

@@ -14,8 +14,8 @@ const Navbar = () => {
           href="mailto:info@itechdigit.com"
           className="text-primary text-sm font-semibold flex items-center gap-1"
         >
-          <EmailIcon />:
-          info@itechdigit.com
+          <EmailIcon />
+          <p className="sm:block hidden">:info@itechdigit.com</p>
         </a>
 
         {/* Clickable Phone */}
@@ -23,8 +23,7 @@ const Navbar = () => {
           href="tel:7010189969"
           className="text-primary text-sm font-semibold flex items-center gap-1"
         >
-          <LocalPhoneIcon />:
-          7010189969
+          <LocalPhoneIcon /> <p className="sm:block hidden">:7010189969</p>
         </a>
       </div>
 
