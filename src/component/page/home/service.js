@@ -32,7 +32,7 @@ const services = [
 
 export default function HomeServices() {
   return (
-    <section className="py-16 bg-black text-white">
+    <section className="py-16 global-bg text-white">
       <div className=" common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div

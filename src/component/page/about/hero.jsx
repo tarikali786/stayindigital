@@ -1,12 +1,12 @@
+"use client";
 import React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
-
-const ServiceHero = () => {
+const AboutHero = () => {
   return (
-    <div className="bg-secondry  md:h-[50vh] h-[36vh] text-white flex common-padding flex-col justify-center">
-      <h2 className="md:text-4xl text-3xl mb-4">Services</h2>
+    <div className="global-bg-2  md:h-[50vh] h-[36vh] text-white flex common-padding flex-col justify-center">
+      <h2 className="md:text-4xl text-3xl mb-4">About Us</h2>
       <Breadcrumbs
         separator="›"
         aria-label="breadcrumb"
@@ -21,10 +21,10 @@ const ServiceHero = () => {
         >
           Home
         </Link>
-        <Typography sx={{ color: "#e2e2e2" }}>Services</Typography>
+        <Typography sx={{ color: "#e2e2e2" }}>About Us</Typography>
       </Breadcrumbs>
     </div>
   );
 };
 
-export default ServiceHero;
+export default AboutHero;

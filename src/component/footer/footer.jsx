@@ -7,7 +7,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 const Footer = () => {
   return (
-    <div className="bg-black common-padding py-8 text-white  z-50 ">
+    <div className="global-bg common-padding py-8 text-white border-t border-white/50  z-50 ">
       <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr] md:grid-cols-2 sm:grid-cols-1 gap-12 sm:items-start text-center   sm:text-left ">
         <div>
           <h1 className="lg:text-[28px] font-['lato'] md:text-[26px] sm:text-[20px] text-xl text-primary">
@@ -39,22 +39,16 @@ const Footer = () => {
             {FooterData.quickLinks.title}
           </h3>
           {FooterData.quickLinks.links.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className="block  mt-3 text-sm hover:underline"
-            >
-              {item.name}
-            </a>
+            <Link key={item.id} href={item.link}>{item.name}</Link>
           ))}
         </div>
 
-        {/* Courses */}
+        {/* Cources */}
         <div>
           <h3 className="font-bold text-lg text-primary">
-            {FooterData.courses.title}
+            {FooterData.Cources.title}
           </h3>
-          {FooterData.courses.links.map((item) => (
+          {FooterData.Cources.links.map((item) => (
             <a
               key={item.id}
               href={item.link}

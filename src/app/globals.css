@@ -8,7 +8,7 @@ body {
 
 :root {
   --background: #ffffff;
-  --foreground: #212037;
+  --foreground: #716af2;
 }
 
 @theme inline {
@@ -27,4 +27,24 @@ h6 {
 
 .common-padding {
   @apply px-2  md:px-[4%] lg:px-[8%] xl:px-[14%] sm:px-6;
+}
+
+.global-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../public/9\ I.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(6, 3, 15);
+}
+
+.global-bg-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../public/9\ I.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #2b2784;
 }

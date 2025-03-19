@@ -1,8 +1,7 @@
-import ServiceHero from "@/component/page/services/hero";
-import Porttitor from "@/component/page/services/porttitor";
-import Posuere from "@/component/page/services/posuere";
-import Service from "@/component/page/services/service";
-import Testimonials from "@/component/page/services/testimonial";
+import Testimonials from "@/component/page/cources/testimonial";
+import ServiceHero from "@/component/page/service/hero";
+import OurClient from "@/component/page/service/porttitor";
+import Service from "@/component/page/service/service";
 import React from "react";
 
 const Services = () => {
@@ -10,10 +9,8 @@ const Services = () => {
     <div>
       <ServiceHero />
       <Service />
-      <Porttitor />
-      <Posuere />
+      <OurClient />
       <Testimonials />
-
     </div>
   );
 };

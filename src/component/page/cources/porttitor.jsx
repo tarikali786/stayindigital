@@ -10,7 +10,7 @@ import Img5 from "../../../../public/5 I.jpg";
 import Img6 from "../../../../public/7 I.jpg";
 import Img7 from "../../../../public/8 I.jpg";
 
-const courses = [
+const Cources = [
   {
     img: Img,
     title: "Web Design",
@@ -21,19 +21,19 @@ const courses = [
     img: Img2,
     title: "Web Design",
     description:
-      "Transform your digital presence and unlock new opportunities with our expert-led SEO courses. Whether you're looking to enhance your personal skills or boost your business’s online performance, our courses provide the knowledge and tools you need to succeed.",
+      "Transform your digital presence and unlock new opportunities with our expert-led SEO Cources. Whether you're looking to enhance your personal skills or boost your business’s online performance, our Cources provide the knowledge and tools you need to succeed.",
   },
   {
     img: Img3,
     title: "Web Design",
     description:
-      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI courses provide the knowledge and skills needed to excel in this dynamic field.",
+      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI Cources provide the knowledge and skills needed to excel in this dynamic field.",
   },
 ];
 
 export const Porttitor = () => {
   return (
-    <section className="py-20  text-white bg-[#0a0718]">
+    <section className="py-20  text-white global-bg">
       <div className="  common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div
@@ -67,7 +67,7 @@ export const Porttitor = () => {
           }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
-          {courses.map((course, index) => (
+          {Cources.map((course, index) => (
             <motion.div
               key={index}
               variants={{
@@ -76,9 +76,7 @@ export const Porttitor = () => {
               }}
               className=" bg-secondry p-8 border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
-             <div className="size-20 bg-primary mb-4">
-
-             </div>
+              <div className="size-20 bg-primary mb-4"></div>
               <h4 className=" text-center font-bold mb-2 text-white ">
                 {course.title}
               </h4>

@@ -25,15 +25,15 @@ const HomeHero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="max-w-xl"
         >
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="sm:text-3xl text-2xl md:text-4xl font-bold text-white mb-4"
           >
             BECOME A DIGITAL MARKETING EXPERT
           </motion.h2>
@@ -42,7 +42,7 @@ const HomeHero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="text-gray-100 my-8 "
           >
             Ready to take your Digital Marketing to the next level?

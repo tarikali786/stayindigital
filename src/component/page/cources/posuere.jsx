@@ -11,10 +11,10 @@ const Posuere = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className=" bg-white md:w-[40%] w-full text-black p-8  md:mt-0 mt-6 rounded-lg shadow-lg "
+        className=" bg-white md:w-[40%] w-full global-bg p-8  md:mt-0 mt-6 rounded-lg shadow-lg "
       >
         <h2 className="text-2xl md:text-3xl mb-6 ">Nam Posuere Placerat Finibus</h2>
-        <p className=" text-gray-600">
+        <p className=" text-gray-300">
           Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
           Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in
           metus. Aenean pharetra mauris ac sem faucibus, consectetur ullamcorper

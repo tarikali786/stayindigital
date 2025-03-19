@@ -10,7 +10,7 @@ import Img5 from "../../../../public/5 I.jpg";
 import Img6 from "../../../../public/7 I.jpg";
 import Img7 from "../../../../public/8 I.jpg";
 
-const courses = [
+const Cources = [
   {
     img: Img,
     title: "Social Media Management",
@@ -22,14 +22,14 @@ const courses = [
 
     title: "Search Engine Optimization",
     description:
-      "Transform your digital presence and unlock new opportunities with our expert-led SEO courses. Whether you're looking to enhance your personal skills or boost your business’s online performance, our courses provide the knowledge and tools you need to succeed.",
+      "Transform your digital presence and unlock new opportunities with our expert-led SEO Cources. Whether you're looking to enhance your personal skills or boost your business’s online performance, our Cources provide the knowledge and tools you need to succeed.",
   },
   {
     img: Img3,
 
     title: "Artificial Intelligence",
     description:
-      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI courses provide the knowledge and skills needed to excel in this dynamic field.",
+      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI Cources provide the knowledge and skills needed to excel in this dynamic field.",
   },
   {
     img: Img4,
@@ -67,13 +67,12 @@ export const Service = () => {
         >
           <h2 className="text-lg font-bold text-gray-900 ">Services</h2>
           <h3 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
-            Web Development Service
+            We Provide
           </h3>
           <p className="max-w-2xl m-auto text-black/70">
-            Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
-            Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in
-            metus. Aenean pharetra mauris ac sem faucibus, consectetur
-            ullamcorper ex fermentum. Mauris placerat scelerisque pulvinar.
+            Your brand deserves to be seen, heard, and remembered. Let us craft
+            your digital success story with expert marketing, stunning design,
+            and powerful SEO. 
           </p>
         </motion.div>
 
@@ -91,7 +90,7 @@ export const Service = () => {
           }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
-          {courses.map((course, index) => (
+          {Cources.map((course, index) => (
             <motion.div
               key={index}
               variants={{

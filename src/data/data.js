@@ -1,7 +1,7 @@
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About  Us", link: "/about-us" },
-  { id: 3, name: "Courses", link: "/courses" },
+  { id: 3, name: "Cources", link: "/cources" },
   { id: 4, name: "Services", link: "/services" },
   { id: 5, name: "Gallery", link: "/gallery" },
   { id: 6, name: "Contact", link: "/contact" },
@@ -27,18 +27,18 @@ export const FooterData = {
       { id: 5, name: "Contact Us", link: "/contact" },
     ],
   },
-  courses: {
-    title: "Courses",
+  Cources: {
+    title: "Cources",
     links: [
-      { id: 1, name: "SEO", link: "/courses/seo" },
-      { id: 2, name: "Social Media Management", link: "/courses/social-media" },
+      { id: 1, name: "SEO", link: "/Cources/seo" },
+      { id: 2, name: "Social Media Management", link: "/Cources/social-media" },
       {
         id: 3,
         name: "Professional Video Editing",
-        link: "/courses/video-editing",
+        link: "/Cources/video-editing",
       },
-      { id: 4, name: "Advertising Campaign", link: "/courses/advertising" },
-      { id: 5, name: "Website Development", link: "/courses/web-development" },
+      { id: 4, name: "Advertising Campaign", link: "/Cources/advertising" },
+      { id: 5, name: "Website Development", link: "/Cources/web-development" },
     ],
   },
 };

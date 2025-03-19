@@ -52,54 +52,11 @@ const Cources = [
     description:
       "Transform your approach to managing digital content and achieve impactful results with our expert-led course. Whether you're seeking to launch a new career, advance your existing role, or improve your content management strategies, our course provides the knowledge and tools you need to succeed.",
   },
-  {
-    img: Img7,
-
-    title: "Professional Video Editing",
-    description:
-      "Transform your video editing skills and create stunning, professional-quality videos with our expert-led course. Whether you’re looking to enhance your current skills or start a new career, our Professional Video Editing course provides the tools and knowledge you need to succeed.",
-  },
-  {
-    img: Img2,
-
-    title: "Podcast Creation",
-    description:
-      "Embark on your podcasting adventure with the confidence that you have the knowledge and skills to succeed. Our Podcast Creation course is designed to equip you with everything you need to create, produce, and promote a successful podcast.",
-  },
-
-  {
-    img: Img3,
-
-    title: "Advertising Campaigne",
-    description:
-      "Transform your approach to advertising and drive impactful results with our expert-led Ad Campaign course. Whether you’re looking to enhance your skills, advance your career, or achieve your business objectives, our course provides the tools and knowledge you need to succeed.",
-  },
-  {
-    img: Img4,
-
-    title: "Performance Marketing",
-    description:
-      "Choosing a Performance Marketing course equips you with the skills and knowledge to drive effective, data-driven marketing campaigns. By mastering performance metrics, leveraging key platforms, and staying updated with industry trends, you’ll be well-prepared to excel in a dynamic and results-oriented field.",
-  },
-  {
-    img: Img5,
-
-    title: "Personality Development",
-    description:
-      "Invest in yourself and take the first step towards a more confident, capable, and charismatic you. Discover the difference that our Personality Development Course can make in your life and unlock a future full of possibilities.",
-  },
-  {
-    img: Img6,
-
-    title: "Search Engine Marketing",
-    description:
-      "Choosing a Search Engine Marketing course equips you with the skills and knowledge to excel in the competitive field of search advertising. By mastering key platforms, optimizing campaigns, and staying updated with industry trends, you'll be well-prepared to drive impactful results and advance your career in SEM.",
-  },
 ];
 
-export const HomeCources = () => {
+export const Service = () => {
   return (
-    <section className="py-20 global-bg text-white">
+    <section className="py-20  ">
       <div className="common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div
@@ -108,10 +65,16 @@ export const HomeCources = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-lg font-bold ">Cources</h2>
-          <h3 className="md:text-3xl text-2xl font-bold my-3 text-primary">
-            Cources We Provide!
+          <h2 className="text-lg font-bold text-gray-900 ">Services</h2>
+          <h3 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
+            Web Development Service
           </h3>
+          <p className="max-w-2xl m-auto text-black/70">
+            Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
+            Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in
+            metus. Aenean pharetra mauris ac sem faucibus, consectetur
+            ullamcorper ex fermentum. Mauris placerat scelerisque pulvinar.
+          </p>
         </motion.div>
 
         {/* Course Cards */}
@@ -126,7 +89,7 @@ export const HomeCources = () => {
               transition: { staggerChildren: 0.2 },
             },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-10 md:gap-6 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
           {Cources.map((course, index) => (
             <motion.div
@@ -155,4 +118,4 @@ export const HomeCources = () => {
   );
 };
 
-export default HomeCources;
+export default Service;
