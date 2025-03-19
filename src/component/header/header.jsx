@@ -1,16 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../../../public/logo.jpeg";
+import Logo from "../../../public/StayInLogo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
 import ButtonCard from "../common/button";
 import { HeaderData } from "@/data/data";
+import ImageComponent from "../common/ImageComponent";
 const Header = () => {
   return (
     <div className=" bg-black  py-4 common-padding   text-white sticky top-11 z-50 flex items-center gap-4  justify-between ">
-      <h1 className="lg:text-[34px] font-['lato'] md:text-[30px] sm:text-[26px] text-xl">
-        ITEKDIGIT
-      </h1>
+      <Image
+        src={Logo}
+        className="h-16 xl:w-56 md:w-44 sm:w-40 w-36 object-contain   "
+        loading="lazy"
+        alt="StayInDigital"
+      />
       <div className=" hidden md:flex items-center lg:gap-10 md:gap-6 sm:gap-4 gap-4">
         {HeaderData?.map((item) => (
           <Link
