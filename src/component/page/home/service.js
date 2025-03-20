@@ -1,8 +1,10 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { BarChart, Language, Brush, GridView } from "@mui/icons-material";
-
+import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import ButtonCard from "@/component/common/button";
+import { useState } from "react";
+import ModalCard from "@/component/model/model";
 const services = [
   {
     icon: <BarChart sx={{ fontSize: 44 }} className="text-black" />, // Increase size
@@ -31,8 +33,9 @@ const services = [
 ];
 
 export default function HomeServices() {
+  const [open, setOpen] = useState(false);
   return (
-    <section className="py-16 global-bg text-white">
+    <section className="py-16   relative  bg-gradient-to-b from-white to-blue-200 text-white    min-h-[100vh]  rounded-b-[200px] sm:rounded-b-[70%]">
       <div className=" common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div
@@ -73,17 +76,32 @@ export default function HomeServices() {
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
               }}
-              className="bg-gray-900  border border-gray-800 rounded-lg p-6 flex flex-col items-center text-center hover:border-blue-500 transition-all duration-300"
+              className="bg-white rounded-4xl shadow-2xl p-6 flex flex-col items-center text-center  cursor-pointer"
             >
               <div className="p-4 md:size-20 size-16  flex items-center justify-center bg-white rounded-full mb-4">
                 {service.icon}
               </div>
-              <h4 className="text-lg font-semibold mb-2">{service.title}</h4>
+              <h4 className="text-2xl text-black font-semibold mb-2">
+                {service.title}
+              </h4>
               <p className="text-gray-400 text-sm">{service.description}</p>
             </motion.div>
           ))}
+
+          <div className="flex justify-center items-center mt-6 col-span-full">
+            <ButtonCard title="View All Services" />
+          </div>
         </motion.div>
       </div>
+
+      <div className="absolute -bottom-10 left-0 right-0  flex justify-center items-center">
+        <PlayCircleIcon
+          onClick={() => setOpen(!open)}
+          className="text-blue-600  animate-bounce cursor-pointer"
+          sx={{ fontSize: "80px" }}
+        />
+      </div>
+      {open && <ModalCard open={open} setOpen={setOpen} />}
     </section>
   );
 }

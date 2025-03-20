@@ -74,9 +74,11 @@ export const OurClient = () => {
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
               }}
-              className=" bg-secondry p-8 border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
+              className=" bg-secondry p-8 border  border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
-              <ImageComponent cardCss="w-full h-[26vh] " />
+              <div className="h-[26vh]">
+                <ImageComponent />
+              </div>
               <h4 className=" text-center font-bold mb-2 text-white mt-6 ">
                 {course.title}
               </h4>

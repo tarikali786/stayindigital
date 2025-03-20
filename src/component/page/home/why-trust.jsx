@@ -7,14 +7,14 @@ import ImageComponent from "@/component/common/ImageComponent";
 
 const WhyTrust = () => {
   return (
-    <section className="py-16 common-padding bg-black text-white relative   overflow-hidden w-full ">
+    <section className="py-16 mt-16 common-padding bg-black text-white relative   overflow-hidden w-full ">
       <div className="   text-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-semibold text-primary"
+          className="text-2xl  md:text-3xl font-semibold text-primary"
         >
           Why Trust Us
         </motion.h2>

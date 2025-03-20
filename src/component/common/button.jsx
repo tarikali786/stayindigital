@@ -5,7 +5,7 @@ const ButtonCard = ({ title = "Contact Us", link = "#" }) => {
   return link ? (
     <Link
       href={link}
-      className="bg-primary px-4 py-2  text-nowrap rounded text-white font-medium transition duration-300 hover:bg-opacity-80"
+      className="bg-primary px-4 py-2.5  text-nowrap rounded text-white font-medium transition duration-300 hover:bg-opacity-80"
     >
       {title}
     </Link>

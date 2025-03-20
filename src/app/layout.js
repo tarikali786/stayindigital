@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/component/navbar/navbar";
 import Header from "@/component/header/header";
 import Footer from "@/component/footer/footer";
-import WaterBubbleEffect from "@/component/ui-effect/water-boboul";
+import WaterBubbleEffect from "@/component/UiEffect/water-boboul";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

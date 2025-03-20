@@ -3,16 +3,17 @@ import HomeCources from "@/component/page/home/course";
 import HomeHero from "@/component/page/home/hero";
 import HomeServices from "@/component/page/home/service";
 import WhyTrust from "@/component/page/home/why-trust";
-import WaterBubbleEffect from "@/component/ui-effect/water-boboul";
+import Testimonials from "../component/page/cources/testimonial";
 
 export default function HeroSection() {
   return (
-    <>
+    <div className="z-30">
       <HomeHero />
       <HomeAbout />
       <HomeServices />
       <WhyTrust />
       <HomeCources />
-    </>
+      <Testimonials />
+    </div>
   );
 }

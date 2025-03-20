@@ -125,9 +125,9 @@ export default function WaterBubbleEffect() {
 
   return (
     <div
-      className="fixed inset-0 pointer-events-none z-[-1]"
+      className="fixed inset-0 pointer-events-none z-10"
       onClick={handleClick}
-      onMouseMove={(e) => e.stopPropagation()}
+      style={{ pointerEvents: "all" }}
     >
       {/* Render bubble */}
       {bubbleExists && (
@@ -143,12 +143,44 @@ export default function WaterBubbleEffect() {
             borderRadius: getBubbleShape(),
             background:
               "radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(173, 216, 230, 0.4))",
+            boxShadow:
+              "inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 15px rgba(0, 150, 255, 0.3)",
             transform: `scale(${isPopping ? 0 : 1})`,
             transition:
               "width 0.3s, height 0.3s, left 0.3s, top 0.3s, transform 0.3s, opacity 0.3s",
           }}
-        ></div>
+        >
+          {/* Bubble highlight/reflection */}
+          <div
+            className="absolute rounded-full bg-white/0"
+            style={{
+              width: "30%",
+              height: "20%",
+              left: "20%",
+              top: "20%",
+              transform: "rotate(-45deg)",
+            }}
+          />
+        </div>
       )}
+
+      {/* Render particles */}
+      {particles.map((particle) => (
+        <div
+          key={particle.id}
+          className="absolute rounded-full"
+          style={{
+            left: particle.x - particle.size / 2,
+            top: particle.y - particle.size / 2,
+            width: particle.size,
+            height: particle.size,
+            opacity: particle.opacity,
+            background:
+              "radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.6))",
+            boxShadow: "0 0 3px rgba(255, 255, 255, 0.8)",
+          }}
+        />
+      ))}
     </div>
   );
 }

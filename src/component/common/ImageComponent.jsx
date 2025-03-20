@@ -3,15 +3,13 @@ import { useState } from "react";
 import Skeleton from "@mui/material/Skeleton";
 import Image from "next/image";
 
-const ImageComponent = ({ src, alt, imgCss, cardCss, variant }) => {
+const ImageComponent = ({ src, alt, imgCss, variant }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   return (
     <div
-      className={`relative flex items-center overflow-hidden justify-center ${
-        cardCss || "w-full h-auto"
-      }`}
+      className={`relative flex items-center overflow-hidden justify-center `}
     >
       {/* Skeleton Loader */}
       {loading && !error && (
@@ -22,7 +20,6 @@ const ImageComponent = ({ src, alt, imgCss, cardCss, variant }) => {
           className="absolute inset-0"
         />
       )}
-
       {/* Next.js Image Component */}
       {!error && src ? (
         <Image
@@ -30,9 +27,7 @@ const ImageComponent = ({ src, alt, imgCss, cardCss, variant }) => {
           alt={alt || "Image"}
           height={"100%"}
           width={"100%"}
-          className={`rounded-lg ${imgCss || "object-cover "} 
-            transition-opacity duration-500 
-            ${loading ? "opacity-0" : "opacity-100"}`}
+          className={` w-full h-full ${imgCss || "object-cover rounded-lg "}`}
           onLoadingComplete={() => setLoading(false)}
           onError={() => {
             setError(true);

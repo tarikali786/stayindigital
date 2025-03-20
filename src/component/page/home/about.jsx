@@ -33,9 +33,9 @@ const HomeAbout = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative md:w-1/2"
+        className="relative md:w-1/2 w-full md:h-[50vh]"
       >
-        <ImageComponent src={Img1} alt="Trust Image" cardCss=" w-full md:h-[50vh] " />
+        <ImageComponent src={Img1} alt="Trust Image" imgCss="rounded-xl " />
       </motion.div>
     </section>
   );
