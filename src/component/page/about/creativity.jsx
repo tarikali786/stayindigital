@@ -1,7 +1,7 @@
 import React from "react";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
-import Img1 from "../../../../public/7 i.jpg";
-import Img2 from "../../../../public/8 i.jpg";
+import Img1 from "../../../../public/7I.jpg";
+import Img2 from "../../../../public/8I.jpg";
 import ImageComponent from "@/component/common/ImageComponent";
 import Image from "next/image";
 const item = [
@@ -40,8 +40,6 @@ const Creativity = () => {
           <Image src={Img1} className="  sm:h-[60vh] h-[40vh]" />
         </div>
       </div>
-
-   
 
       <div className="  relative  w-full  flex sm:flex-row flex-col  sm:mt-20 mt-10   gap-6 ">
         <div className="sm:w-1/2 w-full sm:absolute top-8 md:right-20 sm:right-10 py-6 sm:py-0  px-4 sm:px-6 lg:px-8 bg-white rounded-md sm:h-[56vh] min-h-[40vh] flex  flex-col justify-center gap-6">

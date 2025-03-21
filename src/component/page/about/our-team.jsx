@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import ImageComponent from "../../common/ImageComponent";
-import Img from "../../../../public/1 I.jpg";
-import Img2 from "../../../../public/2 I.jpg";
-import Img3 from "../../../../public/3 I.jpg";
+import Img from "../../../../public/1I.jpg";
+import Img2 from "../../../../public/2I.jpg";
+import Img3 from "../../../../public/3I.jpg";
 
 const Cources = [
   {
@@ -63,7 +63,7 @@ const Team = () => {
               className=" bg-secondry p-8 border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
               <div className="h-[26vh]">
-                <ImageComponent src=""  />
+                <ImageComponent src="" />
               </div>
               <h4 className=" text-center font-bold mb-2 text-white mt-6 ">
                 {course.title}

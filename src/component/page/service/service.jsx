@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import ImageComponent from "../../common/ImageComponent";
-import Img from "../../../../public/1 I.jpg";
-import Img2 from "../../../../public/2 I.jpg";
-import Img3 from "../../../../public/3 I.jpg";
-import Img4 from "../../../../public/4 I.jpg";
-import Img5 from "../../../../public/5 I.jpg";
-import Img6 from "../../../../public/7 I.jpg";
-import Img7 from "../../../../public/8 I.jpg";
+import Img from "../../../../public/1I.jpg";
+import Img2 from "../../../../public/2I.jpg";
+import Img3 from "../../../../public/3I.jpg";
+import Img4 from "../../../../public/4I.jpg";
+import Img5 from "../../../../public/5I.jpg";
+import Img6 from "../../../../public/7I.jpg";
+import Img7 from "../../../../public/8I.jpg";
 
 const Cources = [
   {
@@ -72,7 +72,7 @@ export const Service = () => {
           <p className="max-w-2xl m-auto text-black/70">
             Your brand deserves to be seen, heard, and remembered. Let us craft
             your digital success story with expert marketing, stunning design,
-            and powerful SEO. 
+            and powerful SEO.
           </p>
         </motion.div>
 

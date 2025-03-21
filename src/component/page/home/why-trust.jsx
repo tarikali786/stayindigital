@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
-import Img1 from "../../../../public/5 I.jpg";
+import Img1 from "../../../../public/5I.jpg";
 import ImageComponent from "@/component/common/ImageComponent";
 
 const WhyTrust = () => {

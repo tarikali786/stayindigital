@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Img1 from "../../../../public/4 I.jpg";
+import Img1 from "../../../../public/4I.jpg";
 import ImageComponent from "@/component/common/ImageComponent";
 const Posuere = () => {
   return (
@@ -13,7 +13,9 @@ const Posuere = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className=" bg-white md:w-[40%] w-full global-bg p-8  md:mt-0 mt-6 rounded-lg shadow-lg "
       >
-        <h2 className="text-2xl md:text-3xl mb-6 ">Nam Posuere Placerat Finibus</h2>
+        <h2 className="text-2xl md:text-3xl mb-6 ">
+          Nam Posuere Placerat Finibus
+        </h2>
         <p className=" text-gray-300">
           Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
           Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in
