@@ -2,7 +2,6 @@
 import React from "react";
 import { Chrono } from "react-chrono";
 import { motion } from "framer-motion";
-import Img from "../../../../public/6 i.png";
 
 const items = [
   {
