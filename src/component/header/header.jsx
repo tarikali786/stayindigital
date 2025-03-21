@@ -30,7 +30,6 @@ const Header = () => {
         ))}
       </div>
       <div className="flex items-center lg:gap-8 md:gap-4 sm:gap-2">
-        <SearchIcon className=" cursor-pointer" />
         <div className="hidden md:block">
           <ButtonCard title="View Brochure" />
         </div>
