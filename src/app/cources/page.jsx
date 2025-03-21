@@ -1,8 +1,8 @@
-import CourceHero from "@/component/page/Cources/hero";
-import Porttitor from "@/component/page/Cources/porttitor";
-import Posuere from "@/component/page/Cources/posuere";
-import Service from "@/component/page/Cources/service";
-import Testimonials from "@/component/page/Cources/testimonial";
+import CourceHero from "@/component/page/cources/hero";
+import Porttitor from "@/component/page/cources/porttitor";
+import Posuere from "@/component/page/cources/posuere";
+import Service from "@/component/page/cources/service";
+import Testimonials from "@/component/page/cources/testimonial";
 import React from "react";
 
 const Cources = () => {
