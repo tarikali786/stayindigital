@@ -1,3 +1,4 @@
+"use client";
 import About from "@/component/page/about/about";
 import Creativity from "@/component/page/about/creativity";
 import AboutHero from "@/component/page/about/hero";
