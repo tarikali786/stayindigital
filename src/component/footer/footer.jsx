@@ -67,7 +67,8 @@ const Footer = () => {
           Copyright 2025 ITEKDIGIT | All Rights Reserved
         </p>
         <div className="text-primary flex justify-center gap-6 flex-wrap ">
-          <Link href="site-map">Site Map</Link>
+          <Link href="site-map">Site Map</Link>   
+          
           <Link href="privacy-policy">Privacy Policy</Link>
           <Link href="site-map">Terms & Conditions</Link>
 
