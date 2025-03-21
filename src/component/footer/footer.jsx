@@ -39,7 +39,9 @@ const Footer = () => {
             {FooterData.quickLinks.title}
           </h3>
           {FooterData.quickLinks.links.map((item) => (
-            <Link key={item.id} href={item.link}>{item.name}</Link>
+            <div key={item.id}>
+              <Link href={item.link}>{item.name}</Link>
+            </div>
           ))}
         </div>
 

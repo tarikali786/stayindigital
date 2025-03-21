@@ -8,12 +8,12 @@ body {
 
 :root {
   --background: #ffffff;
-  --foreground: #716af2;
+  --foreground: #3d34ee;
 }
 
 @theme inline {
-  --color-primary: #716af2;
-  --color-secondry: #212037;
+  --color-primary: #140ad8;
+  --color-secondry: #3d34ee;
 }
 
 h1,
@@ -56,4 +56,6 @@ h6 {
   width: 14px !important;
   height: 8px !important;
   border-radius: 20px !important;
+  background-color: #fff !important;
 }
+

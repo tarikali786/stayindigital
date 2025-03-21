@@ -2,9 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function CylindricalSpectrum() {
+export default function HorizontalSpectrumStarGlow() {
   const canvasRef = useRef(null);
-  const [scrollCount, setScrollCount] = useState(0);
+
+  // This state toggles the glow on/off
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -13,84 +15,197 @@ export default function CylindricalSpectrum() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const resizeCanvas = () => {
+    // 1) INITIAL CANVAS SETUP
+    function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    };
+    }
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const nodeCount = 50;
-    const radius = Math.min(canvas.width, canvas.height) * 0.4;
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
+    // 2) CREATE A FIXED NETWORK OF NODES (shape doesn't change later)
+    const nodeCount = 30;
     const nodes = [];
 
-    // Generate colors across a spectrum
-    const colors = ["#37B6FF", "#8F78FF", "#FF20E0", "#FF9900", "#00FF99"];
+    // Horizontal distribution: from 10% to 90% of screen width
+    const leftMargin = 0.1 * window.innerWidth;
+    const rightMargin = 0.9 * window.innerWidth;
+    // Vertical center + random band for variation
+    const verticalCenter = window.innerHeight / 2;
+    const verticalBand = 0.4 * window.innerHeight; // Adjust to make it taller/shorter
 
-    for (let i = 0; i < nodeCount; i++) {
-      const angle = (i / nodeCount) * Math.PI * 2;
-      const x = centerX + Math.cos(angle) * radius;
-      const y = centerY + Math.sin(angle) * radius;
-      nodes.push({ x, y, color: colors[i % colors.length] });
+    // Simple color interpolation from blue -> purple -> pink
+    function interpolateColor(ratio) {
+      // clamp ratio
+      ratio = Math.max(0, Math.min(ratio, 1));
+
+      const leftColor = [55, 182, 255]; // #37B6FF
+      const midColor = [143, 120, 255]; // #8F78FF
+      const rightColor = [255, 32, 224]; // #FF20E0
+
+      if (ratio < 0.5) {
+        const localRatio = ratio / 0.5;
+        const r = leftColor[0] + (midColor[0] - leftColor[0]) * localRatio;
+        const g = leftColor[1] + (midColor[1] - leftColor[1]) * localRatio;
+        const b = leftColor[2] + (midColor[2] - leftColor[2]) * localRatio;
+        return `rgb(${r}, ${g}, ${b})`;
+      } else {
+        const localRatio = (ratio - 0.5) / 0.5;
+        const r = midColor[0] + (rightColor[0] - midColor[0]) * localRatio;
+        const g = midColor[1] + (rightColor[1] - midColor[1]) * localRatio;
+        const b = midColor[2] + (rightColor[2] - midColor[2]) * localRatio;
+        return `rgb(${r}, ${g}, ${b})`;
+      }
     }
 
-    let rotation = 0;
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.save();
-      ctx.translate(centerX, centerY);
-      ctx.rotate(rotation);
-      ctx.translate(-centerX, -centerY);
+    // Generate nodes in a horizontal line
+    for (let i = 0; i < nodeCount; i++) {
+      const ratio = i / (nodeCount - 1);
+      // X from left to right
+      const x = leftMargin + ratio * (rightMargin - leftMargin);
+      // Y is random around center
+      const yOffset = (Math.random() - 0.5) * verticalBand;
+      const y = verticalCenter + yOffset;
 
-      // Draw connections
-      ctx.globalAlpha = 0.2;
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j += Math.floor(Math.random() * 3 + 1)) {
+      const radius = 3 + Math.random() * 5;
+      const color = interpolateColor(ratio);
+
+      nodes.push({
+        x,
+        y,
+        radius,
+        color,
+        connections: [],
+      });
+    }
+
+    // Connect each node to a few neighbors
+    const maxConnections = 3;
+    for (let i = 0; i < nodeCount; i++) {
+      const node = nodes[i];
+      // Forward neighbors
+      let possibleIndices = [];
+      for (let offset = 1; offset <= 4; offset++) {
+        const neighborIndex = i + offset;
+        if (neighborIndex < nodeCount) {
+          possibleIndices.push(neighborIndex);
+        }
+      }
+      // Shuffle, pick a few
+      possibleIndices.sort(() => Math.random() - 0.5);
+      possibleIndices = possibleIndices.slice(0, maxConnections);
+
+      // Back neighbors
+      let behindIndices = [];
+      for (let offset = 1; offset <= 2; offset++) {
+        const neighborIndex = i - offset;
+        if (neighborIndex >= 0) {
+          behindIndices.push(neighborIndex);
+        }
+      }
+
+      node.connections = [...possibleIndices, ...behindIndices];
+    }
+
+    // 3) SCROLL HANDLER: ONLY CHANGES GLOW STATE, NOTHING ELSE
+    let scrollTimeout;
+    function handleScroll() {
+      setIsScrolling(true);
+
+      // If no scroll for 300ms, we consider scrolling finished
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => setIsScrolling(false), 300);
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    // 4) ANIMATION LOOP
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // a) Draw connections
+      for (const node of nodes) {
+        for (const connectionIndex of node.connections) {
+          const connectedNode = nodes[connectionIndex];
           ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = nodes[i].color;
-          ctx.lineWidth = 0.8;
+          ctx.moveTo(node.x, node.y);
+          ctx.lineTo(connectedNode.x, connectedNode.y);
+
+          // Gradient line from node color to connectedNode color
+          const gradient = ctx.createLinearGradient(
+            node.x,
+            node.y,
+            connectedNode.x,
+            connectedNode.y
+          );
+          gradient.addColorStop(0, node.color);
+          gradient.addColorStop(1, connectedNode.color);
+
+          ctx.strokeStyle = gradient;
+          // Only brighter if user is currently scrolling
+          ctx.globalAlpha = isScrolling ? 0.7 : 0.3;
+          ctx.lineWidth = 1.5;
           ctx.stroke();
         }
       }
 
-      // Draw nodes with glow effect
+      // b) Draw nodes
       for (const node of nodes) {
+        // Base circle
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 2.5, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.radius, 0, 2 * Math.PI);
         ctx.fillStyle = node.color;
+        ctx.globalAlpha = 1;
         ctx.fill();
 
-        if (scrollCount > 0) {
-          ctx.save();
-          ctx.globalAlpha = Math.min(0.04 + scrollCount * 0.02, 0.8);
+        // Extra glow only while scrolling
+        if (isScrolling) {
+          // Outer ring
           ctx.beginPath();
-          ctx.arc(node.x, node.y, 8 + scrollCount * 2, 0, Math.PI * 2);
+          ctx.arc(node.x, node.y, node.radius * 2.5, 0, 2 * Math.PI);
           ctx.fillStyle = node.color;
+          ctx.globalAlpha = 0.4;
+          ctx.fill();
+
+          // Star glow
+          ctx.save();
+          ctx.globalCompositeOperation = "lighter";
+          ctx.beginPath();
+
+          const glowRadius = node.radius * 6;
+          const starGlow = ctx.createRadialGradient(
+            node.x,
+            node.y,
+            0,
+            node.x,
+            node.y,
+            glowRadius
+          );
+          starGlow.addColorStop(0, "rgba(255,255,255,0.8)");
+          starGlow.addColorStop(0.2, node.color);
+          starGlow.addColorStop(1, "rgba(255,255,255,0)");
+
+          ctx.fillStyle = starGlow;
+          ctx.globalAlpha = 0.6;
+          ctx.arc(node.x, node.y, glowRadius, 0, 2 * Math.PI);
           ctx.fill();
           ctx.restore();
         }
       }
 
-      ctx.restore();
-      rotation += 0.002;
       requestAnimationFrame(animate);
-    };
+    }
     animate();
 
-    const handleScroll = () => {
-      setScrollCount((prev) => (prev < 20 ? prev + 1 : 4)); // Loop back after 20
-    };
-    window.addEventListener("scroll", handleScroll);
-
+    // 5) CLEANUP
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
     };
-  }, [scrollCount]);
+  }, [isScrolling]);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 -z-10 bg-black" />;
+  // Canvas always the same shape, only glow toggles
+  return (
+    <canvas ref={canvasRef} className="fixed inset-0 -z-10 bg-[#07040f]" />
+  );
 }

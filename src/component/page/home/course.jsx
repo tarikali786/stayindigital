@@ -14,6 +14,7 @@ import Img5 from "../../../../public/5 I.jpg";
 import Img6 from "../../../../public/7 I.jpg";
 import Img7 from "../../../../public/8 I.jpg";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
 
 const Cources = [
   {
@@ -59,6 +60,8 @@ const Cources = [
 ];
 
 export const HomeCources = () => {
+  const isMd = useMediaQuery("(min-width:768px)");
+  const isSm = useMediaQuery("(min-width:640px)");
   return (
     <section className="py-20  text-white">
       <div className=" mx-auto px-6">
@@ -79,7 +82,8 @@ export const HomeCources = () => {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={40}
-          slidesPerView={2.5}
+          // slidesPerView={2.5}
+          slidesPerView={isSm ? 2.5 : isMd ? 2 : 1}
           loop={true}
           freeMode={true}
           autoplay={{ delay: 0, disableOnInteraction: false }}
@@ -94,7 +98,12 @@ export const HomeCources = () => {
                 transition={{ duration: 0.2 }}
                 className="bg-gray-100 overflow-hidden border border-gray-800 rounded-4xl flex flex-col items-center hover:border-primary hover:shadow-md transition-all duration-300"
               >
-                <Image  src={course.img} alt="img" loading="lazy" className="h-[60vh]  " />
+                <Image
+                  src={course.img}
+                  alt="img"
+                  loading="lazy"
+                  className="xl:h-[60vh] md:h-[50vh] sm:h-[30vh] h-[30vh]  "
+                />
                 <div className=" text-center py-8 px-6">
                   <h4 className="  text-3xl font-bold mb-2 text-black">
                     {course.title}
