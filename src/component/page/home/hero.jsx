@@ -2,23 +2,22 @@
 
 import ButtonCard from "@/component/common/button";
 import { motion } from "framer-motion";
-import Img from "../../../../public/2 I.jpg";
-import Image from "next/image";
-
 const HomeHero = () => {
   return (
-    <div className="relative min-h-[50vh] md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
+    <div className="relative min-h-[50vh] hero-section md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a3f847c] to-[#0a3f8483] z-10"></div>
 
-      {/* Background Image */}
-      <Image
-        src={Img}
-        alt="Digital Marketing"
-        fill
-        className="object-cover object-center"
-        priority
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Hero Content */}
       <div className="z-30 px-2 md:absolute md:left-10 left-4 lg:left-[48%] lg:-mt-16 flex flex-col justify-center">

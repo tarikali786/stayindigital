@@ -29,6 +29,9 @@ h6 {
   @apply px-2  md:px-[4%] lg:px-[8%] xl:px-[14%] sm:px-6;
 }
 
+.hero-section {
+  background: var("../../public/website video.mp4");
+}
 .global-bg {
   background: linear-gradient(rgba(12, 14, 33, 0.6), rgba(0, 0, 0, 0.6)),
     url("../../public/9\ I.png");
@@ -36,7 +39,7 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: rgb(7, 4, 15);
+  background-color: #07040f;
 }
 
 .global-bg-2 {

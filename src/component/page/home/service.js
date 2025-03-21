@@ -35,7 +35,7 @@ const services = [
 export default function HomeServices() {
   const [open, setOpen] = useState(false);
   return (
-    <section className="py-16   relative  bg-gradient-to-b from-white to-blue-200 text-white    min-h-[100vh]  rounded-b-[200px] sm:rounded-b-[70%]">
+    <section className="py-16   relative  bg-gradient-to-b  from-transparent to-blue-200 text-white    min-h-[100vh]  rounded-b-[200px] sm:rounded-b-[70%]">
       <div className=" common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div

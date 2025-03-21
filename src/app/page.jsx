@@ -4,6 +4,7 @@ import HomeHero from "@/component/page/home/hero";
 import HomeServices from "@/component/page/home/service";
 import WhyTrust from "@/component/page/home/why-trust";
 import Testimonials from "../component/page/cources/testimonial";
+import SpectralBackground from "@/component/UiEffect/network-spectrum";
 
 export default function HeroSection() {
   return (
@@ -14,6 +15,7 @@ export default function HeroSection() {
       <WhyTrust />
       <HomeCources />
       <Testimonials />
+      <SpectralBackground />
     </div>
   );
 }

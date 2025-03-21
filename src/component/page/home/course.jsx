@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/autoplay";
 import { Autoplay, FreeMode } from "swiper/modules";
-import ImageComponent from "../../common/ImageComponent";
 import Img from "../../../../public/1 I.jpg";
 import Img2 from "../../../../public/2 I.jpg";
 import Img3 from "../../../../public/3 I.jpg";
@@ -61,7 +60,7 @@ const Cources = [
 
 export const HomeCources = () => {
   return (
-    <section className="py-20 global-bg text-white">
+    <section className="py-20  text-white">
       <div className=" mx-auto px-6">
         {/* Section Heading */}
         <motion.div

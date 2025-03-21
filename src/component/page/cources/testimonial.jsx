@@ -44,10 +44,10 @@ export default function Testimonials() {
   const isMd = useMediaQuery("(min-width:768px)");
   const isSm = useMediaQuery("(min-width:640px)");
   return (
-    <section className="py-16 bg-gray-50 text-center common-padding">
+    <section className="py-16  text-center common-padding">
       <h3 className="text-lg text-black/70 font-semibold">Testimonials</h3>
       <h2 className="text-4xl font-bold text-primary my-3">What People Say</h2>
-      <p className="max-w-2xl mx-auto text-gray-600">
+      <p className="max-w-2xl mx-auto text-white/80">
         Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
         Mauris quam arcu, facilisis ut vestibulum sit amet.
       </p>

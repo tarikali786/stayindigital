@@ -7,7 +7,7 @@ import ImageComponent from "@/component/common/ImageComponent";
 
 const WhyTrust = () => {
   return (
-    <section className="py-16 mt-16 common-padding bg-black text-white relative   overflow-hidden w-full ">
+    <section className="py-16 mt-16 common-padding  text-white relative   overflow-hidden w-full ">
       <div className="   text-center">
         {/* Heading */}
         <motion.h2
