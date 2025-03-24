@@ -2,7 +2,29 @@ export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About  Us", link: "/about-us" },
   { id: 3, name: "Cources", link: "/cources" },
-  { id: 4, name: "Services", link: "/services" },
+  {
+    id: 4,
+    name: "Services",
+    link: "/services",
+    items: [
+      { id: "1a", name: "Web Development", link: "/services/web-development" },
+      {
+        id: "2a",
+        name: "Mobile App Development",
+        link: "/services/mobile-app-development",
+      },
+      {
+        id: "3a",
+        name: "Software Development",
+        link: "/services/software-development",
+      },
+      {
+        id: "4a",
+        name: "eCommerce Development",
+        link: "/services/ecommerce-development",
+      },
+    ],
+  },
   { id: 5, name: "Gallery", link: "/gallery" },
   { id: 6, name: "Contact", link: "/contact" },
 ];

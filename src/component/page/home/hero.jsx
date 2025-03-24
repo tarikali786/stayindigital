@@ -2,6 +2,7 @@
 
 import ButtonCard from "@/component/common/button";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 const HomeHero = () => {
   return (
     <div className="relative min-h-[50vh] hero-section md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
@@ -31,7 +32,7 @@ const HomeHero = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
             className="sm:text-3xl text-2xl md:text-4xl font-bold text-white mb-4"
           >
             BECOME A DIGITAL MARKETING EXPERT
@@ -50,12 +51,38 @@ const HomeHero = () => {
             to Hero.
           </motion.p>
 
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="max-w-xl"
+          >
+            <TypeAnimation
+              sequence={[
+                "Web Development",
+                1000,
+                "Mobile App Development",
+                1000,
+                "Software Development",
+                1000,
+                "eCommerce Development",
+                1000,
+              ]}
+              speed={50}
+              className="text-white text-6xl  font-semibold"
+              repeat={Infinity}
+              cursor={false}
+            />
+          </motion.div>
+
+
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-4"
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-wrap gap-4 mt-8"
           >
             <ButtonCard title="Get Started" />
 
@@ -67,7 +94,7 @@ const HomeHero = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="md:absolute border-t-1 border-white/80 pt-10 hidden bottom-2 lg:bottom-10 left-1/2 transform -translate-x-1/2 md:flex gap-6 z-40 ">
+      {/* <div className="md:absolute border-t-1 border-white/80 pt-10 hidden bottom-2 lg:bottom-10 left-1/2 transform -translate-x-1/2 md:flex gap-6 z-40 ">
         {["DIGITAL MARKETING", "IT SERVICES", "VFX", "E-COMMERCE"].map(
           (item, index) => (
             <motion.div
@@ -81,7 +108,7 @@ const HomeHero = () => {
             </motion.div>
           )
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

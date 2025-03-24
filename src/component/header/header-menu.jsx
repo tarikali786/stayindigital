@@ -10,6 +10,8 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { HeaderData } from "@/data/data";
 import Logo from "../../../public/StayInLogo.png";
 import Image from "next/image";
@@ -17,6 +19,7 @@ import ButtonCard from "../common/button";
 
 export const MobileMenu = () => {
   const [open, setOpen] = React.useState(false);
+  const [expanded, setExpanded] = React.useState(null);
 
   const toggleDrawer = (isOpen) => (event) => {
     if (
@@ -28,32 +31,64 @@ export const MobileMenu = () => {
     setOpen(isOpen);
   };
 
+  const handleExpand = (id) => {
+    setExpanded(expanded === id ? null : id); // Toggle submenu open/close
+  };
+
   const menuList = (
     <Box
       sx={{ width: 250 }}
       role="presentation"
-      onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
         <Image
           src={Logo}
-          className="h-16 pl-3  w-36 object-contain   "
+          className="h-16 pl-3 w-36 object-contain"
           loading="lazy"
           alt="StayInDigital"
         />
         <Divider />
 
         {HeaderData.map((item) => (
-          <ListItem key={item.id} disablePadding>
-            <Link href={item.link} passHref legacyBehavior>
-              <ListItemButton component="a">
-                <ListItemText primary={item.name} />
-              </ListItemButton>
-            </Link>
-          </ListItem>
+          <React.Fragment key={item.id}>
+            <ListItem disablePadding>
+              {item.items ? (
+                <ListItemButton onClick={() => handleExpand(item.id)}>
+                  <ListItemText primary={item.name} />
+                  {expanded === item.id ? (
+                    <ExpandLessIcon />
+                  ) : (
+                    <ExpandMoreIcon />
+                  )}
+                </ListItemButton>
+              ) : (
+                <Link href={item.link} passHref legacyBehavior>
+                  <ListItemButton component="a">
+                    <ListItemText primary={item.name} />
+                  </ListItemButton>
+                </Link>
+              )}
+            </ListItem>
+
+            {/* Submenu */}
+            {item.items && expanded === item.id && (
+              <List sx={{ pl: 4 }}>
+                {item?.items.map((subItem) => (
+                  <ListItem key={subItem.id} disablePadding>
+                    <Link href={subItem.link} passHref legacyBehavior>
+                      <ListItemButton component="a">
+                        <ListItemText primary={subItem.name} />
+                      </ListItemButton>
+                    </Link>
+                  </ListItem>
+                ))}
+              </List>
+            )}
+          </React.Fragment>
         ))}
       </List>
+
       <Divider />
       <div className="px-3 pt-5">
         <ButtonCard title="View Brochure" />

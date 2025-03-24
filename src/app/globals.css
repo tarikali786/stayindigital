@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&family=PT+Sans:wght@400;700&display=swap");
 
 body {
-  /* font-family: "Poppins", "Roboto", "PT Sans", sans-serif; */
-  font-family: "lato";
+  font-family: "Poppins", "Roboto", "PT Sans", sans-serif;
 }
 
 :root {
@@ -58,4 +57,3 @@ h6 {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
-
