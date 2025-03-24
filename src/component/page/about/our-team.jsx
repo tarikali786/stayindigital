@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import ImageComponent from "../../common/ImageComponent";
 import Img from "../../../../public/1I.jpg";
 import Img2 from "../../../../public/2I.jpg";
 import Img3 from "../../../../public/3I.jpg";
