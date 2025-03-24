@@ -1,6 +1,4 @@
 import React from "react";
-import { Chrono } from "react-chrono";
-import { motion } from "framer-motion";
 
 const items = [
   {
@@ -38,29 +36,11 @@ const items = [
 const WhyChoose = () => {
   return (
     <div className="w-full py-14 ">
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex flex-col justify-center items-center text-center  px-6"
-      >
+      <div className="flex flex-col justify-center items-center text-center  px-6">
         <h3 className="md:text-3xl mb-10  text-2xl font-bold my-3 text-[#716af2]">
           Why Choose ITechDigit?
         </h3>
-      </motion.div>
-      <Chrono
-        items={items}
-        mode="VERTICAL_ALTERNATING"
-        disableToolbar="true"
-        cardHeight={"100"}
-        borderLessCards={false}
-        theme={{
-          primary: "#007bff",
-          secondary: "#f0f0f0",
-          cardBgColor: "#ffffff",
-          titleColor: "#000",
-        }}
-      />
+      </div>
     </div>
   );
 };

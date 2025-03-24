@@ -5,12 +5,7 @@ const About = () => {
   return (
     <section className=" py-10 text-white  common-padding ">
       {/* About Us Section */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex flex-col justify-center items-center text-center  px-6"
-      >
+      <div className="flex flex-col justify-center items-center text-center  px-6">
         <h2 className="text-xl font-bold text-white">About Us</h2>
         <h3 className="md:text-3xl  text-2xl font-bold my-3 text-[#716af2]">
           Who We Are
@@ -26,7 +21,7 @@ const About = () => {
           journey of digital transformation and stay connected to the future of
           marketing.
         </p>
-      </motion.div>
+      </div>
 
       <WhyChoose />
     </section>
