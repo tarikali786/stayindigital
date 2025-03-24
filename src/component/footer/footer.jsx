@@ -1,18 +1,26 @@
 import { FooterData } from "@/data/data";
-import { Divider } from "@mui/material";
+import Logo from "../../../public/logo.png";
+
 import Link from "next/link";
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
+import Image from "next/image";
 const Footer = () => {
   return (
-    <div className="global-bg common-padding py-8 text-white border-t border-white/50  z-50 ">
+    <div className="bg-white common-padding py-8 border-t border-white/50  z-50 ">
       <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr] md:grid-cols-2 sm:grid-cols-1 gap-12 sm:items-start text-center   sm:text-left ">
         <div>
-          <h1 className="lg:text-[28px] font-['lato'] md:text-[26px] sm:text-[20px] text-xl text-primary">
-            ITEKDIGIT
-          </h1>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src={Logo}
+              className=" object-contain  size-10 md:size-14  "
+              loading="lazy"
+              alt="StayInDigital"
+            />
+            <h1 className="md:text-xl text-primary">Stay in Digital</h1>
+          </Link>
           <p className="text-sm mt-2 leading-5.5">
             At Stay In Digital, we specialize in transforming businesses with
             innovative digital marketing strategies. Our team of experts is
@@ -27,7 +35,7 @@ const Footer = () => {
             {FooterData.getInTouch.title}
           </h3>
           {FooterData.getInTouch.address.map((line, index) => (
-            <p key={index} className="text-sm leading-5.5 mt-3">
+            <p key={index} className="text-sm text-black leading-5.5 mt-3">
               {line}
             </p>
           ))}
@@ -39,7 +47,7 @@ const Footer = () => {
             {FooterData.quickLinks.title}
           </h3>
           {FooterData.quickLinks.links.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="text-black">
               <Link href={item.link}>{item.name}</Link>
             </div>
           ))}
@@ -54,7 +62,7 @@ const Footer = () => {
             <a
               key={item.id}
               href={item.link}
-              className="block  mt-3 text-sm hover:underline"
+              className="block text-black  mt-3 text-sm hover:underline"
             >
               {item.name}
             </a>
@@ -67,8 +75,8 @@ const Footer = () => {
           Copyright 2025 ITEKDIGIT | All Rights Reserved
         </p>
         <div className="text-primary flex justify-center gap-6 flex-wrap ">
-          <Link href="site-map">Site Map</Link>   
-          
+          <Link href="site-map">Site Map</Link>
+
           <Link href="privacy-policy">Privacy Policy</Link>
           <Link href="site-map">Terms & Conditions</Link>
 

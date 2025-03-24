@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Clickable Email */}
         <a
           href="mailto:info@itechdigit.com"
-          className="text-primary text-sm font-semibold flex items-center gap-1"
+          className="text-white text-sm font-semibold flex items-center gap-1"
         >
           <EmailIcon />
           <p className="sm:block hidden">:info@itechdigit.com</p>
@@ -21,13 +21,13 @@ const Navbar = () => {
         {/* Clickable Phone */}
         <a
           href="tel:7010189969"
-          className="text-primary text-sm font-semibold flex items-center gap-1"
+          className="text-white text-sm font-semibold flex items-center gap-1"
         >
           <LocalPhoneIcon /> <p className="sm:block hidden">:7010189969</p>
         </a>
       </div>
 
-      <div className="flex gap-6 text-primary">
+      <div className="flex gap-6 text-white">
         <Link target="_blank" href={"https://facebook.com/"}>
           <FacebookIcon />
         </Link>

@@ -65,7 +65,7 @@ export const MobileMenu = () => {
     <div>
       {/* Menu Icon Button */}
       <IconButton onClick={toggleDrawer(true)} sx={{ color: "black" }}>
-        <MenuIcon className="text-white" />
+        <MenuIcon className="text-black" />
       </IconButton>
 
       {/* Right-Side Drawer */}

@@ -5,10 +5,10 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import ButtonCard from "@/component/common/button";
 import { useState } from "react";
 import ModalCard from "@/component/model/model";
-import Icon1 from "../../../../public/icon1.jpg";
-import Icon2 from "../../../../public/icon2.jpg";
-import Icon3 from "../../../../public/icon3.jpg";
-import Icon4 from "../../../../public/icon4.jpg";
+import Icon1 from "../../../../public/icon1.png";
+import Icon2 from "../../../../public/icon2.png";
+import Icon3 from "../../../../public/icon3.png";
+import Icon4 from "../../../../public/icon4.png";
 import Image from "next/image";
 
 const services = [
