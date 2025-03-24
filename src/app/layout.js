@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/component/navbar/navbar";
 import Header from "@/component/header/header";
 import Footer from "@/component/footer/footer";
+import SpectralBackground from "@/component/UiEffect/network-spectrum";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <SpectralBackground />
       </body>
     </html>
   );

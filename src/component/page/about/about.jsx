@@ -4,7 +4,7 @@ import WhyChoose from "./why-choose";
 
 const About = () => {
   return (
-    <section className="global-bg py-10 text-white  common-padding ">
+    <section className=" py-10 text-white  common-padding ">
       {/* About Us Section */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}

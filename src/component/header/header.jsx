@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../../../public/StayInLogo.png";
-import SearchIcon from "@mui/icons-material/Search";
+import Logo from "../../../public/Logo2.0.png";
 import Link from "next/link";
 import ButtonCard from "../common/button";
 import { HeaderData } from "@/data/data";
@@ -13,7 +12,7 @@ const Header = () => {
       <Link href="/">
         <Image
           src={Logo}
-          className="h-16 xl:w-56 md:w-44 sm:w-40 w-36 object-contain   "
+          className=" object-contain   "
           loading="lazy"
           alt="StayInDigital"
         />

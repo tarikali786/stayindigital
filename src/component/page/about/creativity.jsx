@@ -25,7 +25,7 @@ const item = [
 
 const Creativity = () => {
   return (
-    <div className="global-bg relative common-padding py-10 mx-auto ">
+    <div className="relative common-padding py-10 mx-auto ">
       <div className=" relative  w-full flex  justify-end gap-6 flex-col sm:flex-row ">
         <div className="sm:w-1/2 w-full sm:absolute top-8  xl:left-20 md:left-10 sm:left-6   px-4 sm:px-6 lg:px-8 bg-white rounded-md sm:h-[56vh] h-[40vh] flex  flex-col justify-center gap-6">
           {item.map((item, index) => (
@@ -37,7 +37,7 @@ const Creativity = () => {
         </div>
         {/* <p className=" absolute ri"></p> */}
         <div className="  rounded-xl overflow-hidden sm:w-1/2 w-full">
-          <Image src={Img1} className="  sm:h-[60vh] h-[40vh]" />
+          <Image src={Img1} alt="img" className="  sm:h-[60vh] h-[40vh]" />
         </div>
       </div>
 

@@ -23,7 +23,7 @@ const Cources = [
 
 export const OurClient = () => {
   return (
-    <section className="py-20  text-white global-bg">
+    <section className="py-20  text-white ">
       <div className="  common-padding mx-auto px-6">
         {/* Section Heading */}
         <motion.div

@@ -5,27 +5,33 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import ButtonCard from "@/component/common/button";
 import { useState } from "react";
 import ModalCard from "@/component/model/model";
+import Icon1 from "../../../../public/icon1.jpg";
+import Icon2 from "../../../../public/icon2.jpg";
+import Icon3 from "../../../../public/icon3.jpg";
+import Icon4 from "../../../../public/icon4.jpg";
+import Image from "next/image";
+
 const services = [
   {
-    icon: <BarChart sx={{ fontSize: 44 }} className="text-black" />, // Increase size
+    icon: Icon1, // Increase size
     title: "Social Media Marketing",
     description:
       "Boost your brand’s presence on social media platforms with targeted campaigns that engage and convert.",
   },
   {
-    icon: <Language sx={{ fontSize: 44 }} className="text-black" />,
+    icon: Icon2,
     title: "SEO",
     description:
       "Improve your website’s visibility on search engines and attract organic traffic with our SEO expertise.",
   },
   {
-    icon: <Brush sx={{ fontSize: 44 }} className="text-black" />,
+    icon: Icon3,
     title: "Website Development",
     description:
       "Create a stunning, user-friendly website that reflects your brand’s identity and converts visitors into customers.",
   },
   {
-    icon: <GridView sx={{ fontSize: 36 }} className="text-black" />,
+    icon: Icon4,
     title: "Graphic Design",
     description:
       "Elevate your brand’s visual identity with professional graphic design services that captivate and inspire.",
@@ -78,9 +84,17 @@ export default function HomeServices() {
               }}
               className="bg-white rounded-4xl shadow-2xl p-6 flex flex-col items-center text-center  cursor-pointer"
             >
-              <div className="p-4 md:size-20 size-16  flex items-center justify-center bg-white rounded-full mb-4">
-                {service.icon}
+              <div className="p-4 md:size-24 size-20  flex items-center justify-center bg-white rounded-full mb-4">
+                {/* {service.icon} */}
+                <Image
+                  src={service.icon}
+                  alt="icon"
+                  height="100%"
+                  width="100%"
+                  className="object-contain"
+                />
               </div>
+
               <h4 className="text-2xl text-black font-semibold mb-2">
                 {service.title}
               </h4>

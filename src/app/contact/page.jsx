@@ -6,7 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
 const Contact = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen common-padding global-bg">
+    <div className="flex items-center justify-center min-h-screen common-padding ">
       <div className="w-full rounded-lg shadow-lg relative flex flex-col  md:flex-row gap-8">
         {/* Left Section */}
         <div className="flex flex-col gap-6 justify-between w-full md:w-1/3">
