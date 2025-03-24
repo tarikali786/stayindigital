@@ -1,3 +1,4 @@
+import Creativity from "@/component/page/about/creativity";
 import AboutHero from "@/component/page/about/hero";
 import Team from "@/component/page/about/our-team";
 import React from "react";
@@ -8,7 +9,7 @@ const AboutUs = () => {
       <AboutHero />
       {/* <About /> */}
       <Team />
-      {/* <Creativity /> */}
+      <Creativity />
     </div>
   );
 };
