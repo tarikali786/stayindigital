@@ -8,7 +8,7 @@ import { MobileMenu } from "./header-menu";
 
 const Header = () => {
   return (
-    <div className=" bg-white  py-2 common-padding shadow-md border border-black   text-black sticky top-11 z-50 flex items-center gap-4  justify-between ">
+    <div className=" bg-white  py-2 common-padding shadow-md   text-black sticky top-11 z-50 flex items-center gap-4  justify-between ">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src={Logo}
