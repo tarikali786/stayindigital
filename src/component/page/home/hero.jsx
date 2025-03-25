@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 const HomeHero = () => {
   return (
-    <div className="relative min-h-[50vh] hero-section md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
+    <div className="relative min-h-[50vh] hero-section md:py-0 sm:py-4 py-8 md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a3f847c] to-[#0a3f8483] z-10"></div>
 
@@ -33,7 +33,7 @@ const HomeHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="sm:text-3xl text-2xl md:text-4xl font-bold text-white mb-4"
+            className="sm:text-2xl text-xl md:text-4xl font-bold text-white sm:mb-4 mb-2"
           >
             BECOME A DIGITAL MARKETING EXPERT
           </motion.h2>
@@ -43,10 +43,9 @@ const HomeHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-100 my-8 "
+            className="text-gray-100 md:my-8 sm:my-3 my-2 text-sm sm:text-[16px] "
           >
             Ready to take your Digital Marketing to the next level?
-            <br />
             Discover our cutting-edge training programs and dominate from Zero
             to Hero.
           </motion.p>
@@ -70,7 +69,7 @@ const HomeHero = () => {
                 1000,
               ]}
               speed={50}
-              className="text-white text-6xl  font-semibold"
+              className="text-white md:text-6xl  sm:text-3xl text-xl font-semibold"
               repeat={Infinity}
               cursor={false}
             />

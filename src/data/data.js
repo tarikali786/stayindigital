@@ -1,3 +1,5 @@
+import Angular from "../../public/angular.png";
+
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About  Us", link: "/about-us" },
@@ -64,3 +66,87 @@ export const FooterData = {
     ],
   },
 };
+
+export const Webtechnologies = [
+  {
+    name: "Angular",
+    icon: Angular,
+  },
+  {
+    name: "React",
+    icon: Angular,
+  },
+  {
+    name: "JavaScript",
+    icon: Angular,
+  },
+  {
+    name: "TypeScript",
+    icon: Angular,
+  },
+  {
+    name: "HTML5",
+    icon: Angular,
+  },
+];
+
+export const Backendtechnologies = [
+  {
+    name: "ASP.Net Core",
+    icon: Angular,
+  },
+  {
+    name: "ASP.Net MVC",
+    icon: Angular,
+  },
+  {
+    name: "Laravel",
+    icon: Angular,
+  },
+  {
+    name: "Node.js",
+    icon: Angular,
+  },
+];
+
+export const PlateFormTechnology = [
+  {
+    category: "iOS",
+    techs: [
+      { name: "Swift", icon: Angular },
+      { name: "Objective-C", icon: Angular },
+    ],
+  },
+  {
+    category: "Android",
+    techs: [
+      { name: "Kotlin", icon: Angular },
+      { name: "Java", icon: Angular },
+    ],
+  },
+  {
+    category: "Cross-Platform",
+    techs: [
+      { name: "Flutter", icon: Angular },
+      { name: "React Native", icon: Angular },
+    ],
+  },
+];
+
+export const DatabaseTechnology = [
+  {
+    category: "Database",
+    techs: [
+      { name: "SQL Server", icon: Angular },
+      { name: "MySQL", icon: Angular },
+      { name: "Mongo DB", icon: Angular },
+    ],
+  },
+  {
+    category: "Infrastructure",
+    techs: [
+      { name: "Azure", icon: Angular },
+      { name: "AWS", icon: Angular },
+    ],
+  },
+];

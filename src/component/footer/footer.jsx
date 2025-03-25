@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="bg-white common-padding py-8 border-t border-white/50  z-50 ">
       <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr] md:grid-cols-2 sm:grid-cols-1 gap-12 sm:items-start text-center   sm:text-left ">
-        <div>
+        <div className="flex flex-col justify-center sm:items-start  items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <Image
               src={Logo}
