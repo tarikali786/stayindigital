@@ -3,27 +3,97 @@ import Angular from "../../public/angular.png";
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About  Us", link: "/about-us" },
-  { id: 3, name: "Cources", link: "/cources" },
+  {
+    id: 3,
+    name: "Cources",
+    link: "/cources",
+    items: [
+      {
+        id: "1b",
+        name: "Social Media  Management",
+        link: "/cources/cource-details/social-media-management",
+      },
+      {
+        id: "2b",
+        name: "Search Engine Optimization",
+        link: "/cources/cource-details/search-engine-optimization",
+      },
+      {
+        id: "3b",
+        name: "Artifical intelligence",
+        link: "/cources/cource-details/artifical-intelligence",
+      },
+      {
+        id: "4b",
+        name: "Website Development",
+        link: "/cources/cource-details/web-development",
+      },
+      {
+        id: "5bb",
+        name: "Graphic Designer",
+        link: "/cources/cource-details/graphic-designer",
+      },
+      {
+        id: "5b",
+        name: "Content Management",
+        link: "/cources/cource-details/content-management",
+      },
+      {
+        id: "6b",
+        name: "Professional video Editing",
+        link: "/cources/cource-details/professional-video-editing",
+      },
+      {
+        id: "7b",
+        name: "Podcast Creation",
+        link: "/cources/cource-details/podcast-creation",
+      },
+      {
+        id: "8b",
+        name: "Advertising Campaign",
+        link: "/cources/cource-details/advertising-campaign",
+      },
+      {
+        id: "9b",
+        name: "Performance Marketing",
+        link: "/cources/cource-details/performance-marketing",
+      },
+      {
+        id: "10b",
+        name: "Personality development",
+        link: "/cources/cource-details/personality-development",
+      },
+      {
+        id: "11b",
+        name: "Search Engine Marketing",
+        link: "/cources/cource-details/search-engine-marketing",
+      },
+    ],
+  },
   {
     id: 4,
     name: "Services",
     link: "/services",
     items: [
-      { id: "1a", name: "Web Development", link: "/services/web-development" },
+      {
+        id: "1a",
+        name: "Web Development",
+        link: "/services/service-details/web-development",
+      },
       {
         id: "2a",
         name: "Mobile App Development",
-        link: "/services/mobile-app-development",
+        link: "/services/service-details/mobile-app-development",
       },
       {
         id: "3a",
         name: "Software Development",
-        link: "/services/software-development",
+        link: "/services/service-details/software-development",
       },
       {
         id: "4a",
         name: "eCommerce Development",
-        link: "/services/ecommerce-development",
+        link: "/services/service-details/ecommerce-development",
       },
     ],
   },

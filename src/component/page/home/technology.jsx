@@ -144,6 +144,7 @@ const Technology = () => {
                       alt={tech.name}
                       width={"100%"}
                       height={"100%"}
+                      loading="lazy"
                     />
                   </div>
                   <p className="text-lg  text-white/80">

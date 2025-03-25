@@ -9,7 +9,7 @@ import Technology from "@/component/page/home/technology";
 
 export default function HeroSection() {
   return (
-    <div className="z-30">
+    <div className="">
       <HomeHero />
       <HomeAbout />
       <HomeServices />
