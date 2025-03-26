@@ -45,11 +45,9 @@ const HomeHero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-gray-100 md:my-8 sm:my-3 my-2 text-sm sm:text-[16px] "
           >
-            Ready to take your Digital Marketing to the next level?
-            Discover our cutting-edge training programs and dominate from Zero
-            to Hero.
+            Ready to take your Digital Marketing to the next level? Discover our
+            cutting-edge training programs and dominate from Zero to Hero.
           </motion.p>
-
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +73,6 @@ const HomeHero = () => {
             />
           </motion.div>
 
-
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,31 +80,11 @@ const HomeHero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap gap-4 mt-8"
           >
-            <ButtonCard title="Get Started" />
-
-            <button className="border-white rounded-md border px-4 py-2 cursor-pointer text-white hover:bg-white/10">
-              How It Works
-            </button>
+            <ButtonCard title="Get Started" link="/contact" />
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Cards Section */}
-      {/* <div className="md:absolute border-t-1 border-white/80 pt-10 hidden bottom-2 lg:bottom-10 left-1/2 transform -translate-x-1/2 md:flex gap-6 z-40 ">
-        {["DIGITAL MARKETING", "IT SERVICES", "VFX", "E-COMMERCE"].map(
-          (item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 + index * 0.2 }}
-              className="border-2 border-white flex items-center justify-center  text-white  font-semibold px-6 py-4 min-w-44 max-w-52 text-center rounded-lg bg-black/60 backdrop-blur-md shadow-lg hover:bg-white hover:text-black transition"
-            >
-              {item}
-            </motion.div>
-          )
-        )}
-      </div> */}
     </div>
   );
 };

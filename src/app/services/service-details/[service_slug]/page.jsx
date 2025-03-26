@@ -17,11 +17,11 @@ const ServiceDetails = async ({ params }) => {
 
   return (
     <>
-      <div className="h-[60vh] w-full   relative ">
+      <div className="h-[60vh] w-full   relative  rounded-b-[100px] shadow-white shadow-2xs overflow-hidden ">
         <Image
           src={serviceData?.image}
           alt={serviceData?.name}
-          className="object-cover w-full h-full filter z-0 "
+          className="object-cover w-full h-full filter z-0  hover:brightness-150"
           priority
         />
         <div className="common-padding absolute top-[20vh] left-0">
