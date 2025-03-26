@@ -9,6 +9,9 @@ import Img4 from "../../../../public/4I.jpg";
 import Img5 from "../../../../public/5I.jpg";
 import Img6 from "../../../../public/7I.jpg";
 import Img7 from "../../../../public/8I.jpg";
+import { HeaderData } from "@/data/data";
+import Image from "next/image";
+import ButtonCard from "@/component/common/button";
 
 const Cources = [
   {
@@ -55,6 +58,8 @@ const Cources = [
 ];
 
 export const Service = () => {
+  const serviceCategory = HeaderData.find((item) => item.name === "Services");
+
   return (
     <section className="py-20  ">
       <div className="common-padding mx-auto px-6">
@@ -65,11 +70,11 @@ export const Service = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-lg font-bold text-gray-900 ">Services</h2>
+          <h2 className="text-lg font-bold text-white/90 ">Services</h2>
           <h3 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
             We Provide
           </h3>
-          <p className="max-w-2xl m-auto text-black/70">
+          <p className="max-w-2xl m-auto text-white/70">
             Your brand deserves to be seen, heard, and remembered. Let us craft
             your digital success story with expert marketing, stunning design,
             and powerful SEO.
@@ -90,24 +95,29 @@ export const Service = () => {
           }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
-          {Cources.map((course, index) => (
+          {serviceCategory?.items?.map((service, index) => (
             <motion.div
               key={index}
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
               }}
-              className="bg-gray-100  border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
+              className="bg-gray-100 relative  border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
-              <ImageComponent
-                cardCss="max-h-[26vh]  overflow-hidden"
-                src={course?.img}
-              />
+              <div className="h-[26vh]">
+                <Image
+                  src={service?.image}
+                  alt={service?.name}
+                  priority
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
               <div className="p-5">
-                <h4 className=" text-center font-bold mb-2 text-black ">
-                  {course.title}
+                <h4 className=" text-xl font-bold mb-2 text-primary ">
+                  {service.name}
                 </h4>
-                <p className="text-gray-500 text-sm">{course.description}</p>
+                <p className="text-gray-500 text-sm mb-4">{service.subTitle}</p>
+                <ButtonCard link={service?.link} title="Know more" />
               </div>
             </motion.div>
           ))}
