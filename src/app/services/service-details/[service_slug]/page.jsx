@@ -4,7 +4,7 @@ import React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
-import Testimonials from "@/component/page/cources/testimonial";
+import Testimonials from "@/component/page/courses/testimonial";
 import ButtonCard from "@/component/common/button";
 import HomeIcon from "@mui/icons-material/Home";
 const ServiceDetails = async ({ params }) => {
@@ -21,7 +21,7 @@ const ServiceDetails = async ({ params }) => {
         <Image
           src={serviceData?.image}
           alt={serviceData?.name}
-          className="object-cover w-full h-full filter z-0  hover:brightness-150"
+          className="object-cover w-full h-full filter z-0  hover:brightness-110"
           priority
         />
         <div className="common-padding absolute top-[20vh] left-0">
@@ -57,8 +57,6 @@ const ServiceDetails = async ({ params }) => {
         </div>
       </div>
 
-
-      
       <div className=" text-white common-padding  py-10  font-semibold text-center">
         <div>
           <p className=" uppercase text-sm text-primary   ">services</p>
@@ -98,7 +96,9 @@ const ServiceDetails = async ({ params }) => {
           </div>
         </div>
 
-        <ButtonCard link="/contact" title="Get Service" />
+        <div className="flex justify-center">
+          <ButtonCard link="/contact" title="Get Service" />
+        </div>
       </div>
       <Testimonials />
     </>

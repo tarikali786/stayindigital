@@ -66,7 +66,10 @@ export const Service = () => {
                   {service.name}
                 </h4>
                 <p className="text-gray-500 text-sm mb-4">{service.subTitle}</p>
+                <div className="flex justify-center items-center">
                 <ButtonCard link={service?.link} title="Know more" />
+
+                </div>
               </div>
             </motion.div>
           ))}

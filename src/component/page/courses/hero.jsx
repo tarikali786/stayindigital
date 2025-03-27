@@ -3,10 +3,10 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
-const CourceHero = () => {
+const CourseHero = () => {
   return (
     <div className="global-bg-2  md:h-[50vh] h-[36vh] text-white flex common-padding flex-col justify-center">
-      <h2 className="md:text-4xl text-3xl mb-4">Cources</h2>
+      <h2 className="md:text-4xl text-3xl mb-4">Courses</h2>
       <Breadcrumbs
         separator="›"
         aria-label="breadcrumb"
@@ -21,10 +21,10 @@ const CourceHero = () => {
         >
           Home
         </Link>
-        <Typography sx={{ color: "#e2e2e2" }}>Services</Typography>
+        <Typography sx={{ color: "#e2e2e2" }}>Courses</Typography>
       </Breadcrumbs>
     </div>
   );
 };
 
-export default CourceHero;
+export default CourseHero;

@@ -3,18 +3,18 @@ import Image from "next/image";
 import React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
-import Testimonials from "@/component/page/cources/testimonial";
+import Testimonials from "@/component/page/courses/testimonial";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import HomeIcon from "@mui/icons-material/Home";
 import Link from "next/link";
-const CourceDetails = async ({ params }) => {
-  const { cource_slug } = await params;
-  const courcesCategory = HeaderData.find((item) => item.name === "Cources");
+import ButtonCard from "@/component/common/button";
+const CourseDetails = async ({ params }) => {
+  const { course_slug } = await params;
+  const coursesCategory = HeaderData.find((item) => item.name === "Courses");
 
-  const courceData = courcesCategory?.items.find(
-    (subItem) => subItem.link === `/cources/cource-details/${cource_slug}` // Ensure correct path format
+  const courceData = coursesCategory?.items.find(
+    (subItem) => subItem.link === `/courses/course-details/${course_slug}` // Ensure correct path format
   );
-  console.log(courcesCategory);
 
   return (
     <>
@@ -22,7 +22,7 @@ const CourceDetails = async ({ params }) => {
         <Image
           src={courceData?.bannerImage}
           alt={courceData?.name}
-          className="object-cover w-full h-full filter z-0  hover:brightness-150"
+          className="object-cover w-full h-full filter z-0  hover:brightness-110"
           priority
         />
         <div className="common-padding absolute top-[10vh] md:top-[20vh] left-0">
@@ -46,10 +46,10 @@ const CourceDetails = async ({ params }) => {
             </Link>
             <Link
               underline="hover"
-              href="/services"
+              href="/courses"
               sx={{ opacity: 0.6, color: "#f9f9f9" }}
             >
-              Cources
+              Courses
             </Link>
             <Typography sx={{ color: "#f9f9f9" }}>
               {courceData?.name}
@@ -77,13 +77,15 @@ const CourceDetails = async ({ params }) => {
             <h3 className="text-2xl mt-8 mb-4  font-normal text-primary">
               What We Offer?{" "}
             </h3>
-            <p className=" text-white">{courceData?.whatWeOffer?.title}</p>
+            <p className=" text-white  font-normal">
+              {courceData?.whatWeOffer?.title}
+            </p>
 
             <div className="flex flex-col justify-center  gap-4 mt-6">
               {courceData?.whatWeOffer?.items?.map((item, index) => (
                 <p
                   key={index}
-                  className="text-white/90 text-left flex items-center gap-2 font-normal"
+                  className="text-white/90 font-normal text-left flex items-center gap-2 font-normal"
                 >
                   <TaskAltIcon className="text-blue-700" /> {item}
                 </p>
@@ -100,7 +102,7 @@ const CourceDetails = async ({ params }) => {
               {courceData?.whyChooseus?.items?.map((item, index) => (
                 <div
                   key={index}
-                  className=" flex items-center gap-2 rounded-3xl p-4 bg-white/90 font-normal"
+                  className=" flex items-center gap-2 rounded-3xl p-4 bg-white font-normal"
                 >
                   <div className="w-1/3 h-[12vh]  relative">
                     <Image
@@ -110,7 +112,9 @@ const CourceDetails = async ({ params }) => {
                       priority
                     />
                   </div>
-                  <h3 className="text-black text-xl w-2/3">{item?.title}</h3>
+                  <h3 className="text-black font-normal text-xl w-2/3">
+                    {item?.title}
+                  </h3>
                 </div>
               ))}
             </div>
@@ -119,19 +123,26 @@ const CourceDetails = async ({ params }) => {
             <h3 className="text-2xl mt-8 mb-4  font-normal text-primary">
               Get Started Today !
             </h3>
-            <p>{courceData?.gstTitle}</p>
+            <p className=" font-normal">{courceData?.gstTitle}</p>
+          </div>
+          <div className="flex mt-6 justify-items-start items-start  ">
+            <ButtonCard link="/contact" title="Get Course" />
           </div>
         </div>
 
         {/* Left Sticky Card */}
-        <div className="h-[80vh] md:w-1/4 md:sticky md:top-30 med:left-0 p-4  bg-white/80  rounded-xl">
+        <div className="h-[80vh] md:w-1/4 md:sticky md:top-30 med:left-0 py-4  bg-white  rounded-xl">
           <p className="uppercase text-primary  font-semibold  text-center">
-            Cources
+            Courses
           </p>
 
-          <div className=" space-y-2 flex flex-col  mt-5">
-            {courcesCategory?.items.map((cource, index) => (
-              <Link key={index} href={cource?.link} className="text-black hover:bg-primary hover:text-white  rounded-md font-normal p-2">
+          <div className=" space-y-2 flex flex-col   my-5">
+            {coursesCategory?.items.map((cource, index) => (
+              <Link
+                key={index}
+                href={cource?.link}
+                className="text-black px-4 border-b border-dotted hover:bg-gradient-to-r hover:from-[#103ce7] hover:to-[#64e9ff] hover:text-white  hover:rounded-md font-normal p-2"
+              >
                 {cource?.name}
               </Link>
             ))}
@@ -144,4 +155,4 @@ const CourceDetails = async ({ params }) => {
   );
 };
 
-export default CourceDetails;
+export default CourseDetails;

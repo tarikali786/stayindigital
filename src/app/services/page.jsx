@@ -1,4 +1,4 @@
-import Testimonials from "@/component/page/cources/testimonial";
+import Testimonials from "@/component/page/courses/testimonial";
 import ServiceHero from "@/component/page/service/hero";
 import OurClient from "@/component/page/service/porttitor";
 import Service from "@/component/page/service/service";

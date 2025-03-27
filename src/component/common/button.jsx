@@ -6,7 +6,7 @@ const ButtonCard = ({ title = "Contact Us", link = "#" }) => {
   return link ? (
     <Link
       href={link}
-      className="bg-gradient-to-r from-[#103ce7] to-[#64e9ff] px-6 py-2 m-auto  text-nowrap rounded-4xl w-min gap-2 flex items-center justify-center text-white font-medium "
+      className="bg-gradient-to-r from-[#103ce7] to-[#64e9ff] px-6 py-2  text-nowrap rounded-4xl w-min gap-2 flex items-center justify-center text-white font-medium "
     >
       {title}{" "}
       <div className="size-10  rounded-full bg-white flex items-center justify-center">

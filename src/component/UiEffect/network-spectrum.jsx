@@ -307,6 +307,6 @@ export default function SpectralBackground() {
   }, [isScrolling]);
 
   return (
-    <canvas ref={canvasRef} className="fixed inset-0 -z-10 bg-[#07040f]" />
+    <canvas ref={canvasRef} className="fixed inset-0 -z-10 bg-[#100922]" />
   );
 }

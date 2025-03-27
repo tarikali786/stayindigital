@@ -41,14 +41,14 @@ export const HeaderData = [
   { id: 2, name: "About  Us", link: "/about-us" },
   {
     id: 3,
-    name: "Cources",
-    link: "/cources",
+    name: "Courses",
+    link: "/courses",
 
     items: [
       {
         id: "1b",
         name: "Social Media  Management",
-        link: "/cources/cource-details/social-media-management",
+        link: "/courses/course-details/social-media-management",
         image: SMM,
         bannerImage: SMM1,
         description: [
@@ -95,68 +95,521 @@ export const HeaderData = [
       {
         id: "2b",
         name: "Search Engine Optimization",
-        link: "/cources/cource-details/search-engine-optimization",
+        link: "/courses/course-details/search-engine-optimization",
         image: SEO1A,
+        bannerImage: SMM1,
+        description: [
+          "Our Search Engine Optimization (SEO) course is designed to help you master the techniques and strategies that drive organic traffic, improve search engine rankings, and boost your online presence. Whether you're a business owner, marketer, or aspiring SEO professional, this course will equip you with the tools you need to succeed in the competitive world of digital marketing.",
+          "Unlock the secrets of search engine dominance with our hands-on, expert-led SEO course your gateway to mastering the art of online visibility.",
+          "In today’s digital era, mastering SEO (Search Engine Optimization) is not just an option—it's a necessity for anyone looking to succeed in the online marketplace. Whether you’re a business owner, marketer, or aspiring SEO professional, our tailored SEO courses are designed to provide you with the skills and knowledge you need to excel.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "Comprehensive Curriculum",
+            "Basic of SEO",
+            "Keyword Research",
+            "On-Page Optimization",
+            "Technical SEO",
+            "Content Strategy",
+            "Link Building",
+            "Local SEO",
+            "SEO Analytics and Reportin",
+            "Expert-Led Instruction",
+            "Practical, Hands-On Learning",
+            "Up-to-Date and Relevant Content",
+            "Comprehensive Support and Resources",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Transform your digital presence and unlock new opportunities with our expert-led SEO courses. Whether you're looking to enhance your personal skills or boost your business’s online performance, our courses provide the knowledge and tools you need to succeed.",
       },
       {
         id: "3b",
         name: "Artifical intelligence",
-        link: "/cources/cource-details/artifical-intelligence",
+        link: "/courses/course-details/artifical-intelligence",
         image: AI,
+        bannerImage: SMM1,
+        description: [
+          "Unlock the Future with Our Artificial Intelligence Courses",
+          "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI courses provide the knowledge and skills needed to excel in this dynamic field.",
+        ],
+        whatWeOffer: {
+          title:
+            "Our AI courses are designed to offer a robust, practical, and forward-thinking education in artificial intelligence. Here’s why our program stands out:",
+          items: [
+            "Comprehensive Curriculum",
+            "Basic of SEO",
+            "Keyword Research",
+            "On-Page Optimization",
+            "Technical SEO",
+            "Content Strategy",
+            "Link Building",
+            "Local SEO",
+            "SEO Analytics and Reportin",
+            "Expert-Led Instruction",
+            "Practical, Hands-On Learning",
+            "Up-to-Date and Relevant Content",
+            "Comprehensive Support and Resources",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Transform your digital presence and unlock new opportunities with our expert-led SEO courses. Whether you're looking to enhance your personal skills or boost your business’s online performance, our courses provide the knowledge and tools you need to succeed.",
       },
       {
         id: "4b",
         name: "Website Development",
-        link: "/cources/cource-details/web-development",
+        link: "/courses/course-details/web-development",
         image: WD,
+        bannerImage: SMM1,
+        description: [
+          "Build dynamic, user-friendly websites from the ground up with our Website Developer course—your gateway to mastering the art of web design and coding.",
+          "Our carefully crafted Website development course will provide you with the essential abilities and understanding required to develop stunning, intuitive, and mobile-friendly websites. This course will help you at every stage of the web design process, whether you're just starting out and want to create your first website or you're an experienced professional trying to improve your design skills.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "  Basic of Web Design",
+            "HTML & CSS",
+            "Responsive Design",
+            "SEO Basics",
+            "Final Project & Portfolio Development",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Are you prepared to develop your web design abilities? Take our Website Design course to get started on the path to being a proficient web designer. Our course provides the resources and direction you need to be successful, whether your goals are to pursue a new job, enhance the online appearance of your company, or just explore your creative side.",
       },
       {
         id: "5bb",
         name: "Graphic Designer",
-        link: "/cources/cource-details/graphic-designer",
+        link: "/courses/course-details/graphic-designer",
         image: GDR,
+        bannerImage: SMM1,
+        description: [
+          "Transform your creativity into a career with our Graphic Designer courses—where your vision becomes a masterpiece!",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "Introduction to Graphic Design",
+            "Fundamentals of Design",
+            "Branding and Identity Design",
+            " Digital Design",
+            "   Print Design",
+            " Portfolio Development",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Choosing a graphic designer course is a step towards a dynamic and fulfilling career. Whether you’re looking to start from scratch or refine your existing skills, the right course can provide you with the tools, knowledge, and opportunities to succeed in the vibrant field of graphic design.",
       },
       {
         id: "5b",
         name: "Content Management",
-        link: "/cources/cource-details/content-management",
+        link: "/courses/course-details/content-management",
         image: CM1a,
+        bannerImage: SMM1,
+        description: [
+          "aster the art of digital storytelling with our Content Management course—your key to creating, organizing, and optimizing content that drives engagement.",
+          "In today's digital landscape, effective content management is vital for businesses and organizations aiming to engage their audience and drive results. Our Content Management course is expertly designed to Develop you with the skills and knowledge needed to master the art and science of managing digital content. Whether you're looking to start a career in content management or enhance your current skill set, our course provides a comprehensive, practical education to help you excel.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            " Introduction to Content Management",
+            "Content Strategy Development",
+            "Content Creation and Optimization",
+            "Content Organization and Structure",
+            "Managing Media and Assets",
+            "Content Publishing and Scheduling",
+            "Analytics and Performance Tracking",
+            "Content Governance and Maintenance",
+            "Advanced Content Management Techniques",
+            "Building and Managing Content Teams",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Transform your approach to managing digital content and achieve impactful results with our expert-led course. Whether you're seeking to launch a new career, advance your existing role, or improve your content management strategies, our course provides the knowledge and tools you need to succeed.",
       },
       {
         id: "6b",
         name: "Professional video Editing",
-        link: "/cources/cource-details/professional-video-editing",
+        link: "/courses/course-details/professional-video-editing",
         image: PVE,
+        bannerImage: SMM1,
+        description: [
+          "Transform raw footage into cinematic masterpieces with our Professional Video Editing course—your pathway to creating visually stunning and impactful content.",
+          "In a world where visual content drives engagement and storytelling, mastering video editing is a crucial skill for content creators, marketers, and media professionals. Our Professional Video Editing course is designed to provide you with the skills and knowledge needed to produce high-quality, compelling videos that captivate audiences and Improve your projects.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "Introduction to Video Editing",
+            "Understanding Video Editing Software",
+            "Basic Editing Techniques",
+            "Advanced Editing Techniques",
+            "Working with Audio",
+            "Color Correction and Grading",
+            "Adding Visual Effects and Graphics",
+            "Exporting and Delivering the Final Product",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Transform your video editing skills and create stunning, professional-quality videos with our expert-led course. Whether you’re looking to enhance your current skills or start a new career, our Professional Video Editing course provides the tools and knowledge you need to succeed. Ready to take your editing skills to the next level? Contact us today to learn more about our course and how you can get started on your path to becoming a professional video editor!",
       },
       {
         id: "7b",
         name: "Podcast Creation",
-        link: "/cources/cource-details/podcast-creation",
+        link: "/courses/course-details/podcast-creation",
         image: PC,
+        bannerImage: SMM1,
+        description: [
+          "Turn your voice into influence with our Podcast Creation course—where storytelling meets professional production for a powerful audience connection.",
+          "In the rapidly growing world of digital media, podcasting has emerged as a powerful tool for engaging audiences and sharing your message. Whether you’re an aspiring podcaster or a business looking to expand your content strategy, our Podcast Creation course provides everything you need to produce professional-quality podcasts that captivate and connect with listeners.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "  Introduction to Podcasting",
+            "Developing a Podcast Concept",
+            "Pre-Production Planning",
+            "Equipment and Software Essentials",
+            "Recording Techniques",
+            "Branding and Marketing Your Podcast",
+            "Publishing and Distribution",
+            "Engaging and Growing Your Audience",
+            "Podcast Analytics and Optimization",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Embark on your podcasting adventure with the confidence that you have the knowledge and skills to succeed. Our Podcast Creation course is designed to equip you with everything you need to create, produce, and promote a successful podcast.",
       },
       {
         id: "8b",
         name: "Advertising Campaign",
-        link: "/cources/cource-details/advertising-campaign",
+        link: "/courses/course-details/advertising-campaign",
         image: AC,
+        bannerImage: SMM1,
+        description: [
+          "Craft compelling campaigns that captivate and convert with our Advertising Campaign course—your blueprint for driving results and maximizing ROI",
+          "In today's competitive digital landscape, crafting effective ad campaigns is essential for driving business success and achieving marketing goals. Our Ad Campaign course is meticulously designed to equip you with the skills and insights needed to create, manage, and optimize high-impact ad campaigns that deliver measurable results.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "Introduction to Advertising Campaigns",
+            "Campaign Planning and Strategy",
+            "Creative Concept Development",
+            "Media Planning and Buying",
+            "Content Creation for Campaigns",
+            "Digital Advertising and Social Media Campaigns",
+            "Campaign Execution and Management",
+            "Monitoring and Optimization",
+            "Legal and Ethical Considerations",
+            "Case Studies and Best Practices",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Transform your approach to advertising and drive impactful results with our expert-led Ad Campaign course. Whether you’re looking to enhance your skills, advance your career, or achieve your business objectives, our course provides the tools and knowledge you need to succeed.",
       },
       {
         id: "9b",
         name: "Performance Marketing",
-        link: "/cources/cource-details/performance-marketing",
+        link: "/courses/course-details/performance-marketing",
         image: PMC,
+        bannerImage: SMM1,
+        description: [
+          "Drive your success to the next level with our Performance Marketing course—master data-driven strategies that deliver real, measurable results!",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "  Focus on Data-Driven Results",
+            "Master Key Performance Metrics",
+            "Leverage Multi-Channel Strategies",
+            "Leverage Multi-Channel Strategies",
+            "Learn from Industry Experts",
+            "Create Data-Driven Campaigns",
+            "Stay Ahead with the Latest Trends",
+            "Build a Comprehensive Portfolio",
+            "Flexible Learning Options",
+            "Network with Professionals",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Choosing a Performance Marketing course equips you with the skills and knowledge to drive effective, data-driven marketing campaigns. By mastering performance metrics, leveraging key platforms, and staying updated with industry trends, you’ll be well-prepared to excel in a dynamic and results-oriented field.",
       },
       {
         id: "10b",
         name: "Personality development",
-        link: "/cources/cource-details/personality-development",
+        link: "/courses/course-details/personality-development",
         image: PD,
+        bannerImage: SMM1,
+        description: [
+          "Unlock your true potential and transform your life with our Personality Development courses—where self-improvement meets confidence and success!",
+          "Unlock your full potential with our expertly designed Personality Development Course, crafted to empower you with the skills and confidence needed for personal and professional success. Our course goes beyond traditional training, offering a comprehensive approach to help you stand out and excel in every aspect of your life.",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            " Tailored to Your Needs",
+            "Expert Instructors",
+            "Interactive Learning",
+            "Holistic Approach",
+            "Supportive Community",
+            "Practical Tools and Techniques",
+            "Flexible Learning Options",
+            "Proven Results",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Invest in yourself and take the first step towards a more confident, capable, and charismatic you. Discover the difference that our Personality Development Course can make in your life and unlock a future full of possibilities.",
       },
       {
         id: "11b",
         name: "Search Engine Marketing",
-        link: "/cources/cource-details/search-engine-marketing",
+        link: "/courses/course-details/search-engine-marketing",
         image: SM,
+        bannerImage: SMM1,
+        description: [
+          "Boost your digital presence with our Search Engine Marketing courses—unlock the secrets to dominating search results and driving impactful traffic",
+        ],
+        whatWeOffer: {
+          title: "",
+          items: [
+            "  Understand the SEM Ecosystem",
+            "Develop Expertise in Major Platforms",
+            "Optimize Campaign Performance",
+            "Craft Effective Ad Copy and Creative",
+            "Master Keyword Research and Selection",
+            "Implement and Manage Bidding Strategies",
+            "Stay Updated with Industry Trends",
+            "Build a Strong Portfolio",
+            "Flexible Learning Options",
+            "Network with Industry Professionals",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Choosing a Search Engine Marketing course equips you with the skills and knowledge to excel in the competitive field of search advertising. By mastering key platforms, optimizing campaigns, and staying updated with industry trends, you'll be well-prepared to drive impactful results and advance your career in SEM.",
       },
     ],
   },
@@ -432,7 +885,7 @@ export const HeaderData = [
       },
     ],
   },
-  { id: 5, name: "Gallery", link: "/gallery" },
+  { id: 5, name: "Blogs", link: "/blogs" },
   { id: 6, name: "Contact", link: "/contact" },
 ];
 export const FooterData = {
@@ -457,9 +910,9 @@ export const FooterData = {
     ],
   },
   Cources: {
-    title: "Cources",
+    title: "Courses",
     links: [
-      { id: 1, name: "SEO", link: "/Cources/seo" },
+      { id: 1, name: "SEO", link: "/Courses/seo" },
       { id: 2, name: "Social Media Management", link: "/Cources/social-media" },
       {
         id: 3,

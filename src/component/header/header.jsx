@@ -25,7 +25,7 @@ const Header = () => {
         {HeaderData?.map((item) => (
           <div className="relative" key={item.id}>
             <Link
-              className="text-[16px] text-black text-nowrap"
+              className="text-[16px] text-black text-nowrap hover:text-primary hover:font-semibold"
               href={item.link}
               onMouseOver={() => setIsOpen(item.id)}
             >
@@ -42,7 +42,7 @@ const Header = () => {
                     key={index}
                     href={subItem.link}
                     onClick={() => setIsOpen("")}
-                    className="block text-black p-2 hover:bg-blue-500 hover:text-white rounded-md"
+                    className="block text-black p-2 hover:bg-gradient-to-r hover:from-[#103ce7] hover:to-[#64e9ff] hover:text-white rounded-md"
                   >
                     {subItem.name}
                   </Link>
