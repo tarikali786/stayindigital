@@ -56,6 +56,9 @@ const ServiceDetails = async ({ params }) => {
           </Breadcrumbs>
         </div>
       </div>
+
+
+      
       <div className=" text-white common-padding  py-10  font-semibold text-center">
         <div>
           <p className=" uppercase text-sm text-primary   ">services</p>

@@ -9,6 +9,9 @@ import Img4 from "../../../../public/4I.jpg";
 import Img5 from "../../../../public/5I.jpg";
 import Img6 from "../../../../public/7I.jpg";
 import Img7 from "../../../../public/8I.jpg";
+import { HeaderData } from "@/data/data";
+import Image from "next/image";
+import ButtonCard from "@/component/common/button";
 
 const Cources = [
   {
@@ -55,6 +58,8 @@ const Cources = [
 ];
 
 export const Service = () => {
+  const CourcesCategory = HeaderData.find((item) => item.name === "Cources");
+
   return (
     <section className="py-20  ">
       <div className="common-padding mx-auto px-6">
@@ -67,7 +72,7 @@ export const Service = () => {
         >
           <h2 className="text-lg font-bold text-white/60 ">Courses</h2>
           <h3 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
-          Courses We Provide !
+            Courses We Provide !
           </h3>
           <p className="max-w-2xl m-auto text-white/70">
             Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
@@ -91,7 +96,7 @@ export const Service = () => {
           }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
-          {Cources.map((course, index) => (
+          {CourcesCategory?.items?.map((course, index) => (
             <motion.div
               key={index}
               variants={{
@@ -100,15 +105,20 @@ export const Service = () => {
               }}
               className="bg-gray-100  border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
-              <ImageComponent
-                cardCss="max-h-[26vh]  overflow-hidden"
-                src={course?.img}
-              />
+              <div className="h-[26vh]">
+                <Image
+                  src={course?.image}
+                  alt={course?.name}
+                  priority
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
               <div className="p-5">
-                <h4 className=" text-center font-bold mb-2 text-black ">
-                  {course.title}
+                <h4 className=" text-center font-bold mb-6 text-black ">
+                  {course.name}
                 </h4>
-                <p className="text-gray-500 text-sm">{course.description}</p>
+                {/* <p className="text-gray-500 text-sm">{course.description}</p> */}
+                <ButtonCard link={course?.link} title="Know more" />
               </div>
             </motion.div>
           ))}

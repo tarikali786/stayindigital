@@ -1,4 +1,5 @@
 import Angular from "../../public/angular.png";
+// Service
 import SMD from "../../public/service/social-media-services.jpg";
 import SMD1 from "../../public/service/social-media-marketing-services.png";
 import CM from "../../public/service/content-services.jpg";
@@ -11,6 +12,30 @@ import Email from "../../public/service/email-services.jpg";
 import Email1 from "../../public/service/email-marketing-services.png";
 import GD from "../../public/service/graphic-design-service.jpg";
 import GD1 from "../../public/service/graphic-design-services.png";
+// Cources
+
+import SMM from "../../public/cource/social-media.png";
+import SMM1 from "../../public/cource/social-media-banner.jpg";
+import SEO1A from "../../public/cource/seo.png";
+import AI from "../../public/cource/ai.png";
+import WD from "../../public/cource/website-design.png";
+import GDR from "../../public/cource/graphic-designer.png";
+
+import CM1a from "../../public/cource/content-management.png";
+import PVE from "../../public/cource/video-editing.png";
+
+import PC from "../../public/cource/pod-cast.png";
+import AC from "../../public/cource/ad-campainge.png";
+import PMC from "../../public/cource/performance-marketing-course.png";
+import PD from "../../public/cource/personality-development.png";
+import SM from "../../public/cource/search-marketing.png";
+
+// Cource Icon
+import Team from "../../public/cource/team.png";
+import Approach from "../../public/cource/approach.png";
+import Service from "../../public/cource/services.png";
+import Communication from "../../public/cource/trans-communication.png";
+
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About  Us", link: "/about-us" },
@@ -18,66 +43,120 @@ export const HeaderData = [
     id: 3,
     name: "Cources",
     link: "/cources",
+
     items: [
       {
         id: "1b",
         name: "Social Media  Management",
         link: "/cources/cource-details/social-media-management",
+        image: SMM,
+        bannerImage: SMM1,
+        description: [
+          "Your Search Engine Optimization (SEO) course is designed to help you master the techniques and strategies that drive organic traffic, improve search engine rankings, and boost your online presence. Whether you're a business owner, marketer, or aspiring SEO professional, this course will equip you with the tools you need to succeed in the competitive world of digital marketing.",
+
+          "Unlock the secrets of search engine dominance with our hands-on, expert-led SEO course—your gateway to mastering the art of online visibility.",
+
+          "In today’s digital era, mastering SEO (Search Engine Optimization) is not just an option—it's a necessity for anyone looking to succeed in the online marketplace. Whether you’re a business owner, marketer, or aspiring SEO professional, our tailored SEO courses are designed to provide you with the skills and knowledge you need to excel.",
+        ],
+        whatWeOffer: {
+          title:
+            "Our Social Media Management services are designed to enhance your online presence through strategic planning, creative content, and data-driven insights. Here’s how we can help:",
+          items: [
+            "Tailored Social Media Strategy",
+            "Engaging Content Creation",
+            "Expert Social Media Management",
+            "Data-Driven Insights and Reporting",
+            "Strategic Social Media Advertising",
+          ],
+        },
+        whyChooseus: {
+          items: [
+            {
+              icon: Team,
+              title: "Experienced Team",
+            },
+            {
+              icon: Approach,
+              title: "Customized Approach",
+            },
+            {
+              icon: Service,
+              title: "Comprehensive Services",
+            },
+            {
+              icon: Communication,
+              title: "Transparent Communication",
+            },
+          ],
+        },
+        gstTitle:
+          "Ready to transform your social media presence and connect with your audience like never before? Contact us to learn more about our Social Media Management services and how we can help your business thrive in the digital age.",
       },
       {
         id: "2b",
         name: "Search Engine Optimization",
         link: "/cources/cource-details/search-engine-optimization",
+        image: SEO1A,
       },
       {
         id: "3b",
         name: "Artifical intelligence",
         link: "/cources/cource-details/artifical-intelligence",
+        image: AI,
       },
       {
         id: "4b",
         name: "Website Development",
         link: "/cources/cource-details/web-development",
+        image: WD,
       },
       {
         id: "5bb",
         name: "Graphic Designer",
         link: "/cources/cource-details/graphic-designer",
+        image: GDR,
       },
       {
         id: "5b",
         name: "Content Management",
         link: "/cources/cource-details/content-management",
+        image: CM1a,
       },
       {
         id: "6b",
         name: "Professional video Editing",
         link: "/cources/cource-details/professional-video-editing",
+        image: PVE,
       },
       {
         id: "7b",
         name: "Podcast Creation",
         link: "/cources/cource-details/podcast-creation",
+        image: PC,
       },
       {
         id: "8b",
         name: "Advertising Campaign",
         link: "/cources/cource-details/advertising-campaign",
+        image: AC,
       },
       {
         id: "9b",
         name: "Performance Marketing",
         link: "/cources/cource-details/performance-marketing",
+        image: PMC,
       },
       {
         id: "10b",
         name: "Personality development",
         link: "/cources/cource-details/personality-development",
+        image: PD,
       },
       {
         id: "11b",
         name: "Search Engine Marketing",
         link: "/cources/cource-details/search-engine-marketing",
+        image: SM,
       },
     ],
   },
