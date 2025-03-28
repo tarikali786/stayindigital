@@ -57,3 +57,12 @@ h6 {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+
+.blog-hero {
+  background: linear-gradient(#893aff5f, rgba(17, 24, 74, 0.6)),
+    url("../../public/blog.webp");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

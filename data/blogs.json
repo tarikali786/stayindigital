@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1743061382005,
+    "title": "My First Blog with Image",
+    "content": "<h2>Welcome to my blog!</h2> <p>This is a rich-text formatted content with <b>bold</b> and <i>italic</i> text.</p>\n",
+    "slug": "my-first-blog-with-image",
+    "banner": "/uploads/1743061382003-content-management.png",
+    "createdAt": "2025-03-27T07:43:02.005Z",
+    "updatedAt": "2025-03-27T07:43:02.007Z"
+  },
+  {
+    "id": 1743062157257,
+    "title": "My First Blog with Image",
+    "content": "<h2>Welcome to my blog!</h2> <p>This is a rich-text formatted content with <b>bold</b> and <i>italic</i> text.</p>\n",
+    "slug": "my-first-blog-with-image-1",
+    "banner": "/uploads/1743062157254-content-management.png",
+    "createdAt": "2025-03-27T07:55:57.257Z",
+    "updatedAt": "2025-03-27T07:55:57.257Z"
+  },
+  {
+    "id": 1743062161505,
+    "title": "My First Blog with Image",
+    "content": "<h2>Welcome to my blog!</h2> <p>This is a rich-text formatted content with <b>bold</b> and <i>italic</i> text.</p>\n",
+    "slug": "my-first-blog-with-image-2",
+    "banner": "/uploads/1743062161503-content-management.png",
+    "createdAt": "2025-03-27T07:56:01.505Z",
+    "updatedAt": "2025-03-27T07:56:01.505Z"
+  }
+]

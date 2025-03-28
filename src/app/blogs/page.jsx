@@ -1,7 +1,11 @@
-import React from "react";
+import BlogList from "@/component/page/blog/blog-list";
+import Hero from "@/component/page/blog/hero";
 
-const Blogs = () => {
-  return <div>Blogs</div>;
-};
-
-export default Blogs;
+export default async function Blogs() {
+  return (
+    <>
+      <Hero />
+      <BlogList />
+    </>
+  );
+}
