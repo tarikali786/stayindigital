@@ -24,6 +24,7 @@ const CourseDetails = async ({ params }) => {
           alt={courceData?.name}
           className="object-cover w-full h-full filter z-0  hover:brightness-110"
           priority
+          fill
         />
         <div className="common-padding absolute top-[10vh] md:top-[20vh] left-0">
           <h2 className="md:text-4xl text-3xl mb-4 text-white">
@@ -66,7 +67,7 @@ const CourseDetails = async ({ params }) => {
             <h3 className="text-4xl my-4 text-primary">{courceData?.name}</h3>
             <div className="flex flex-col gap-4">
               {courceData?.description?.map((item, index) => (
-                <p key={index} className="text-white text-left font-normal">
+                <p key={index} className="text-white  text-left font-normal">
                   {item}
                 </p>
               ))}
@@ -85,7 +86,7 @@ const CourseDetails = async ({ params }) => {
               {courceData?.whatWeOffer?.items?.map((item, index) => (
                 <p
                   key={index}
-                  className="text-white/90 font-normal text-left flex items-center gap-2 font-normal"
+                  className="text-white/90 font-normal text-left flex items-center gap-2 "
                 >
                   <TaskAltIcon className="text-blue-700" /> {item}
                 </p>
@@ -110,6 +111,7 @@ const CourseDetails = async ({ params }) => {
                       alt={item?.title}
                       className="object-contain w-full h-full "
                       priority
+                      fill
                     />
                   </div>
                   <h3 className="text-black font-normal text-xl w-2/3">

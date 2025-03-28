@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Img1 from "../../../../public/4I.jpg";
 import ImageComponent from "@/component/common/ImageComponent";
+import Image from "next/image";
 const Posuere = () => {
   return (
     <section className="py-16 common-padding   text-white   flex flex-col md:flex-row gap-6  items-start  overflow-hidden w-full ">
@@ -31,12 +32,14 @@ const Posuere = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative md:w-1/2"
+        className="relative md:w-1/2  md:h-[50vh]"
       >
-        <ImageComponent
+        <Image
           src={Img1}
           alt="Trust Image"
-          cardCss=" w-full md:h-[50vh] "
+          className=" fill object-cover rounded-xl   "
+          fill
+          loading="lazy"
         />
       </motion.div>
     </section>

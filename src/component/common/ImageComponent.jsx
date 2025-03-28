@@ -25,8 +25,6 @@ const ImageComponent = ({ src, alt, imgCss, variant }) => {
         <Image
           src={src}
           alt={alt || "Image"}
-          height={"100%"}
-          width={"100%"}
           className={` w-full h-full ${imgCss || "object-cover rounded-lg "}`}
           onLoadingComplete={() => setLoading(false)}
           onError={() => {
@@ -35,6 +33,7 @@ const ImageComponent = ({ src, alt, imgCss, variant }) => {
           }}
           placeholder="empty"
           loading="lazy"
+          fill
         />
       ) : null}
     </div>

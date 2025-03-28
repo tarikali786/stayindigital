@@ -5,9 +5,7 @@ import { HeaderData } from "@/data/data";
 import Image from "next/image";
 import ButtonCard from "@/component/common/button";
 
-
-
-export const Service = () => {
+const CoursesList = () => {
   const CourcesCategory = HeaderData.find((item) => item.name === "Courses");
 
   return (
@@ -78,4 +76,4 @@ export const Service = () => {
   );
 };
 
-export default Service;
+export default CoursesList;

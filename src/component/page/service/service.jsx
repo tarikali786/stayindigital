@@ -53,19 +53,20 @@ export const Service = () => {
               }}
               className="bg-gray-100 relative  border border-gray-800  rounded-lg  flex flex-col items-center  hover:border-primary  hover:shadow-md shadow-white transition-all duration-300"
             >
-              <div className="h-[26vh]">
+              <div className="w-full relative h-[26vh]">
                 <Image
                   src={service?.image}
                   alt={service?.name}
                   priority
-                  className="w-full h-full object-cover rounded-lg"
+                  fill
+                  className="w-full h-full object-fill rounded-lg"
                 />
               </div>
               <div className="p-5">
                 <h4 className=" text-xl font-bold mb-2 text-primary ">
                   {service.name}
                 </h4>
-                <p className="text-gray-500 text-sm mb-4">{service.subTitle}</p>
+                <p className="text-gray-500 text-sm mb-4 line-clamp-4">{service.subTitle}</p>
                 <div className="flex justify-center items-center">
                 <ButtonCard link={service?.link} title="Know more" />
 

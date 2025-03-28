@@ -84,13 +84,13 @@ export default function HomeServices() {
               }}
               className="bg-white rounded-4xl shadow-2xl p-6 flex flex-col items-center text-center  cursor-pointer"
             >
-              <div className="p-4 md:size-24 size-20  flex items-center justify-center bg-white rounded-full mb-4">
+              <div className="p-4 relative md:size-18 size-14  flex items-center justify-center bg-white rounded-full mb-4">
                 {/* {service.icon} */}
                 <Image
                   src={service.icon}
                   alt="icon"
-                  height="100%"
-                  width="100%"
+                  fill
+                  loading="lazy"
                   className="object-contain"
                 />
               </div>
@@ -103,7 +103,7 @@ export default function HomeServices() {
           ))}
 
           <div className="flex justify-center items-center mt-6 col-span-full">
-            <ButtonCard title="View All Services" />
+            <ButtonCard title="View All Services" link="services" />
           </div>
         </motion.div>
       </div>

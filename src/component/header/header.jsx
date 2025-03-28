@@ -12,13 +12,17 @@ const Header = () => {
 
   return (
     <div className=" bg-white  py-2 common-padding shadow-md   text-black sticky top-11 z-50 flex items-center gap-4  justify-between ">
-      <Link href="/" className="flex items-center gap-1 justify-start">
-        <Image
-          src={Logo}
-          className=" object-contain  md:size-14 size-10   "
-          loading="lazy"
-          alt="StayInDigital"
-        />
+      <Link href="/" className="flex  items-center gap-1 justify-start">
+        <div className=" relative md:size-14 size-10">
+          <Image
+            src={Logo}
+            className=" object-contain  w-full h-full  "
+            alt="StayInDigital"
+            fill
+            priority
+          />
+        </div>
+
         <h1 className="md:text-xl text-primary">Stay in Digital</h1>
       </Link>
       <div className="hidden md:flex items-center lg:gap-10 md:gap-6 sm:gap-4 gap-4">

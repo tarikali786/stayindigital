@@ -15,6 +15,7 @@ import Img6 from "../../../../public/7I.jpg";
 import Img7 from "../../../../public/8I.jpg";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
+import ButtonCard from "@/component/common/button";
 
 const Cources = [
   {
@@ -98,14 +99,17 @@ export const HomeCources = () => {
                 transition={{ duration: 0.2 }}
                 className="bg-gray-100 overflow-hidden border border-gray-800 rounded-4xl flex flex-col items-center hover:border-primary hover:shadow-md transition-all duration-300"
               >
-                <Image
-                  src={course.img}
-                  alt="img"
-                  loading="lazy"
-                  className="xl:h-[60vh] md:h-[50vh] sm:h-[30vh] h-[30vh]  "
-                />
+                <div className="xl:h-[60vh] w-full md:h-[50vh] sm:h-[30vh] h-[30vh] relative ">
+                  <Image
+                    src={course.img}
+                    alt="img"
+                    loading="lazy"
+                    fill
+                    className=" object-cover"
+                  />
+                </div>
                 <div className=" text-center py-8 px-6">
-                  <h4 className="  text-3xl font-bold mb-2 text-black">
+                  <h4 className="  sm:text-2xl md:text-3xl text-xl font-bold mb-2 text-black">
                     {course.title}
                   </h4>
                   <p className="text-gray-500 text-sm line-clamp-1">
@@ -116,6 +120,9 @@ export const HomeCources = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="flex justify-center mt-10">
+        <ButtonCard title="See All Courses" link="/courses" />
       </div>
     </section>
   );

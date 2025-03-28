@@ -21,8 +21,9 @@ const ServiceDetails = async ({ params }) => {
         <Image
           src={serviceData?.image}
           alt={serviceData?.name}
-          className="object-cover w-full h-full filter z-0  hover:brightness-110"
+          className="object-fill w-full h-full filter z-0  hover:brightness-110"
           priority
+          fill
         />
         <div className="common-padding absolute top-[20vh] left-0">
           <h2 className="md:text-4xl text-3xl mb-4 text-white">

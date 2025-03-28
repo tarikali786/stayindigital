@@ -33,7 +33,9 @@ const Technology = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="sm:text-3xl text-xl text-white font-bold">Web Front-End</h2>
+          <h2 className="sm:text-3xl text-xl text-white font-bold">
+            Web Front-End
+          </h2>
         </motion.div>
         <div className="flex justify-center sm:gap-16 gap-8 flex-wrap">
           {Webtechnologies.map((tech, index) => (
@@ -44,12 +46,13 @@ const Technology = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="  "
             >
-              <div className="sm:size-26 size-20 sm:p-4 p-3 bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
+              <div className="sm:size-26  relative size-20  bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
                 <Image
                   src={tech.icon}
                   alt={tech.name}
-                  width={"100%"}
-                  height={"100%"}
+                  fill
+                  loading="lazy"
+                  className="p-3  object-contain"
                 />
               </div>
               <p className="text-lg  text-white/80">{tech.name}</p>
@@ -76,12 +79,13 @@ const Technology = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="  "
             >
-              <div className="sm:size-26 size-20 sm:p-4 p-3 bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
+              <div className="sm:size-26 relative size-20  bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
                 <Image
                   src={tech.icon}
                   alt={tech.name}
-                  width={"100%"}
-                  height={"100%"}
+                  fill
+                  loading="lazy"
+                  className=" p-3  object-contain"
                 />
               </div>
               <p className="text-lg  text-white/80">{tech.name}</p>
@@ -105,17 +109,16 @@ const Technology = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="  "
                 >
-                  <div className="sm:size-26 size-20 sm:p-4 p-3 bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
+                  <div className="sm:size-26 relative size-20  bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={"100%"}
-                      height={"100%"}
+                      fill
+                      priority
+                      className=" p-3  object-contain"
                     />
                   </div>
-                  <p className="text-lg text-white/80">
-                    {tech.name}
-                  </p>
+                  <p className="text-lg text-white/80">{tech.name}</p>
                 </motion.div>
               ))}
             </div>
@@ -138,18 +141,16 @@ const Technology = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="  "
                 >
-                  <div className="sm:size-26 size-20 sm:p-4 p-3 bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
+                  <div className="sm:size-26 relative size-20  bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={"100%"}
-                      height={"100%"}
+                      fill
                       loading="lazy"
+                      className=" p-3 object-contain"
                     />
                   </div>
-                  <p className="text-lg  text-white/80">
-                    {tech.name}
-                  </p>
+                  <p className="text-lg  text-white/80">{tech.name}</p>
                 </motion.div>
               ))}
             </div>
