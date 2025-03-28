@@ -1,64 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ImageComponent from "../../common/ImageComponent";
-import Img from "../../../../public/1I.jpg";
-import Img2 from "../../../../public/2I.jpg";
-import Img3 from "../../../../public/3I.jpg";
-import Img4 from "../../../../public/4I.jpg";
-import Img5 from "../../../../public/5I.jpg";
-import Img6 from "../../../../public/7I.jpg";
-import Img7 from "../../../../public/8I.jpg";
 import { HeaderData } from "@/data/data";
 import Image from "next/image";
 import ButtonCard from "@/component/common/button";
 
-const Cources = [
-  {
-    img: Img,
-    title: "Social Media Management",
-    description:
-      "Ready to transform your social media presence and connect with your audience like never before? Contact us to learn more about our Social Media Management services and how we can help your business thrive in the digital age.",
-  },
-  {
-    img: Img2,
 
-    title: "Search Engine Optimization",
-    description:
-      "Transform your digital presence and unlock new opportunities with our expert-led SEO Cources. Whether you're looking to enhance your personal skills or boost your business’s online performance, our Cources provide the knowledge and tools you need to succeed.",
-  },
-  {
-    img: Img3,
-
-    title: "Artificial Intelligence",
-    description:
-      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI Cources provide the knowledge and skills needed to excel in this dynamic field.",
-  },
-  {
-    img: Img4,
-
-    title: "Website Development",
-    description:
-      "Build dynamic, user-friendly websites from the ground up with our Website Developer course—your gateway to mastering the art of web design and coding.",
-  },
-  {
-    img: Img5,
-
-    title: "Graphic Design",
-    description:
-      "Choosing a graphic designer course is a step towards a dynamic and fulfilling career. Whether you’re looking to start from scratch or refine your existing skills, the right course can provide you with the tools, knowledge, and opportunities to succeed in the vibrant field of graphic design.",
-  },
-  {
-    img: Img6,
-
-    title: "Content Management",
-    description:
-      "Transform your approach to managing digital content and achieve impactful results with our expert-led course. Whether you're seeking to launch a new career, advance your existing role, or improve your content management strategies, our course provides the knowledge and tools you need to succeed.",
-  },
-];
 
 export const Service = () => {
-  const CourcesCategory = HeaderData.find((item) => item.name === "Cources");
+  const CourcesCategory = HeaderData.find((item) => item.name === "Courses");
 
   return (
     <section className="py-20  ">
