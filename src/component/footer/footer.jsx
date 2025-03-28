@@ -13,12 +13,16 @@ const Footer = () => {
       <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr] md:grid-cols-2 sm:grid-cols-1 gap-12 sm:items-start text-center   sm:text-left ">
         <div className="flex flex-col justify-center sm:items-start  items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src={Logo}
-              className=" object-contain  size-10 md:size-14  "
-              loading="lazy"
-              alt="StayInDigital"
-            />
+            <div className=" relative size-10 md:size-14">
+              <Image
+                src={Logo}
+                className=" object-contain    "
+                priority
+                fill
+                alt="StayInDigital"
+              />
+            </div>
+
             <h1 className="md:text-xl text-primary">Stay in Digital</h1>
           </Link>
           <p className="text-sm mt-2 leading-5.5">

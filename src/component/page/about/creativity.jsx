@@ -36,7 +36,12 @@ const Creativity = () => {
         </div>
         {/* <p className=" absolute ri"></p> */}
         <div className="  rounded-xl overflow-hidden sm:w-1/2 w-full">
-          <Image src={Img1} alt="img" className="  sm:h-[60vh] h-[40vh]" />
+          <Image
+            src={Img1}
+            alt="img"
+            loading="lazy"
+            className="  sm:h-[60vh] h-[40vh]"
+          />
         </div>
       </div>
 
@@ -59,7 +64,12 @@ const Creativity = () => {
         </div>
         {/* <p className=" absolute ri"></p> */}
         <div className="  rounded-xl overflow-hidden sm:w-1/2 w-full">
-          <Image src={Img2} alt="img" className="  sm:h-[60vh] h-[40vh]" />
+          <Image
+            src={Img2}
+            alt="img"
+            className="  sm:h-[60vh] h-[40vh]"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
