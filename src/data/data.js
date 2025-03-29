@@ -15,20 +15,32 @@ import GD1 from "../../public/service/graphic-design-services.png";
 // Cources
 
 import SMM from "../../public/cource/social-media.png";
-import SMM1 from "../../public/cource/social-media-banner.jpg";
+import SMM1 from "../../public/cource/social-media-management.jpg";
 import SEO1A from "../../public/cource/seo.png";
+import SEO1A1 from "../../public/cource/search-engine-optimization.jpg";
+
 import AI from "../../public/cource/ai.png";
+import AI1 from "../../public/cource/artificial-intelligence.jpg";
 import WD from "../../public/cource/website-design.png";
+import WD1 from "../../public/cource/website-development.jpg";
 import GDR from "../../public/cource/graphic-designer.png";
+import GDR1 from "../../public/cource/graphic-design.jpg";
 
 import CM1a from "../../public/cource/content-management.png";
+import CM1a1 from "../../public/cource/content-marketing.jpg";
 import PVE from "../../public/cource/video-editing.png";
+import PVE1 from "../../public/cource/professional-video-editing.jpg";
 
 import PC from "../../public/cource/pod-cast.png";
+import PC1 from "../../public/cource/podcast-creation.jpg";
 import AC from "../../public/cource/ad-campainge.png";
+import AC1 from "../../public/cource/advertising-campaign.jpg";
 import PMC from "../../public/cource/performance-marketing-course.png";
+import PMC1 from "../../public/cource/performance-marketing.jpg";
 import PD from "../../public/cource/personality-development.png";
+import PD1 from "../../public/cource/personality-development.jpg";
 import SM from "../../public/cource/search-marketing.png";
+import SM1 from "../../public/cource/search-engine-marketing.jpg";
 
 // Cource Icon
 import Team from "../../public/cource/team.png";
@@ -97,7 +109,7 @@ export const HeaderData = [
         name: "Search Engine Optimization",
         link: "/courses/course-details/search-engine-optimization",
         image: SEO1A,
-        bannerImage: SMM1,
+        bannerImage: SEO1A1,
         description: [
           "Our Search Engine Optimization (SEO) course is designed to help you master the techniques and strategies that drive organic traffic, improve search engine rankings, and boost your online presence. Whether you're a business owner, marketer, or aspiring SEO professional, this course will equip you with the tools you need to succeed in the competitive world of digital marketing.",
           "Unlock the secrets of search engine dominance with our hands-on, expert-led SEO course your gateway to mastering the art of online visibility.",
@@ -149,7 +161,7 @@ export const HeaderData = [
         name: "Artifical intelligence",
         link: "/courses/course-details/artifical-intelligence",
         image: AI,
-        bannerImage: SMM1,
+        bannerImage: AI1,
         description: [
           "Unlock the Future with Our Artificial Intelligence Courses",
           "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI courses provide the knowledge and skills needed to excel in this dynamic field.",
@@ -201,7 +213,7 @@ export const HeaderData = [
         name: "Website Development",
         link: "/courses/course-details/web-development",
         image: WD,
-        bannerImage: SMM1,
+        bannerImage: WD1,
         description: [
           "Build dynamic, user-friendly websites from the ground up with our Website Developer course—your gateway to mastering the art of web design and coding.",
           "Our carefully crafted Website development course will provide you with the essential abilities and understanding required to develop stunning, intuitive, and mobile-friendly websites. This course will help you at every stage of the web design process, whether you're just starting out and want to create your first website or you're an experienced professional trying to improve your design skills.",
@@ -244,7 +256,7 @@ export const HeaderData = [
         name: "Graphic Designer",
         link: "/courses/course-details/graphic-designer",
         image: GDR,
-        bannerImage: SMM1,
+        bannerImage: GDR1,
         description: [
           "Transform your creativity into a career with our Graphic Designer courses—where your vision becomes a masterpiece!",
         ],
@@ -287,7 +299,7 @@ export const HeaderData = [
         name: "Content Management",
         link: "/courses/course-details/content-management",
         image: CM1a,
-        bannerImage: SMM1,
+        bannerImage: CM1a1,
         description: [
           "aster the art of digital storytelling with our Content Management course—your key to creating, organizing, and optimizing content that drives engagement.",
           "In today's digital landscape, effective content management is vital for businesses and organizations aiming to engage their audience and drive results. Our Content Management course is expertly designed to Develop you with the skills and knowledge needed to master the art and science of managing digital content. Whether you're looking to start a career in content management or enhance your current skill set, our course provides a comprehensive, practical education to help you excel.",
@@ -335,7 +347,7 @@ export const HeaderData = [
         name: "Professional video Editing",
         link: "/courses/course-details/professional-video-editing",
         image: PVE,
-        bannerImage: SMM1,
+        bannerImage: PVE1,
         description: [
           "Transform raw footage into cinematic masterpieces with our Professional Video Editing course—your pathway to creating visually stunning and impactful content.",
           "In a world where visual content drives engagement and storytelling, mastering video editing is a crucial skill for content creators, marketers, and media professionals. Our Professional Video Editing course is designed to provide you with the skills and knowledge needed to produce high-quality, compelling videos that captivate audiences and Improve your projects.",
@@ -381,7 +393,7 @@ export const HeaderData = [
         name: "Podcast Creation",
         link: "/courses/course-details/podcast-creation",
         image: PC,
-        bannerImage: SMM1,
+        bannerImage: PC1,
         description: [
           "Turn your voice into influence with our Podcast Creation course—where storytelling meets professional production for a powerful audience connection.",
           "In the rapidly growing world of digital media, podcasting has emerged as a powerful tool for engaging audiences and sharing your message. Whether you’re an aspiring podcaster or a business looking to expand your content strategy, our Podcast Creation course provides everything you need to produce professional-quality podcasts that captivate and connect with listeners.",
@@ -428,7 +440,7 @@ export const HeaderData = [
         name: "Advertising Campaign",
         link: "/courses/course-details/advertising-campaign",
         image: AC,
-        bannerImage: SMM1,
+        bannerImage: AC1,
         description: [
           "Craft compelling campaigns that captivate and convert with our Advertising Campaign course—your blueprint for driving results and maximizing ROI",
           "In today's competitive digital landscape, crafting effective ad campaigns is essential for driving business success and achieving marketing goals. Our Ad Campaign course is meticulously designed to equip you with the skills and insights needed to create, manage, and optimize high-impact ad campaigns that deliver measurable results.",
@@ -476,7 +488,7 @@ export const HeaderData = [
         name: "Performance Marketing",
         link: "/courses/course-details/performance-marketing",
         image: PMC,
-        bannerImage: SMM1,
+        bannerImage: PMC1,
         description: [
           "Drive your success to the next level with our Performance Marketing course—master data-driven strategies that deliver real, measurable results!",
         ],
@@ -523,7 +535,7 @@ export const HeaderData = [
         name: "Personality development",
         link: "/courses/course-details/personality-development",
         image: PD,
-        bannerImage: SMM1,
+        bannerImage: PD1,
         description: [
           "Unlock your true potential and transform your life with our Personality Development courses—where self-improvement meets confidence and success!",
           "Unlock your full potential with our expertly designed Personality Development Course, crafted to empower you with the skills and confidence needed for personal and professional success. Our course goes beyond traditional training, offering a comprehensive approach to help you stand out and excel in every aspect of your life.",
@@ -569,7 +581,7 @@ export const HeaderData = [
         name: "Search Engine Marketing",
         link: "/courses/course-details/search-engine-marketing",
         image: SM,
-        bannerImage: SMM1,
+        bannerImage: SM1,
         description: [
           "Boost your digital presence with our Search Engine Marketing courses—unlock the secrets to dominating search results and driving impactful traffic",
         ],

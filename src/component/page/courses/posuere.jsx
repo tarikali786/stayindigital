@@ -39,6 +39,7 @@ const Posuere = () => {
           alt="Trust Image"
           className=" fill object-cover rounded-xl   "
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
           loading="lazy"
         />
       </motion.div>

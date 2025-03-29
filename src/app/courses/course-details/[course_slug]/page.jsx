@@ -19,15 +19,18 @@ const CourseDetails = async ({ params }) => {
   return (
     <>
       <div className="md:h-[60vh] h-[40vh] w-full   relative  rounded-b-[100px] shadow-white shadow-2xs overflow-hidden ">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1839bb7c] to-[#10418283] z-3"></div>
+
         <Image
           src={courceData?.bannerImage}
           alt={courceData?.name}
-          className="object-cover w-full h-full filter z-0  hover:brightness-110"
+          className="object-fill w-full h-full filter z-0  hover:brightness-110"
           priority
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
-        <div className="common-padding absolute top-[10vh] md:top-[20vh] left-0">
-          <h2 className="md:text-4xl text-3xl mb-4 text-white">
+        <div className="common-padding absolute top-[10vh] md:top-[20vh] z-30 left-0">
+          <h2 className="md:text-4xl text-3xl mb-4 text-white ">
             {courceData?.name}
           </h2>
           <Breadcrumbs

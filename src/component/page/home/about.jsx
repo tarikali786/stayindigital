@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Img1 from "../../../../public/4I.jpg";
-import ImageComponent from "@/component/common/ImageComponent";
 import Image from "next/image";
 const HomeAbout = () => {
   return (
@@ -40,6 +39,7 @@ const HomeAbout = () => {
           src={Img1}
           alt="Trust Image"
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
           className="  object-contain rounded-xl"
           loading="lazy"
         />

@@ -24,6 +24,7 @@ const ServiceDetails = async ({ params }) => {
           className="object-fill w-full h-full filter z-0  hover:brightness-110"
           priority
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
         <div className="common-padding absolute top-[20vh] left-0">
           <h2 className="md:text-4xl text-3xl mb-4 text-white">

@@ -42,6 +42,7 @@ const WhyTrust = () => {
             alt="Trust Image"
             className="w-full h-full fill object-fill rounded-xl"
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
             loading="lazy"
           />
         </motion.div>

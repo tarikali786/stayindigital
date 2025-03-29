@@ -16,6 +16,9 @@ import Img7 from "../../../../public/8I.jpg";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
 import ButtonCard from "@/component/common/button";
+import { useEffect, useState } from "react";
+import { HeaderData } from "@/data/data";
+import Link from "next/link";
 
 const Cources = [
   {
@@ -63,6 +66,8 @@ const Cources = [
 export const HomeCources = () => {
   const isMd = useMediaQuery("(min-width:768px)");
   const isSm = useMediaQuery("(min-width:640px)");
+  const courses = HeaderData.find((item) => item.name === "Courses");
+
   return (
     <section className="py-20  text-white">
       <div className=" mx-auto px-6">
@@ -91,7 +96,7 @@ export const HomeCources = () => {
           speed={2000} // Smooth scrolling effect
           className=" mx-auto"
         >
-          {Cources.map((course, index) => (
+          {courses?.items?.map((course, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -99,23 +104,26 @@ export const HomeCources = () => {
                 transition={{ duration: 0.2 }}
                 className="bg-gray-100 overflow-hidden border border-gray-800 rounded-4xl flex flex-col items-center hover:border-primary hover:shadow-md transition-all duration-300"
               >
-                <div className="xl:h-[60vh] w-full md:h-[50vh] sm:h-[30vh] h-[30vh] relative ">
-                  <Image
-                    src={course.img}
-                    alt="img"
-                    loading="lazy"
-                    fill
-                    className=" object-cover"
-                  />
-                </div>
-                <div className=" text-center py-8 px-6">
-                  <h4 className="  sm:text-2xl md:text-3xl text-xl font-bold mb-2 text-black">
-                    {course.title}
-                  </h4>
-                  <p className="text-gray-500 text-sm line-clamp-1">
-                    {course.description}
-                  </p>
-                </div>
+                <Link href={course?.link}>
+                  <div className="xl:h-[60vh] w-full md:h-[50vh] sm:h-[30vh] h-[30vh] relative ">
+                    <Image
+                      src={course?.bannerImage}
+                      alt="img"
+                      loading="lazy"
+                      className=" object-fill"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                    />
+                  </div>
+                  <div className=" text-center py-8 px-6">
+                    <h4 className="  sm:text-2xl md:text-3xl text-xl font-bold mb-2 text-black">
+                      {course.name}
+                    </h4>
+                    <p className="text-gray-500 text-sm line-clamp-1">
+                      {course.description}
+                    </p>
+                  </div>
+                </Link>
               </motion.div>
             </SwiperSlide>
           ))}

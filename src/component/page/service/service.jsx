@@ -4,8 +4,6 @@ import { HeaderData } from "@/data/data";
 import Image from "next/image";
 import ButtonCard from "@/component/common/button";
 
-
-
 export const Service = () => {
   const serviceCategory = HeaderData.find((item) => item.name === "Services");
 
@@ -59,6 +57,7 @@ export const Service = () => {
                   alt={service?.name}
                   priority
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                   className="w-full h-full object-fill rounded-lg"
                 />
               </div>
@@ -66,10 +65,11 @@ export const Service = () => {
                 <h4 className=" text-xl font-bold mb-2 text-primary ">
                   {service.name}
                 </h4>
-                <p className="text-gray-500 text-sm mb-4 line-clamp-4">{service.subTitle}</p>
+                <p className="text-gray-500 text-sm mb-4 line-clamp-4">
+                  {service.subTitle}
+                </p>
                 <div className="flex justify-center items-center">
-                <ButtonCard link={service?.link} title="Know more" />
-
+                  <ButtonCard link={service?.link} title="Know more" />
                 </div>
               </div>
             </motion.div>

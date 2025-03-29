@@ -25,6 +25,8 @@ const BlogList = async () => {
               alt="blog"
               priority
               fill
+              
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
               className=" w-full h-full object-fill rounded-xl"
             />
           </div>
