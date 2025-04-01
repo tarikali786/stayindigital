@@ -46,7 +46,7 @@ const Technology = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="  "
             >
-              <div className="sm:size-26  relative size-20  bg-gray-200 mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
+              <div className="sm:size-26  relative size-20  bg-white mb-3  rounded-3xl shadow-2xl flex  justify-center items-center">
                 <Image
                   src={tech.icon}
                   alt={tech.name}

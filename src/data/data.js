@@ -1,4 +1,3 @@
-import Angular from "../../public/angular.png";
 // Service
 import SMD from "../../public/service/social-media-services.jpg";
 import SMD1 from "../../public/service/social-media-marketing-services.png";
@@ -47,6 +46,29 @@ import Team from "../../public/cource/team.png";
 import Approach from "../../public/cource/approach.png";
 import Service from "../../public/cource/services.png";
 import Communication from "../../public/cource/trans-communication.png";
+
+// Technology
+
+import Angular from "../../public/technology/18.jpeg";
+import React from "../../public/technology/7.jpeg";
+import JavaScript from "../../public/technology/15.jpeg";
+import TypeScript from "../../public/technology/11.jpeg";
+import HTML5 from "../../public/technology/13.jpeg";
+import Core from "../../public/technology/9.jpeg";
+import MVC from "../../public/technology/19.jpeg";
+import Laravel from "../../public/technology/10.jpeg";
+import Node from "../../public/technology/1.jpeg";
+import Swift from "../../public/technology/6.jpeg";
+import Objective from "../../public/technology/8.jpeg";
+import Kotlin from "../../public/technology/4.jpeg";
+import Java from "../../public/technology/5.jpeg";
+import Flutter from "../../public/technology/2.jpeg";
+import Native from "../../public/technology/12.jpeg";
+import SQL from "../../public/technology/3.jpeg";
+import MySQL from "../../public/technology/3.jpeg";
+import Mongo from "../../public/technology/17.jpeg";
+import Azure from "../../public/technology/18.jpeg";
+import AWS from "../../public/technology/16.jpeg";
 
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
@@ -944,38 +966,38 @@ export const Webtechnologies = [
   },
   {
     name: "React",
-    icon: Angular,
+    icon: React,
   },
   {
     name: "JavaScript",
-    icon: Angular,
+    icon: JavaScript,
   },
   {
     name: "TypeScript",
-    icon: Angular,
+    icon: TypeScript,
   },
   {
     name: "HTML5",
-    icon: Angular,
+    icon: HTML5,
   },
 ];
 
 export const Backendtechnologies = [
   {
     name: "ASP.Net Core",
-    icon: Angular,
+    icon: Core,
   },
   {
     name: "ASP.Net MVC",
-    icon: Angular,
+    icon: MVC,
   },
   {
     name: "Laravel",
-    icon: Angular,
+    icon: Laravel,
   },
   {
     name: "Node.js",
-    icon: Angular,
+    icon: Node,
   },
 ];
 
@@ -983,22 +1005,22 @@ export const PlateFormTechnology = [
   {
     category: "iOS",
     techs: [
-      { name: "Swift", icon: Angular },
-      { name: "Objective-C", icon: Angular },
+      { name: "Swift", icon: Swift },
+      { name: "Objective-C", icon: Objective },
     ],
   },
   {
     category: "Android",
     techs: [
-      { name: "Kotlin", icon: Angular },
-      { name: "Java", icon: Angular },
+      { name: "Kotlin", icon: Kotlin },
+      { name: "Java", icon: Java },
     ],
   },
   {
     category: "Cross-Platform",
     techs: [
-      { name: "Flutter", icon: Angular },
-      { name: "React Native", icon: Angular },
+      { name: "Flutter", icon: Flutter },
+      { name: "React Native", icon: Native },
     ],
   },
 ];
@@ -1007,16 +1029,16 @@ export const DatabaseTechnology = [
   {
     category: "Database",
     techs: [
-      { name: "SQL Server", icon: Angular },
-      { name: "MySQL", icon: Angular },
-      { name: "Mongo DB", icon: Angular },
+      { name: "SQL Server", icon: SQL },
+      { name: "MySQL", icon: MySQL },
+      { name: "Mongo DB", icon: Mongo },
     ],
   },
   {
     category: "Infrastructure",
     techs: [
-      { name: "Azure", icon: Angular },
-      { name: "AWS", icon: Angular },
+      { name: "Azure", icon: Azure },
+      { name: "AWS", icon: AWS },
     ],
   },
 ];
