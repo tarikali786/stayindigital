@@ -24,7 +24,7 @@ const CourseDetails = async ({ params }) => {
         <Image
           src={courceData?.bannerImage}
           alt={courceData?.name}
-          className="object-fill w-full h-full filter z-0  hover:brightness-110"
+          className="object-cover w-full h-full filter z-0  hover:brightness-110"
           priority
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
