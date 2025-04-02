@@ -47,7 +47,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-16  text-center common-padding">
-      <h3 className="text-lg text-black/70 font-semibold">Testimonials</h3>
+      <h3 className="text-lg text-white/70 font-semibold">Testimonials</h3>
       <h2 className="text-4xl font-bold text-primary my-3">What People Say</h2>
       <p className="max-w-2xl mx-auto text-white/80">
         Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
