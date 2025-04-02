@@ -55,7 +55,7 @@ const BlogList = () => {
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               />
               <div className="flex justify-center">
-                <ButtonCard title="Read More" link="#" />
+                <ButtonCard title="Read More" link={`blogs/${blog?.slug}`} />
               </div>
             </div>
           </div>
