@@ -6,8 +6,6 @@ import LoadingRipple from "@/component/common/loading";
 
 const BlogDetails = () => {
   const { blog_slug } = useParams();
-  console.log(blog_slug);
-
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -51,7 +49,7 @@ const BlogDetails = () => {
   return (
     <div className="common-padding mx-auto p-5">
       {/* Banner Section */}
-      <div className="relative w-full h-[60vh] rounded-xl  shadow shadow-white">
+      <div className="relative w-full md:h-[60vh] sm:h-[50vh] h-[40vh] rounded-xl  shadow shadow-white">
         <Image
           src={blog?.banner || "/placeholder.jpg"}
           alt="Blog Banner"
@@ -60,8 +58,8 @@ const BlogDetails = () => {
           priority
         />
         {/* Title Overlay */}
-        <div className="absolute -bottom-6 left-10  bg-white shadow-md px-6 py-3 rounded-lg">
-          <h1 className="text-2xl font-bold text-primary">{blog?.title}</h1>
+        <div className="absolute -bottom-6 md:left-10 left-2  bg-white shadow-md px-6 py-3 rounded-lg">
+          <h1 className="md:text-2xl sm:text-xl  font-bold text-primary">{blog?.title}</h1>
         </div>
       </div>
 
