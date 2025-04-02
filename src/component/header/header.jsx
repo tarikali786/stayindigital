@@ -60,7 +60,7 @@ const Header = () => {
 
       <div className="flex items-center lg:gap-8 md:gap-4 sm:gap-2">
         <div className="hidden md:block">
-          <ButtonCard title="View Brochure" />
+          <ButtonCard title="Contact Us" link="/contact" />
         </div>
         <div className="md:hidden block">
           <MobileMenu />

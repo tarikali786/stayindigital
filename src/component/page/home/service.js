@@ -9,7 +9,7 @@ import Icon1 from "../../../../public/icon1.png";
 import Icon2 from "../../../../public/icon2.png";
 import Icon3 from "../../../../public/icon3.png";
 import Icon4 from "../../../../public/icon4.png";
-import Image from "next/image";
+import Image from "next/image";  
 
 const services = [
   {
