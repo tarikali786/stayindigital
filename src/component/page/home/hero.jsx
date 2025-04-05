@@ -84,7 +84,6 @@ const HomeHero = () => {
           </motion.div>
         </motion.div>
       </div>
-
     </div>
   );
 };

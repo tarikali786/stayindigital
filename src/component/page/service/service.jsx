@@ -22,9 +22,12 @@ export const Service = () => {
             We Provide
           </h3>
           <p className="max-w-2xl m-auto text-white/70">
-            Your brand deserves to be seen, heard, and remembered. Let us craft
-            your digital success story with expert marketing, stunning design,
-            and powerful SEO.
+            We assist in expanding businesses with user-friendly IT solutions
+            and innovative digital marketing. Our team implements technology
+            tailored for your convenience, from dependable software and network
+            support to specialized social media, SEO, and online advertising.
+            Leave technology and marketing to us while you concentrate on
+            serving your patrons.
           </p>
         </motion.div>
 

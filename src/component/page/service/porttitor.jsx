@@ -36,20 +36,15 @@ export const OurClient = () => {
             OUR CLIENTS
           </h3>
           <p className="max-w-4xl m-auto text-white/80">
-            At [Your Company Name], we’re proud to have partnered with a diverse
-            portfolio of clients, helping them achieve significant growth across
-            digital platforms. Our clients range from Tech Innovators like
-            NeoTech Solutions, who saw remarkable SEO results, to e-commerce
-            brands like Trendify Online, where we boosted sales with targeted
-            advertising campaigns. We’ve had the pleasure of enhancing the
-            digital presence of Prime Realty Group, developing dynamic websites
-            that convert visitors into clients, and working with Glamour Vogue,
-            where our social media management elevated their brand recognition.
-            From Vision Studios, where we brought stunning visuals to life with
-            professional video editing and VFX, to LearnHub Academy, where we
-            optimized their online learning platform, our clients trust us to
-            deliver creative, results-driven solutions across all areas of
-            digital marketing and content creation.
+            We help give your business an edge you have never experienced
+            before. All our strategies are built upon studying market trends;
+            thus, you will always remain a step ahead. You will always have
+            better outcomes and value for your money with us because our data
+            driven concepts will ensure you fruitful results. We ensure that new
+            tools and technologies are at the heart of all our solutions so they
+            are scalable with your business. Let our experts take care of your
+            IT and digital footprint while you manage your business with
+            absolute certainty.
           </p>
         </motion.div>
 

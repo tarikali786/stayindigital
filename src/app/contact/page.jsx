@@ -10,19 +10,36 @@ const Contact = () => {
       <div className="w-full rounded-lg shadow-lg relative flex flex-col  md:flex-row gap-8">
         {/* Left Section */}
         <div className="flex flex-col gap-6 justify-between w-full md:w-1/3">
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md h-1/3 flex  gap-4">
-            <LocationOnIcon className="text-primary" />
-            <p>Location Address</p>
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md h-1/3  ">
+            <div className="flex gap-2 items-center">
+              <LocationOnIcon className="text-primary" />
+              <p>Location Address</p>
+            </div>
+            <p className="text-sm pl-5 mt-2 text-gray-700">
+              24/59, KANDAPPA STREET, PURASAWALKAM, CHENNAI 600 007 OPPOSITE TO
+              T.E.L.C SCHOOL, LANDMARK - SARAVANA STORE
+            </p>
           </div>
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md  h-1/3 flex  gap-4">
-            <EmailIcon className="text-primary" />
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md  h-1/3  ">
+            <div className="flex gap-2 items-center">
+              <EmailIcon className="text-primary" />
 
-            <p>Email Address</p>
+              <p>Email Address</p>
+            </div>
+            <p className="text-sm pl-8 mt-2 text-gray-700">
+              info@stayindigital.com
+            </p>
           </div>
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md  h-1/3 flex  gap-4">
-            <CallIcon className="text-primary" />
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md  h-1/3 ">
+            <div className="flex gap-2 items-center">
+              <CallIcon className="text-primary" />
 
-            <p>Phone Number</p>
+              <p>Phone Number</p>
+            </div>
+            <p className="text-sm pl-8 mt-2 text-gray-700">
+              7010189959 <br />
+              7200400653
+            </p>
           </div>
         </div>
 

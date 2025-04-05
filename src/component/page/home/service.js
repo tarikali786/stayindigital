@@ -9,32 +9,32 @@ import Icon1 from "../../../../public/icon1.png";
 import Icon2 from "../../../../public/icon2.png";
 import Icon3 from "../../../../public/icon3.png";
 import Icon4 from "../../../../public/icon4.png";
-import Image from "next/image";  
+import Image from "next/image";
 
 const services = [
   {
     icon: Icon1, // Increase size
     title: "Social Media Marketing",
     description:
-      "Boost your brand’s presence on social media platforms with targeted campaigns that engage and convert.",
+      "Captivate your potential customers and enhance the visibility of your brand on Facebook, Instagram, LinkedIn, and other platforms with strategic advertising that fuels discussions and leads to increased sales.",
   },
   {
     icon: Icon2,
     title: "SEO",
     description:
-      "Improve your website’s visibility on search engines and attract organic traffic with our SEO expertise.",
+      "Captivtate the right atuience with our highly effective SEO techniques designed to raise your online visibility and search ranking, ensuring your website receives attention from the most important visitors.",
   },
   {
     icon: Icon3,
     title: "Website Development",
     description:
-      "Create a stunning, user-friendly website that reflects your brand’s identity and converts visitors into customers.",
+      "Enjoy a top-notch and pleasing user interface inclusive website that depicts your business, converts prospective customers into loyal patrons.",
   },
   {
     icon: Icon4,
     title: "Graphic Design",
     description:
-      "Elevate your brand’s visual identity with professional graphic design services that captivate and inspire.",
+      "Be it logos or custom advertisement designs, branding materials provide value to your business and ensures it gets the exposure it deserves.",
   },
 ];
 
@@ -55,9 +55,8 @@ export default function HomeServices() {
             Service We Provide
           </h3>
           <p className="text-gray-400 max-w-2xl mx-auto ">
-            Your brand deserves to be seen, heard, and remembered. Let us craft
-            your digital success story with expert marketing, design, and
-            content creation.
+            We assist in expanding businesses with user-friendly IT solutions
+            and innovative digital marketing.
           </p>
         </motion.div>
 

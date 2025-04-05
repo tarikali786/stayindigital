@@ -18,15 +18,14 @@ const HomeAbout = () => {
         <h2 className="text-2xl md:text-3xl ">About Us</h2>
         <h3 className="text-lg text-primary my-3">We Do with Creativity</h3>
         <p className=" text-gray-600">
-          itekdigit is a forward-thinking digital marketing company dedicated to
-          empowering individuals and businesses in navigating the fast-evolving
-          digital landscape. Our mission is to provide top-notch digital
-          marketing solutions, bridging the gap between creativity and strategy.
-          With a focus on delivering value-driven services, we equip working
-          professionals, job seekers, and students with the skills and insights
-          needed to excel in today's digital economy. Join us on the journey of
-          digital transformation and stay connected to the future of marketing.
-          !
+          We help give your business an edge you have never experienced before.
+          All our strategies are built upon studying market trends; thus, you
+          will always remain a step ahead. You will always have better outcomes
+          and value for your money with us because our data driven concepts will
+          ensure you fruitful results. We ensure that new tools and technologies
+          are at the heart of all our solutions so they are scalable with your
+          business. Let our experts take care of your IT and digital footprint
+          while you manage your business with absolute certainty. !
         </p>
       </motion.div>
       <motion.div

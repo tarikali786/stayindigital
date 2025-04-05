@@ -11,33 +11,18 @@ import "swiper/css/pagination";
 const testimonials = [
   {
     name: "Maya Bailey",
-    role: "Client",
-    text: "Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem",
+    role: "Marketing Director",
+    text: "Working with this team transformed our online presence. Their SEO and social media strategies drove a 50% increase in traffic within three months!",
   },
   {
-    name: "Alonzo Torres",
-    role: "Client",
-    text: "Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem",
+    name: "Jason Patel, ",
+    role: "CTO",
+    text: "Their app development process was seamless. From concept to launch, they kept us informed and delivered a high‑quality product on time.",
   },
   {
-    name: "Derek Wolzman",
-    role: "Client",
-    text: "Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem",
-  },
-  {
-    name: "Maya Bailey",
-    role: "Client",
-    text: "Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem",
-  },
-  {
-    name: "Alonzo Torres",
-    role: "Client",
-    text: "Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem",
-  },
-  {
-    name: "Derek Wolzman",
-    role: "Client",
-    text: "Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem",
+    name: "Lena Roberts",
+    role: "E‑Commerce Manager",
+    text: "The website redesign exceeded our expectations. Our bounce rate dropped by 30%, and customer engagement has never been higher.",
   },
 ];
 
