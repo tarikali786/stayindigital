@@ -14,7 +14,7 @@ const item = [
   },
   {
     icon: TaskAltIcon,
-    text: "Learn in your comfortable language",
+    text: "Learn in your comfortable language", 
   },
   {
     icon: TaskAltIcon,

@@ -11,15 +11,17 @@ const About = () => {
           Who We Are
         </h3>
         <p className="text-gray-400 text-lg leading-relaxed">
-          ITechDigit is a forward-thinking digital marketing company dedicated
-          to empowering individuals and businesses in navigating the
-          fast-evolving digital landscape. Our mission is to provide top-notch
-          digital marketing solutions, bridging the gap between creativity and
-          strategy. With a focus on delivering value-driven services, we equip
-          working professionals, job seekers, and students with the skills and
-          insights needed to excel in today's digital economy. Join us on the
-          journey of digital transformation and stay connected to the future of
-          marketing.
+          We're a leading mobile app developer known for delivering top-notch,
+          budget-friendly solutions. Our goal is to create digital products and
+          services that bring people together and simplify life. Besides app
+          development, we provide expert IT services and clever digital
+          marketing solutions to help businesses expand online. Supported by a
+          team of capable tech experts, we build secure, dependable, and
+          groundbreaking systems using cutting-edge technologies. Whether you
+          need custom software SEO social media marketing, or website
+          design—we're your go-to partner for all tech and digital needs. Each
+          new project gives us a chance to learn, expand, and test the
+          boundaries of what we can achieve.
         </p>
       </div>
 
