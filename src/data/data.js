@@ -133,9 +133,7 @@ export const HeaderData = [
         image: SEO1A,
         bannerImage: SEO1A1,
         description: [
-          "Our Search Engine Optimization (SEO) course is designed to help you master the techniques and strategies that drive organic traffic, improve search engine rankings, and boost your online presence. Whether you're a business owner, marketer, or aspiring SEO professional, this course will equip you with the tools you need to succeed in the competitive world of digital marketing.",
-          "Unlock the secrets of search engine dominance with our hands-on, expert-led SEO course your gateway to mastering the art of online visibility.",
-          "In today’s digital era, mastering SEO (Search Engine Optimization) is not just an option—it's a necessity for anyone looking to succeed in the online marketplace. Whether you’re a business owner, marketer, or aspiring SEO professional, our tailored SEO courses are designed to provide you with the skills and knowledge you need to excel.",
+          "At Stay In Digital, we help your business rise to the top. Our complete SEO services are built to boost your rankings, increase visibility, and drive organic traffic — all with strategies that deliver long-term results and keep you ahead of the competition.",
         ],
         whatWeOffer: {
           title: "",
@@ -237,7 +235,7 @@ export const HeaderData = [
         image: WD,
         bannerImage: WD1,
         description: [
-          "Build dynamic, user-friendly websites from the ground up with our Website Developer course—your gateway to mastering the art of web design and coding.",
+          "At Stay In Digital, we build websites that don’t just look good — they work brilliantly. Whether you need a brand-new site or a smart redesign, our expert team delivers modern, responsive, and user-friendly solutions tailored to your business goals.",
           "Our carefully crafted Website development course will provide you with the essential abilities and understanding required to develop stunning, intuitive, and mobile-friendly websites. This course will help you at every stage of the web design process, whether you're just starting out and want to create your first website or you're an experienced professional trying to improve your design skills.",
         ],
         whatWeOffer: {
@@ -280,7 +278,7 @@ export const HeaderData = [
         image: GDR,
         bannerImage: GDR1,
         description: [
-          "Transform your creativity into a career with our Graphic Designer courses—where your vision becomes a masterpiece!",
+          "At Stay In Digital, we turn ideas into stunning visuals. Our graphic design services help your brand stand out, tell its story, and leave a lasting impression — across every platform.",
         ],
         whatWeOffer: {
           title: "",
