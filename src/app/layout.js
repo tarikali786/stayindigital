@@ -4,6 +4,7 @@ import Navbar from "@/component/navbar/navbar";
 import Header from "@/component/header/header";
 import Footer from "@/component/footer/footer";
 import SpectralBackground from "@/component/UiEffect/network-spectrum";
+import GoogleAnalytics from "@/component/analytics/ga";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,63 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);} 
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { send_page_view: false });
+                `,
+              }}
+            />
+          </>
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Stayindigital",
+              url: "https://stayindigital.com/",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://stayindigital.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://stayindigital.com/#webpage",
+              url: "https://stayindigital.com/",
+              name: "Stayindigital | Digital Marketing Courses & Services in Chennai",
+              isPartOf: {
+                "@type": "WebSite",
+                url: "https://stayindigital.com/",
+                name: "Stayindigital",
+              },
+              about: {
+                "@type": "Organization",
+                name: "Stayindigital",
+                url: "https://stayindigital.com/",
+              },
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -103,6 +161,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
+        {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics />}
         <Navbar />
         <Header />
         {children}
