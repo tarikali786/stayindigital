@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 import { HeaderData } from "@/data/data";
 import Link from "next/link";
 
-const Cources = [
+const Courses = [
   {
     img: Img,
     title: "Social Media Management",
@@ -31,7 +31,7 @@ const Cources = [
     img: Img2,
     title: "Search Engine Optimization",
     description:
-      "Transform your digital presence and unlock new opportunities with our expert-led SEO Cources.",
+      "Transform your digital presence and unlock new opportunities with our expert-led SEO Courses.",
   },
   {
     img: Img3,
@@ -63,7 +63,7 @@ const Cources = [
   },
 ];
 
-export const HomeCources = () => {
+export const HomeCourses = () => {
   const isMd = useMediaQuery("(min-width:768px)");
   const isSm = useMediaQuery("(min-width:640px)");
   const courses = HeaderData.find((item) => item.name === "Courses");
@@ -78,9 +78,9 @@ export const HomeCources = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-lg font-bold">Cources</h2>
+          <h2 className="text-lg font-bold">Courses</h2>
           <h3 className="md:text-3xl text-2xl font-bold my-3 text-primary">
-            Cources We Provide!
+            Courses We Provide!
           </h3>
         </motion.div>
 
@@ -136,4 +136,4 @@ export const HomeCources = () => {
   );
 };
 
-export default HomeCources;
+export default HomeCourses;

@@ -58,12 +58,12 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Cources */}
+        {/* Courses */}
         <div>
           <h3 className="font-bold text-lg text-primary">
-            {FooterData.Cources.title}
+            {FooterData.Courses.title}
           </h3>
-          {FooterData.Cources.links.map((item) => (
+          {FooterData.Courses.links.map((item) => (
             <a
               key={item.id}
               href={item.link}

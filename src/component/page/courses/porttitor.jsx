@@ -10,7 +10,7 @@ import Img5 from "../../../../public/5I.jpg";
 import Img6 from "../../../../public/7I.jpg";
 import Img7 from "../../../../public/8I.jpg";
 
-const Cources = [
+const Courses = [
   {
     img: Img,
     title: "Web Design",
@@ -21,13 +21,13 @@ const Cources = [
     img: Img2,
     title: "Web Design",
     description:
-      "Transform your digital presence and unlock new opportunities with our expert-led SEO Cources. Whether you're looking to enhance your personal skills or boost your business’s online performance, our Cources provide the knowledge and tools you need to succeed.",
+      "Transform your digital presence and unlock new opportunities with our expert-led SEO Courses. Whether you're looking to enhance your personal skills or boost your business’s online performance, our Courses provide the knowledge and tools you need to succeed.",
   },
   {
     img: Img3,
     title: "Web Design",
     description:
-      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI Cources provide the knowledge and skills needed to excel in this dynamic field.",
+      "Artificial Intelligence (AI) is transforming industries and shaping the future of technology. Whether you’re a tech enthusiast, a professional looking to advance your career, or a business aiming to leverage AI, our comprehensive AI Courses provide the knowledge and skills needed to excel in this dynamic field.",
   },
 ];
 
@@ -67,7 +67,7 @@ export const Porttitor = () => {
           }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
-          {Cources.map((course, index) => (
+          {Courses.map((course, index) => (
             <motion.div
               key={index}
               variants={{

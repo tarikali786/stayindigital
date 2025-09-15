@@ -30,9 +30,9 @@ const CourseDetails = async ({ params }) => {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
         <div className="common-padding absolute top-[10vh] md:top-[20vh] z-30 left-0">
-          <h2 className="md:text-4xl text-3xl mb-4 text-white ">
+          <h1 className="md:text-4xl text-3xl mb-4 text-white ">
             {courceData?.name}
-          </h2>
+          </h1>
           <Breadcrumbs
             separator="›"
             aria-label="breadcrumb"
@@ -67,7 +67,7 @@ const CourseDetails = async ({ params }) => {
 
         <div className="md:w-4/5  pr-4">
           <div>
-            <h3 className="text-4xl my-4 text-primary">{courceData?.name}</h3>
+            <h2 className="text-4xl my-4 text-primary">{courceData?.name}</h2>
             <div className="flex flex-col gap-4">
               {courceData?.description?.map((item, index) => (
                 <p key={index} className="text-white  text-left font-normal">

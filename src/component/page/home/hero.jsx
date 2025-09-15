@@ -29,14 +29,14 @@ const HomeHero = () => {
           className="max-w-xl"
         >
           {/* Heading */}
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             className="sm:text-2xl text-xl md:text-4xl font-bold text-white sm:mb-4 mb-2"
           >
             BECOME A DIGITAL MARKETING EXPERT
-          </motion.h2>
+          </motion.h1>
 
           {/* Description */}
           <motion.p

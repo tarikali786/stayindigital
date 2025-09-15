@@ -11,7 +11,7 @@ import Email from "../../public/service/email-services.jpg";
 import Email1 from "../../public/service/email-marketing-services.png";
 import GD from "../../public/service/graphic-design-service.jpg";
 import GD1 from "../../public/service/graphic-design-services.png";
-// Cources
+// Courses
 
 import SMM from "../../public/cource/social-media.png";
 import SMM1 from "../../public/cource/social-media-management.jpg";
@@ -939,18 +939,18 @@ export const FooterData = {
       { id: 5, name: "Contact Us", link: "/contact" },
     ],
   },
-  Cources: {
+  Courses: {
     title: "Courses",
     links: [
       { id: 1, name: "SEO", link: "/Courses/seo" },
-      { id: 2, name: "Social Media Management", link: "/Cources/social-media" },
+      { id: 2, name: "Social Media Management", link: "/Courses/social-media" },
       {
         id: 3,
         name: "Professional Video Editing",
-        link: "/Cources/video-editing",
+        link: "/Courses/video-editing",
       },
-      { id: 4, name: "Advertising Campaign", link: "/Cources/advertising" },
-      { id: 5, name: "Website Development", link: "/Cources/web-development" },
+      { id: 4, name: "Advertising Campaign", link: "/Courses/advertising" },
+      { id: 5, name: "Website Development", link: "/Courses/web-development" },
     ],
   },
 };

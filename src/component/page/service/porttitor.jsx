@@ -6,7 +6,7 @@ import Img from "../../../../public/1I.jpg";
 import Img2 from "../../../../public/2I.jpg";
 import Img3 from "../../../../public/3I.jpg";
 
-const Cources = [
+const Courses = [
   {
     img: Img,
     title: "NeoTech Solutions",
@@ -62,7 +62,7 @@ export const OurClient = () => {
           }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:gap-10 md:gap-6 gap-4"
         >
-          {Cources.map((course, index) => (
+          {Courses.map((course, index) => (
             <motion.div
               key={index}
               variants={{

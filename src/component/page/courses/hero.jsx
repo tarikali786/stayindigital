@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 const CourseHero = () => {
   return (
     <div className="global-bg-2  md:h-[50vh] h-[36vh] text-white flex common-padding flex-col justify-center">
-      <h2 className="md:text-4xl text-3xl mb-4">Courses</h2>
+      <h1 className="md:text-4xl text-3xl mb-4">Courses</h1>
       <Breadcrumbs
         separator="›"
         aria-label="breadcrumb"

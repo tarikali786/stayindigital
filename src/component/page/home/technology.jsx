@@ -33,9 +33,9 @@ const Technology = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="sm:text-3xl text-xl text-white font-bold">
+          <h3 className="sm:text-3xl text-xl text-white font-bold">
             Web Front-End
-          </h2>
+          </h3>
         </motion.div>
         <div className="flex justify-center sm:gap-16 gap-8 flex-wrap">
           {Webtechnologies.map((tech, index) => (
@@ -70,7 +70,7 @@ const Technology = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="sm:text-3xl text-xl text-white font-bold">Back-End</h2>
+          <h3 className="sm:text-3xl text-xl text-white font-bold">Back-End</h3>
         </motion.div>
         <div className="flex justify-center sm:gap-16 gap-8 flex-wrap">
           {Backendtechnologies.map((tech, index) => (

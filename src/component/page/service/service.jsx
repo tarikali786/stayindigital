@@ -17,10 +17,10 @@ export const Service = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-lg font-bold text-white/90 ">Services</h2>
-          <h3 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
+          <h1 className="text-lg font-bold text-white/90 ">Services</h1>
+          <h2 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
             We Provide
-          </h3>
+          </h2>
           <p className="max-w-2xl m-auto text-white/70">
             We assist in expanding businesses with user-friendly IT solutions
             and innovative digital marketing. Our team implements technology

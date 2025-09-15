@@ -27,9 +27,9 @@ const ServiceDetails = async ({ params }) => {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
         <div className="common-padding absolute top-[20vh] left-0">
-          <h2 className="md:text-4xl text-3xl mb-4 text-white">
+          <h1 className="md:text-4xl text-3xl mb-4 text-white">
             {serviceData?.name}
-          </h2>
+          </h1>
           <Breadcrumbs
             separator="›"
             aria-label="breadcrumb"
@@ -62,16 +62,16 @@ const ServiceDetails = async ({ params }) => {
       <div className=" text-white common-padding  py-10  font-semibold text-center">
         <div>
           <p className=" uppercase text-sm text-primary   ">services</p>
-          <h3 className="text-4xl my-4 text-white">{serviceData?.name}</h3>
+          <h2 className="text-4xl my-4 text-white">{serviceData?.name}</h2>
           <p className="text-white/90 max-w-3xl font-normal m-auto text-sm">
             {serviceData?.subTitle}
           </p>
         </div>
 
         <div className="my-10">
-          <h2 className="text-3xl  text-primary">
+          <h3 className="text-3xl  text-primary">
             {serviceData?.service?.title}
-          </h2>
+          </h3>
 
           <div className="grid  lg:grid-cols-3 md:grid-cols-2   gap-10 my-10">
             {serviceData?.service?.services.map((service, index) => (

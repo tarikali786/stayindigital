@@ -6,10 +6,10 @@ const About = () => {
     <section className=" py-10 text-white  common-padding ">
       {/* About Us Section */}
       <div className="flex flex-col justify-center items-center text-center  px-6">
-        <h2 className="text-xl font-bold text-white">About Us</h2>
-        <h3 className="md:text-3xl  text-2xl font-bold my-3 text-[#716af2]">
+        <h1 className="text-xl font-bold text-white">About Us</h1>
+        <h2 className="md:text-3xl  text-2xl font-bold my-3 text-[#716af2]">
           Who We Are
-        </h3>
+        </h2>
         <p className="text-gray-400 text-lg leading-relaxed">
           We're a leading mobile app developer known for delivering top-notch,
           budget-friendly solutions. Our goal is to create digital products and
