@@ -8,6 +8,40 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import HomeIcon from "@mui/icons-material/Home";
 import Link from "next/link";
 import ButtonCard from "@/component/common/button";
+
+export async function generateMetadata({ params }) {
+  const { course_slug } = await params;
+  const coursesCategory = HeaderData.find((item) => item.name === "Courses");
+  const courceData = coursesCategory?.items.find(
+    (subItem) => subItem.link === `/courses/course-details/${course_slug}`
+  );
+
+  const title = courceData?.name
+    ? `${courceData.name} | Stayindigital`
+    : "Course Details | Stayindigital";
+  const description = courceData?.gstTitle ||
+    "Explore our course details, modules and benefits at Stayindigital.";
+  const url = `https://stayindigital.com/courses/course-details/${course_slug}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [{ url: "/StayLogo.png", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/StayLogo.png"],
+    },
+  };
+}
+
 const CourseDetails = async ({ params }) => {
   const { course_slug } = await params;
   const coursesCategory = HeaderData.find((item) => item.name === "Courses");

@@ -7,6 +7,40 @@ import Typography from "@mui/material/Typography";
 import Testimonials from "@/component/page/courses/testimonial";
 import ButtonCard from "@/component/common/button";
 import HomeIcon from "@mui/icons-material/Home";
+
+export async function generateMetadata({ params }) {
+  const { service_slug } = await params;
+  const serviceCategory = HeaderData.find((item) => item.name === "Services");
+  const serviceData = serviceCategory?.items.find(
+    (subItem) => subItem.link === `/services/service-details/${service_slug}`
+  );
+
+  const title = serviceData?.name
+    ? `${serviceData.name} | Stayindigital`
+    : "Service Details | Stayindigital";
+  const description = serviceData?.subTitle ||
+    "Explore our service details, packages and benefits at Stayindigital.";
+  const url = `https://stayindigital.com/services/service-details/${service_slug}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [{ url: "/StayLogo.png", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/StayLogo.png"],
+    },
+  };
+}
+
 const ServiceDetails = async ({ params }) => {
   const { service_slug } = await params;
   const serviceCategory = HeaderData.find((item) => item.name === "Services");
