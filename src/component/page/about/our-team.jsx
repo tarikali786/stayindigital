@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Img from "../../../../public/team/ceo.jpg";
-import Img2 from "../../../../public/team/mariyam.jpg";
-import Img3 from "../../../../public/team/bdm.jpg";
-import Img4 from "../../../../public/team/seo-male.jpg";
+import Img from "../../../../public/team/ceo.webp";
+import Img2 from "../../../../public/team/mariyam.webp";
+import Img3 from "../../../../public/team/bdm.webp";
+import Img4 from "../../../../public/team/seo-male.webp";
 
 const TeamData = [
   {

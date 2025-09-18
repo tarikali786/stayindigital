@@ -13,7 +13,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { HeaderData } from "@/data/data";
-import Logo from "../../../public/StayInLogo.png";
+import Logo from "../../../public/StayInLogo.webp";
 import Image from "next/image";
 import ButtonCard from "../common/button";
 

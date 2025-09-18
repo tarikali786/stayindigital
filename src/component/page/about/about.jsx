@@ -6,7 +6,7 @@ const About = () => {
     <section className=" py-10 text-white  common-padding ">
       {/* About Us Section */}
       <div className="flex flex-col justify-center items-center text-center  px-6">
-        <h1 className="text-xl font-bold text-white">About Us</h1>
+        <h2 className="text-xl font-bold text-white">About Us</h2>
         <h2 className="md:text-3xl  text-2xl font-bold my-3 text-[#716af2]">
           Who We Are
         </h2>

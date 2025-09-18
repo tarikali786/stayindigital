@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/logo.webp";
 import Link from "next/link";
 import ButtonCard from "../common/button";
 import { HeaderData } from "@/data/data";
@@ -24,7 +24,7 @@ const Header = () => {
           />
         </div>
 
-        <h1 className="md:text-xl text-primary">Stay in Digital</h1>
+        <h3 className="md:text-xl text-primary">Stay in Digital</h3>
       </Link>
       <div className="hidden md:flex items-center lg:gap-10 md:gap-6 sm:gap-4 gap-4">
         {HeaderData?.map((item) => (

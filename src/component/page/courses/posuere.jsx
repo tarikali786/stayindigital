@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Img1 from "../../../../public/4I.jpg";
-import ImageComponent from "@/component/common/ImageComponent";
+import Img1 from "../../../../public/4I.webp";
 import Image from "next/image";
 const Posuere = () => {
   return (

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 const HomeHero = () => {
   return (
-    <div className="relative min-h-[50vh] hero-section md:py-0 sm:py-4 py-8 md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
+    <div className="relative min-h-[50vh]  md:py-0 sm:py-4 py-8 md:min-h-[60vh] lg:h-[84vh] w-full overflow-hidden flex justify-center items-center">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a3f847c] to-[#0a3f8483] z-10"></div>
 

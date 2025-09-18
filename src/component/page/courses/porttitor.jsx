@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import ImageComponent from "../../common/ImageComponent";
-import Img from "../../../../public/1I.jpg";
-import Img2 from "../../../../public/2I.jpg";
-import Img3 from "../../../../public/3I.jpg";
-import Img4 from "../../../../public/4I.jpg";
-import Img5 from "../../../../public/5I.jpg";
-import Img6 from "../../../../public/7I.jpg";
-import Img7 from "../../../../public/8I.jpg";
+import Img from "../../../../public/1I.webp";
+import Img2 from "../../../../public/2I.webp";
+import Img3 from "../../../../public/3I.webp";
+import Img4 from "../../../../public/4I.webp";
+import Img5 from "../../../../public/5I.webp";
+import Img6 from "../../../../public/7I.webp";
+import Img7 from "../../../../public/8I.webp";
 
 const Courses = [
   {

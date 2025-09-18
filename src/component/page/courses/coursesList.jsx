@@ -18,7 +18,7 @@ const CoursesList = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-lg font-bold text-white/60 ">Courses</h1>
+          <h3 className="text-lg font-bold text-white/60 ">Courses</h3>
           <h2 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
             Courses We Provide !
           </h2>

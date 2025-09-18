@@ -1,74 +1,74 @@
 // Service
-import SMD from "../../public/service/social-media-services.jpg";
-import SMD1 from "../../public/service/social-media-marketing-services.png";
-import CM from "../../public/service/content-services.jpg";
-import CM1 from "../../public/service/content-marketing-services.png";
-import SEO from "../../public/service/seo-services.jpg";
-import SEO1 from "../../public/service/seo-service.png";
-import WEB from "../../public/service/web-services.jpg";
-import WEB1 from "../../public/service/website-design-services.png";
-import Email from "../../public/service/email-services.jpg";
-import Email1 from "../../public/service/email-marketing-services.png";
-import GD from "../../public/service/graphic-design-service.jpg";
-import GD1 from "../../public/service/graphic-design-services.png";
+import SMD from "../../public/service/social-media-services.webp";
+import SMD1 from "../../public/service/social-media-marketing-services.webp";
+import CM from "../../public/service/content-services.webp";
+import CM1 from "../../public/service/content-marketing-services.webp";
+import SEO from "../../public/service/seo-services.webp";
+import SEO1 from "../../public/service/seo-service.webp";
+import WEB from "../../public/service/web-services.webp";
+import WEB1 from "../../public/service/website-design-services.webp";
+import Email from "../../public/service/email-services.webp";
+import Email1 from "../../public/service/email-marketing-services.webp";
+import GD from "../../public/service/graphic-design-service.webp";
+import GD1 from "../../public/service/graphic-design-services.webp";
 // Courses
 
-import SMM from "../../public/cource/social-media.png";
-import SMM1 from "../../public/cource/social-media-management.jpg";
-import SEO1A from "../../public/cource/seo.png";
-import SEO1A1 from "../../public/cource/search-engine-optimization.jpg";
+import SMM from "../../public/Course/social-media.webp";
+import SMM1 from "../../public/Course/social-media-management.webp";
+import SEO1A from "../../public/Course/seo.webp";
+import SEO1A1 from "../../public/Course/search-engine-optimization.webp";
 
-import AI from "../../public/cource/ai.png";
-import AI1 from "../../public/cource/artificial-intelligence.jpg";
-import WD from "../../public/cource/website-design.png";
-import WD1 from "../../public/cource/website-development.jpg";
-import GDR from "../../public/cource/graphic-designer.png";
-import GDR1 from "../../public/cource/graphic-design.jpg";
+import AI from "../../public/Course/ai.webp";
+import AI1 from "../../public/Course/artificial-intelligence.webp";
+import WD from "../../public/Course/website-design.webp";
+import WD1 from "../../public/Course/website-development.webp";
+import GDR from "../../public/Course/graphic-designer.webp";
+import GDR1 from "../../public/Course/graphic-design.webp";
 
-import CM1a from "../../public/cource/content-management.png";
-import CM1a1 from "../../public/cource/content-marketing.jpg";
-import PVE from "../../public/cource/video-editing.png";
-import PVE1 from "../../public/cource/professional-video-editing.jpg";
+import CM1a from "../../public/Course/content-management.webp";
+import CM1a1 from "../../public/Course/content-marketing.webp";
+import PVE from "../../public/Course/video-editing.webp";
+import PVE1 from "../../public/Course/professional-video-editing.webp";
 
-import PC from "../../public/cource/pod-cast.png";
-import PC1 from "../../public/cource/podcast-creation.jpg";
-import AC from "../../public/cource/ad-campainge.png";
-import AC1 from "../../public/cource/advertising-campaign.jpg";
-import PMC from "../../public/cource/performance-marketing-course.png";
-import PMC1 from "../../public/cource/performance-marketing.jpg";
-import PD from "../../public/cource/personality-development.png";
-import PD1 from "../../public/cource/personality-development.jpg";
-import SM from "../../public/cource/search-marketing.png";
-import SM1 from "../../public/cource/search-engine-marketing.jpg";
+import PC from "../../public/Course/pod-cast.webp";
+import PC1 from "../../public/Course/podcast-creation.webp";
+import AC from "../../public/Course/ad-campainge.webp";
+import AC1 from "../../public/Course/advertising-campaign.webp";
+import PMC from "../../public/Course/performance-marketing-course.webp";
+import PMC1 from "../../public/Course/performance-marketing.webp";
+import PD from "../../public/Course/personality-development.webp";
+import PD1 from "../../public/Course/personality-development.webp";
+import SM from "../../public/Course/search-marketing.webp";
+import SM1 from "../../public/Course/search-engine-marketing.webp";
 
-// Cource Icon
-import Team from "../../public/cource/team.png";
-import Approach from "../../public/cource/approach.png";
-import Service from "../../public/cource/services.png";
-import Communication from "../../public/cource/trans-communication.png";
+// Course Icon
+import Team from "../../public/Course/team.webp";
+import Approach from "../../public/Course/approach.webp";
+import Service from "../../public/Course/services.png";
+import Communication from "../../public/Course/trans-communication.webp";
 
 // Technology
 
-import Angular from "../../public/technology/18.jpeg";
-import React from "../../public/technology/7.jpeg";
-import JavaScript from "../../public/technology/15.jpeg";
-import TypeScript from "../../public/technology/11.jpeg";
-import HTML5 from "../../public/technology/13.jpeg";
-import Core from "../../public/technology/9.jpeg";
-import MVC from "../../public/technology/19.jpeg";
-import Laravel from "../../public/technology/10.jpeg";
-import Node from "../../public/technology/1.jpeg";
-import Swift from "../../public/technology/6.jpeg";
-import Objective from "../../public/technology/8.jpeg";
-import Kotlin from "../../public/technology/4.jpeg";
-import Java from "../../public/technology/5.jpeg";
-import Flutter from "../../public/technology/2.jpeg";
-import Native from "../../public/technology/12.jpeg";
-import SQL from "../../public/technology/3.jpeg";
-import MySQL from "../../public/technology/3.jpeg";
-import Mongo from "../../public/technology/17.jpeg";
-import Azure from "../../public/technology/18.jpeg";
-import AWS from "../../public/technology/16.jpeg";
+import Angular from "../../public/technology/18.webp";
+import React from "../../public/technology/7.webp";
+import JavaScript from "../../public/technology/15.webp";
+import TypeScript from "../../public/technology/11.webp";
+import HTML5 from "../../public/technology/13.webp";
+import Core from "../../public/technology/9.webp";
+import MVC from "../../public/technology/19.webp";
+import Laravel from "../../public/technology/10.webp";
+import Node from "../../public/technology/1.webp";
+import Swift from "../../public/technology/6.webp";
+import Objective from "../../public/technology/8.webp";
+import Kotlin from "../../public/technology/4.webp";
+import Java from "../../public/technology/5.webp";
+import Flutter from "../../public/technology/2.webp";
+import Native from "../../public/technology/12.webp";
+import SQL from "../../public/technology/3.webp";
+import MySQL from "../../public/technology/3.webp";
+import Mongo from "../../public/technology/17.webp";
+import Azure from "../../public/technology/18.webp";
+import AWS from "../../public/technology/16.webp";
 
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },

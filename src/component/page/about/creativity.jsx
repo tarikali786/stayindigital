@@ -1,7 +1,7 @@
 import React from "react";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
-import Img1 from "../../../../public/7I.jpg";
-import Img2 from "../../../../public/8I.jpg";
+import Img1 from "../../../../public/7I.webp";
+import Img2 from "../../../../public/8I.webp";
 import Image from "next/image";
 const item = [
   {

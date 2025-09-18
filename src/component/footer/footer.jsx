@@ -1,5 +1,5 @@
 import { FooterData } from "@/data/data";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/logo.webp";
 
 import Link from "next/link";
 import React from "react";
@@ -24,7 +24,7 @@ const Footer = () => {
               />
             </div>
 
-            <h1 className="md:text-xl text-primary">Stay in Digital</h1>
+            <h3 className="md:text-xl text-primary">Stay in Digital</h3>
           </Link>
           <p className="text-sm mt-2 leading-5.5">
             At Stay In Digital, we specialize in transforming businesses with

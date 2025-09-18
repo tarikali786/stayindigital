@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ImageComponent from "@/component/common/ImageComponent";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
@@ -97,7 +97,7 @@ export default function EditBlogPage() {
               <input onChange={onPickBanner} type="file" accept="image/*" className="text-white/80" />
               {bannerPreview && (
                 <div className="relative w-40 h-24">
-                  <Image src={bannerPreview} alt="Preview" fill className="object-cover rounded" />
+                  <ImageComponent src={bannerPreview} alt="Preview" fill imgCss="object-cover rounded" />
                 </div>
               )}
             </div>
