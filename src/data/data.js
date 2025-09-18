@@ -917,6 +917,7 @@ export const HeaderData = [
       },
     ],
   },
+  { id: 5, name: "Blogs", link: "/blogs" },
 ];
 export const FooterData = {
   getInTouch: {

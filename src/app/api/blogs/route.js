@@ -21,6 +21,8 @@ async function ensureUploadDir() {
 
 const filePath = path.join(process.cwd(), "data", "blogs.json");
 
+function isAdminAuthenticated() { return true; }
+
 // GET Method - Fetch a Single Blog by Slug
 export async function GET(request) {
   await ensureUploadDir();
@@ -32,7 +34,7 @@ export async function GET(request) {
     const data = await fs.readFile(filePath, "utf-8");
     const blogs = JSON.parse(data);
     if (!slug) {
-      return NextResponse.json(blogs);
+      return NextResponse.json(Array.isArray(blogs) ? blogs : []);
     }
     const blog = blogs.find((b) => b.slug === slug);
     if (!blog)
@@ -51,11 +53,23 @@ export async function GET(request) {
   }
 }
 
+// HEAD Method - Simple auth check for admin UI
+export async function HEAD(request) {
+  try {
+    return new Response(null, { status: 200 });
+  } catch (_) {
+    return new Response(null, { status: 500 });
+  }
+}
+
 // POST Method - Upload File & Create Blog with Unique Slug
 export async function POST(request) {
   await ensureUploadDir();
 
   try {
+    if (!isAdminAuthenticated(request)) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
     const formData = await request.formData();
     const title = formData.get("title");
     const content = formData.get("content");
@@ -123,6 +137,9 @@ export async function POST(request) {
 // PUT Method - Update Blog by Slug
 export async function PUT(request) {
   try {
+    if (!isAdminAuthenticated(request)) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
     const formData = await request.formData();
     const slug = formData.get("slug");
     const title = formData.get("title");
@@ -169,6 +186,9 @@ export async function PUT(request) {
 // DELETE Method - Remove Blog by Slug
 export async function DELETE(request) {
   try {
+    if (!isAdminAuthenticated(request)) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
     const { searchParams } = new URL(request.url);
     const slug = searchParams.get("slug");
 

@@ -13,12 +13,8 @@ const BlogDetails = () => {
   useEffect(() => {
     async function fetchBlogDetails() {
       try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_LIVE_API}/blogs?slug=${blog_slug}`
-        );
-
+        const res = await fetch(`/api/blogs?slug=${blog_slug}`, { cache: "no-store" });
         if (!res.ok) throw new Error("Blog not found");
-
         const data = await res.json();
         setBlog(data);
       } catch (err) {
@@ -51,8 +47,8 @@ const BlogDetails = () => {
       {/* Banner Section */}
       <div className="relative w-full md:h-[60vh] sm:h-[50vh] h-[40vh] rounded-xl  shadow shadow-white">
         <Image
-          src={blog?.banner || "/placeholder.jpg"}
-          alt="Blog Banner"
+          src={blog?.banner || "/blog.webp"}
+          alt={blog?.title || "Blog banner"}
           fill
           className="object-cover"
           priority

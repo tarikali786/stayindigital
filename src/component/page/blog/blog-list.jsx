@@ -10,7 +10,7 @@ const BlogList = () => {
 
   async function getBlogs() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/blogs`);
+      const res = await fetch(`/api/blogs`, { cache: "no-store" });
       if (!res.ok) throw new Error("Failed to fetch blogs");
       const data = await res.json();
       setBlogs(data);
@@ -33,19 +33,19 @@ const BlogList = () => {
   return (
     <div className="common-padding grid lg:grid-cols-3 sm:grid-cols-2 gap-10 py-20">
       {blogs.length > 0 ? (
-        blogs.map((blog, index) => (
+        blogs.map((blog) => (
           <div
-            key={index}
+            key={blog.id || blog.slug}
             className="shadow-md shadow-white/40 rounded-xl bg-black/30 overflow-hidden"
           >
             <div className="w-full h-[30vh] bg-primary relative">
               <Image
-                src={blog?.banner}
-                alt="blog"
+                src={blog?.banner || "/blog.webp"}
+                alt={blog?.title || "Blog banner"}
                 priority
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                className="w-full h-full object-fill rounded-xl"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
             <div className="px-3 py-4 mb-2 flex flex-col">
@@ -55,7 +55,7 @@ const BlogList = () => {
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               />
               <div className="flex justify-center">
-                <ButtonCard title="Read More" link={`blogs/${blog?.slug}`} />
+                <ButtonCard title="Read More" link={`/blogs/${blog?.slug}`} />
               </div>
             </div>
           </div>
