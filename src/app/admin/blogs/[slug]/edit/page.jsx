@@ -1,9 +1,10 @@
 "use client";
-import ImageComponent from "@/component/common/ImageComponent";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-const RichEditor = dynamic(() => import("@/component/common/RichEditor"), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
+import "react-quill-new/dist/quill.snow.css";
 import { useParams, useRouter } from "next/navigation";
 
 export default function EditBlogPage() {
@@ -16,8 +17,10 @@ export default function EditBlogPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     async function load() {
       try {
         const res = await fetch(`/api/blogs?slug=${slug}`, { cache: "no-store" });
@@ -66,7 +69,7 @@ export default function EditBlogPage() {
     }
   }
 
-  if (loading) return <div className="common-padding py-10 text-white/80">Loading...</div>;
+  if (!mounted || loading) return <div className="common-padding py-10 text-white/80">Loading...</div>;
 
   return (
     <div className="common-padding py-10">
@@ -89,7 +92,14 @@ export default function EditBlogPage() {
 
           <div>
             <label className="block text-white/80 text-sm mb-2">Content</label>
-            <RichEditor value={content} onChange={setContent} />
+            <ReactQuill
+              theme="snow"
+              value={content}
+              onChange={setContent}
+              placeholder="Write your blog content..."
+              className="bg-white text-black rounded custom-quill"
+            />
+            <p className="text-xs text-white/60 mt-1">The content is saved as HTML.</p>
           </div>
 
           <div>
@@ -98,7 +108,7 @@ export default function EditBlogPage() {
               <input onChange={onPickBanner} type="file" accept="image/*" className="text-white/80" />
               {bannerPreview && (
                 <div className="relative w-40 h-24">
-                  <ImageComponent src={bannerPreview} alt="Preview" fill imgCss="object-cover rounded" />
+                  <Image src={bannerPreview} alt="Preview" fill className="object-cover rounded" />
                 </div>
               )}
             </div>

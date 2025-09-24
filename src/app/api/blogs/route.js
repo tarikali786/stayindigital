@@ -144,6 +144,7 @@ export async function PUT(request) {
     if (!isAdminAuthenticated(request)) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+    await ensureUploadDir();
     const formData = await request.formData();
     const slug = formData.get("slug");
     const title = formData.get("title");
@@ -154,7 +155,16 @@ export async function PUT(request) {
       return NextResponse.json({ error: "Slug is required" }, { status: 400 });
     }
 
-    let blogs = JSON.parse(await fs.readFile(filePath, "utf-8"));
+    let blogs = [];
+    try {
+      const data = await fs.readFile(filePath, "utf-8");
+      blogs = JSON.parse(data);
+    } catch (err) {
+      if (err.code === "ENOENT") {
+        return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+      }
+      throw err;
+    }
     const blogIndex = blogs.findIndex((b) => b.slug === slug);
     if (blogIndex === -1) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
@@ -166,6 +176,16 @@ export async function PUT(request) {
       const fileName = `${Date.now()}-${banner.name}`;
       bannerPath = `/uploads/${fileName}`;
       await fs.writeFile(path.join(uploadDir, fileName), Buffer.from(buffer));
+      // Attempt to remove old banner to avoid orphan files
+      const previousBanner = blogs[blogIndex].banner;
+      if (previousBanner) {
+        try {
+          const oldPath = previousBanner.startsWith("/")
+            ? path.join(process.cwd(), "public", previousBanner)
+            : path.join(process.cwd(), "public", previousBanner);
+          await fs.unlink(oldPath);
+        } catch (_) {}
+      }
     }
 
     blogs[blogIndex] = {
