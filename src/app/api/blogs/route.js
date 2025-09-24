@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const config = {
   api: {
     bodyParser: false,
@@ -196,13 +200,36 @@ export async function DELETE(request) {
       return NextResponse.json({ error: "Slug is required" }, { status: 400 });
     }
 
-    let blogs = JSON.parse(await fs.readFile(filePath, "utf-8"));
+    let blogs = [];
+    try {
+      const data = await fs.readFile(filePath, "utf-8");
+      blogs = JSON.parse(data);
+    } catch (err) {
+      if (err.code === "ENOENT") {
+        return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+      }
+      throw err;
+    }
+
+    const blogToDelete = blogs.find((b) => b.slug === slug);
     const newBlogs = blogs.filter((b) => b.slug !== slug);
     if (blogs.length === newBlogs.length) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
 
     await fs.writeFile(filePath, JSON.stringify(newBlogs, null, 2));
+
+    // Best-effort delete of banner file if present
+    if (blogToDelete?.banner) {
+      try {
+        const bannerPath = blogToDelete.banner.startsWith("/")
+          ? path.join(process.cwd(), "public", blogToDelete.banner)
+          : path.join(process.cwd(), "public", blogToDelete.banner);
+        await fs.unlink(bannerPath);
+      } catch (_) {
+        // ignore missing file or permission errors
+      }
+    }
     return NextResponse.json(
       { message: "Blog deleted successfully" },
       { status: 200 }
