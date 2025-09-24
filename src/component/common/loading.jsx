@@ -5,14 +5,18 @@ import { useEffect, useState } from "react";
 
 export default function LoadingRipple() {
   const [rotation, setRotation] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   // Create continuous rotation effect
   useEffect(() => {
+    setMounted(true);
     const interval = setInterval(() => {
       setRotation((prev) => (prev + 1) % 360);
     }, 20);
     return () => clearInterval(interval);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="flex items-center justify-center h-screen">

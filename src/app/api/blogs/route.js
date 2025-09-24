@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { getDb } from "@/lib/mongodb";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -12,44 +11,36 @@ export const config = {
   },
 };
 
-const uploadDir = path.join(process.cwd(), "public/uploads");
-
-// Ensure upload directory exists
-async function ensureUploadDir() {
-  try {
-    await fs.access(uploadDir);
-  } catch (err) {
-    await fs.mkdir(uploadDir, { recursive: true });
-  }
-}
-
-const filePath = path.join(process.cwd(), "data", "blogs.json");
+// We no longer use the filesystem for persistence or uploads.
+// Banners will be stored as data URLs in MongoDB for simplicity.
+// If you prefer object storage, replace this with an uploader and store the URL.
 
 function isAdminAuthenticated() { return true; }
 
 // GET Method - Fetch a Single Blog by Slug
 export async function GET(request) {
-  await ensureUploadDir();
-
   try {
     const { searchParams } = new URL(request.url);
     const slug = searchParams.get("slug");
 
-    const data = await fs.readFile(filePath, "utf-8");
-    const blogs = JSON.parse(data);
-    if (!slug) {
-      return NextResponse.json(Array.isArray(blogs) ? blogs : []);
-    }
-    const blog = blogs.find((b) => b.slug === slug);
-    if (!blog)
-      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+    const db = await getDb();
+    const collection = db.collection("blogs");
 
+    if (!slug) {
+      const blogs = await collection
+        .find({}, { projection: { _id: 0 } })
+        .sort({ createdAt: -1 })
+        .toArray();
+      return NextResponse.json(blogs);
+    }
+
+    const blog = await collection.findOne({ slug }, { projection: { _id: 0 } });
+    if (!blog) {
+      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+    }
     return NextResponse.json(blog);
   } catch (err) {
-    if (err.code === "ENOENT") {
-      await fs.writeFile(filePath, JSON.stringify([]));
-      return NextResponse.json({ error: "No blogs found" }, { status: 404 });
-    }
+    console.error("Error fetching blog(s):", err);
     return NextResponse.json(
       { error: "Failed to fetch blog" },
       { status: 500 }
@@ -68,15 +59,13 @@ export async function HEAD(request) {
 
 // POST Method - Upload File & Create Blog with Unique Slug
 export async function POST(request) {
-  await ensureUploadDir();
-
   try {
     if (!isAdminAuthenticated(request)) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
     const formData = await request.formData();
-    const title = formData.get("title");
-    const content = formData.get("content");
+    const title = (formData.get("title") || "").toString().trim();
+    const content = (formData.get("content") || "").toString().trim();
     const banner = formData.get("banner");
 
     if (!title || !content) {
@@ -86,52 +75,53 @@ export async function POST(request) {
       );
     }
 
-    let bannerPath = null;
-    if (banner) {
-      // Handle file upload
-      const buffer = await banner.arrayBuffer();
-      const fileName = `${Date.now()}-${banner.name}`;
-      bannerPath = `/uploads/${fileName}`;
-      await fs.writeFile(path.join(uploadDir, fileName), Buffer.from(buffer));
+    let bannerDataUrl = null;
+    if (banner && typeof banner === "object" && "arrayBuffer" in banner) {
+      const maxBytes = 20 * 1024 * 1024; 
+      const allowed = ["image/png", "image/jpeg", "image/webp"];
+      const mimeType = banner.type || "";
+      if (!allowed.includes(mimeType)) {
+        return NextResponse.json({ error: "Unsupported image type" }, { status: 400 });
+      }
+      const arrayBuf = await banner.arrayBuffer();
+      if (arrayBuf.byteLength > maxBytes) {
+        return NextResponse.json({ error: "Image too large (max 2MB)" }, { status: 400 });
+      }
+      const base64 = Buffer.from(arrayBuf).toString("base64");
+      bannerDataUrl = `data:${mimeType};base64,${base64}`;
     }
 
-    // Read and update blogs
-    let blogs = [];
-    try {
-      const data = await fs.readFile(filePath, "utf-8");
-      blogs = JSON.parse(data);
-    } catch (err) {
-      if (err.code !== "ENOENT") throw err;
-    }
+    const db = await getDb();
+    const collection = db.collection("blogs");
 
-    let slug = title
+    // Compute unique slug
+    const baseSlug = title
       .toLowerCase()
-      .replace(/ /g, "-")
+      .replace(/\s+/g, "-")
       .replace(/[^a-z0-9-]/g, "");
-    let uniqueSlug = slug;
+    let uniqueSlug = baseSlug;
     let counter = 1;
-
-    while (blogs.some((b) => b.slug === uniqueSlug)) {
-      uniqueSlug = `${slug}-${counter}`;
-      counter++;
+    while (await collection.findOne({ slug: uniqueSlug })) {
+      uniqueSlug = `${baseSlug}-${counter++}`;
     }
 
+    const now = new Date().toISOString();
     const newBlog = {
       id: Date.now(),
       title,
       content,
       slug: uniqueSlug,
-      banner: bannerPath,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      banner: bannerDataUrl,
+      createdAt: now,
+      updatedAt: now,
     };
 
-    blogs.push(newBlog);
-    await fs.writeFile(filePath, JSON.stringify(blogs, null, 2));
-
-    return NextResponse.json(newBlog, { status: 201 });
+    await collection.insertOne(newBlog);
+    // Exclude _id for consistency with existing UI
+    const { _id, ...doc } = newBlog;
+    return NextResponse.json(doc, { status: 201 });
   } catch (err) {
-    console.error("Error processing request:", err);
+    console.error("Error creating blog:", err);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
@@ -144,9 +134,8 @@ export async function PUT(request) {
     if (!isAdminAuthenticated(request)) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-    await ensureUploadDir();
     const formData = await request.formData();
-    const slug = formData.get("slug");
+    const slug = (formData.get("slug") || "").toString().trim();
     const title = formData.get("title");
     const content = formData.get("content");
     const banner = formData.get("banner");
@@ -155,49 +144,41 @@ export async function PUT(request) {
       return NextResponse.json({ error: "Slug is required" }, { status: 400 });
     }
 
-    let blogs = [];
-    try {
-      const data = await fs.readFile(filePath, "utf-8");
-      blogs = JSON.parse(data);
-    } catch (err) {
-      if (err.code === "ENOENT") {
-        return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+    let bannerDataUrl;
+    if (banner && typeof banner === "object" && "arrayBuffer" in banner) {
+      const maxBytes = 2 * 1024 * 1024; // 2MB
+      const allowed = ["image/png", "image/jpeg", "image/webp"];
+      const mimeType = banner.type || "";
+      if (!allowed.includes(mimeType)) {
+        return NextResponse.json({ error: "Unsupported image type" }, { status: 400 });
       }
-      throw err;
+      const arrayBuf = await banner.arrayBuffer();
+      if (arrayBuf.byteLength > maxBytes) {
+        return NextResponse.json({ error: "Image too large (max 2MB)" }, { status: 400 });
+      }
+      const base64 = Buffer.from(arrayBuf).toString("base64");
+      bannerDataUrl = `data:${mimeType};base64,${base64}`;
     }
-    const blogIndex = blogs.findIndex((b) => b.slug === slug);
-    if (blogIndex === -1) {
+
+    const db = await getDb();
+    const collection = db.collection("blogs");
+
+    const existing = await collection.findOne({ slug });
+    if (!existing) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
 
-    let bannerPath = blogs[blogIndex].banner;
-    if (banner) {
-      const buffer = await banner.arrayBuffer();
-      const fileName = `${Date.now()}-${banner.name}`;
-      bannerPath = `/uploads/${fileName}`;
-      await fs.writeFile(path.join(uploadDir, fileName), Buffer.from(buffer));
-      // Attempt to remove old banner to avoid orphan files
-      const previousBanner = blogs[blogIndex].banner;
-      if (previousBanner) {
-        try {
-          const oldPath = previousBanner.startsWith("/")
-            ? path.join(process.cwd(), "public", previousBanner)
-            : path.join(process.cwd(), "public", previousBanner);
-          await fs.unlink(oldPath);
-        } catch (_) {}
-      }
-    }
-
-    blogs[blogIndex] = {
-      ...blogs[blogIndex],
-      title,
-      content,
-      banner: bannerPath,
+    const updated = {
+      ...existing,
+      title: title ?? existing.title,
+      content: content ?? existing.content,
+      banner: bannerDataUrl ?? existing.banner,
       updatedAt: new Date().toISOString(),
     };
 
-    await fs.writeFile(filePath, JSON.stringify(blogs, null, 2));
-    return NextResponse.json(blogs[blogIndex], { status: 200 });
+    await collection.updateOne({ slug }, { $set: updated });
+    const { _id, ...doc } = updated;
+    return NextResponse.json(doc, { status: 200 });
   } catch (err) {
     console.error("Error updating blog:", err);
     return NextResponse.json(
@@ -220,35 +201,12 @@ export async function DELETE(request) {
       return NextResponse.json({ error: "Slug is required" }, { status: 400 });
     }
 
-    let blogs = [];
-    try {
-      const data = await fs.readFile(filePath, "utf-8");
-      blogs = JSON.parse(data);
-    } catch (err) {
-      if (err.code === "ENOENT") {
-        return NextResponse.json({ error: "Blog not found" }, { status: 404 });
-      }
-      throw err;
-    }
+    const db = await getDb();
+    const collection = db.collection("blogs");
 
-    const blogToDelete = blogs.find((b) => b.slug === slug);
-    const newBlogs = blogs.filter((b) => b.slug !== slug);
-    if (blogs.length === newBlogs.length) {
+    const deletion = await collection.findOneAndDelete({ slug });
+    if (!deletion.value) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
-    }
-
-    await fs.writeFile(filePath, JSON.stringify(newBlogs, null, 2));
-
-    // Best-effort delete of banner file if present
-    if (blogToDelete?.banner) {
-      try {
-        const bannerPath = blogToDelete.banner.startsWith("/")
-          ? path.join(process.cwd(), "public", blogToDelete.banner)
-          : path.join(process.cwd(), "public", blogToDelete.banner);
-        await fs.unlink(bannerPath);
-      } catch (_) {
-        // ignore missing file or permission errors
-      }
     }
     return NextResponse.json(
       { message: "Blog deleted successfully" },
