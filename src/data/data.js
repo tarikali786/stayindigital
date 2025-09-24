@@ -1,16 +1,16 @@
 // Service
-import SMD from "../../public/service/social-media-services.webp";
-import SMD1 from "../../public/service/social-media-marketing-services.webp";
-import CM from "../../public/service/content-services.webp";
-import CM1 from "../../public/service/content-marketing-services.webp";
-import SEO from "../../public/service/seo-services.webp";
-import SEO1 from "../../public/service/seo-service.webp";
-import WEB from "../../public/service/web-services.webp";
-import WEB1 from "../../public/service/website-design-services.webp";
-import Email from "../../public/service/email-services.webp";
-import Email1 from "../../public/service/email-marketing-services.webp";
-import GD from "../../public/service/graphic-design-service.webp";
-import GD1 from "../../public/service/graphic-design-services.webp";
+import SMD from "../../public/Service/social-media-services.webp";
+import SMD1 from "../../public/Service/social-media-marketing-services.webp";
+import CM from "../../public/Service/content-services.webp";
+import CM1 from "../../public/Service/content-marketing-services.webp";
+import SEO from "../../public/Service/seo-services.webp";
+import SEO1 from "../../public/Service/seo-service.webp";
+import WEB from "../../public/Service/web-services.webp";
+import WEB1 from "../../public/Service/website-design-services.webp";
+import Email from "../../public/Service/email-services.webp";
+import Email1 from "../../public/Service/email-marketing-services.webp";
+import GD from "../../public/Service/graphic-design-service.webp";
+import GD1 from "../../public/Service/graphic-design-services.webp";
 // Courses
 
 import SMM from "../../public/Course/social-media.webp";
