@@ -14,9 +14,18 @@ const HomeHero = () => {
         loop
         muted
         playsInline
+        aria-hidden="true"
+        tabIndex={-1}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/bg.mp4" type="video/mp4" />
+        <track
+          kind="captions"
+          src="/home-hero.vtt"
+          srcLang="en"
+          label="English"
+          default
+        />
         Your browser does not support the video tag.
       </video>
 

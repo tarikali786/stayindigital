@@ -21,7 +21,7 @@ export const Service = () => {
           <h2 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
             We Provide
           </h2>
-          <p className="max-w-2xl m-auto text-white/70">
+          <p className="max-w-2xl m-auto text-white/90">
             We assist in expanding businesses with user-friendly IT solutions
             and innovative digital marketing. Our team implements technology
             tailored for your convenience, from dependable software and network
@@ -68,7 +68,7 @@ export const Service = () => {
                 <h4 className=" text-xl font-bold mb-2 text-primary ">
                   {service.name}
                 </h4>
-                <p className="text-gray-500 text-sm mb-4 line-clamp-4">
+                <p className="text-gray-700 text-sm mb-4 line-clamp-4">
                   {service.subTitle}
                 </p>
                 <div className="flex justify-center items-center">

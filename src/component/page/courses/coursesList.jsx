@@ -18,11 +18,11 @@ const CoursesList = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h3 className="text-lg font-bold text-white/60 ">Courses</h3>
+          <h3 className="text-lg font-bold text-white/90 ">Courses</h3>
           <h2 className="md:text-3xl  text-2xl font-bold my-3 text-primary">
             Courses We Provide !
           </h2>
-          <p className="max-w-2xl m-auto text-white/70">
+          <p className="max-w-2xl m-auto text-white/90">
             Morbi ornare velit vitae felis commodo, at blandit est vestibulum.
             Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in
             metus. Aenean pharetra mauris ac sem faucibus, consectetur

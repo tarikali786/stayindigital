@@ -54,7 +54,7 @@ export default function HomeServices() {
           <h3 className="md:text-4xl text-3xl font-bold my-3 text-primary">
             Service We Provide
           </h3>
-          <p className="text-gray-400 max-w-2xl mx-auto ">
+          <p className="text-white/90 max-w-2xl mx-auto ">
             We assist in expanding businesses with user-friendly IT solutions
             and innovative digital marketing.
           </p>
@@ -98,7 +98,7 @@ export default function HomeServices() {
               <h4 className="text-2xl text-black font-semibold mb-2">
                 {service.title}
               </h4>
-              <p className="text-gray-400 text-sm">{service.description}</p>
+              <p className="text-gray-700 text-sm">{service.description}</p>
             </motion.div>
           ))}
 

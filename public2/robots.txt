@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Block non-indexable or sensitive areas
-Disallow: /admin
-Disallow: /api/
-
-Sitemap: https://stayindigital.com/sitemap.xml

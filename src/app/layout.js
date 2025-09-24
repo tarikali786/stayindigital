@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/component/navbar/navbar";
 import Header from "@/component/header/header";
@@ -82,81 +83,71 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics */}
+        {/* Google Analytics (non-blocking) */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
-            <script
-              async
+            <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
             />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);} 
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { send_page_view: false });
-                `,
-              }}
-            />
+            <Script id="ga-inline" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);} 
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { send_page_view: false });
+              `}
+            </Script>
           </>
         )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
+        {/* JSON-LD (non-blocking) */}
+        <Script id="ld-json-website" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Stayindigital",
+            url: "https://stayindigital.com/",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://stayindigital.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          })}
+        </Script>
+        <Script id="ld-json-webpage" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://stayindigital.com/#webpage",
+            url: "https://stayindigital.com/",
+            name: "Stayindigital | Digital Marketing Courses & Services in Chennai",
+            isPartOf: {
               "@type": "WebSite",
+              url: "https://stayindigital.com/",
               name: "Stayindigital",
-              url: "https://stayindigital.com/",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://stayindigital.com/search?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "@id": "https://stayindigital.com/#webpage",
-              url: "https://stayindigital.com/",
-              name: "Stayindigital | Digital Marketing Courses & Services in Chennai",
-              isPartOf: {
-                "@type": "WebSite",
-                url: "https://stayindigital.com/",
-                name: "Stayindigital",
-              },
-              about: {
-                "@type": "Organization",
-                name: "Stayindigital",
-                url: "https://stayindigital.com/",
-              },
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
+            },
+            about: {
               "@type": "Organization",
               name: "Stayindigital",
               url: "https://stayindigital.com/",
-              logo: "https://stayindigital.com/StayLogo.png",
-              sameAs: [
-                "https://www.instagram.com/stay_in_digitals?igsh=MXM3N3B5NHIxdmkzdA==",
-                "https://www.linkedin.com/company/stay-in-digital/",
-                "https://www.youtube.com/@StayinDigital",
-                "https://x.com/StayinDigital",
-              ],
-            }),
-          }}
-        />
+            },
+          })}
+        </Script>
+        <Script id="ld-json-org" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Stayindigital",
+            url: "https://stayindigital.com/",
+            logo: "https://stayindigital.com/StayLogo.png",
+            sameAs: [
+              "https://www.instagram.com/stay_in_digitals?igsh=MXM3N3B5NHIxdmkzdA==",
+              "https://www.linkedin.com/company/stay-in-digital/",
+              "https://www.youtube.com/@StayinDigital",
+              "https://x.com/StayinDigital",
+            ],
+          })}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}

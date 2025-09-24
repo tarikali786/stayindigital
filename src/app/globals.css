@@ -66,3 +66,12 @@ h6 {
   background-position: center center;
   background-size: cover;
 }
+
+/* styles/globals.css or your component CSS */
+.custom-quill .ql-container {
+  height: 400px; /* desired height */
+}
+
+.custom-quill .ql-editor {
+  min-height: 350px; /* ensures editor content area is tall */
+}

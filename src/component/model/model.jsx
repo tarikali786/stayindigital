@@ -14,7 +14,7 @@ const ModalCard = React.memo(({ setOpen, open }) => {
         aria-describedby="modal-modal-description"
       >
         <div className="w-full sm:max-w-md bg-white p-6 rounded-2xl shadow-2xl absolute min-h-[30vh] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <h1>Hello</h1>
+          <h2>Hello</h2>
         </div>
       </Modal>
     </div>

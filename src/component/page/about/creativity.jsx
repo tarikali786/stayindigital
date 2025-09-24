@@ -48,7 +48,7 @@ const Creativity = () => {
       <div className="  relative  w-full  flex sm:flex-row flex-col  sm:mt-20 mt-10   gap-6 ">
         <div className="sm:w-1/2 w-full sm:absolute top-8 md:right-20 sm:right-10 py-6 sm:py-0  px-4 sm:px-6 lg:px-8 bg-white rounded-md sm:h-[56vh] min-h-[40vh] flex  flex-col justify-center gap-6">
           <h2 className="text-primary text-2xl">We Do with Creativity</h2>
-          <p className="text-black/60">
+          <p className="text-black/80">
             We are a results-driven digital solutions company specializing in
             SEO, Social Media Management, Professional Video Editing,
             Advertising Campaigns, Website Development, and VFX. Our mission is

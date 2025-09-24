@@ -21,7 +21,7 @@ const Technology = () => {
         <h2 className="sm:text-4xl text-2xl text-primary font-bold">
           Technology Expertise
         </h2>
-        <p className="md:text-[16px] text-sm  my-3 text-white/60">
+        <p className="md:text-[16px] text-sm  my-3 text-white/90">
           It thrills us to deliver the trendy solutions using the latest tech.
         </p>
       </motion.div>
@@ -57,7 +57,7 @@ const Technology = () => {
                   className="p-3  object-contain"
                 />
               </div>
-              <p className="text-lg  text-white/80">{tech.name}</p>
+              <p className="text-lg  text-white">{tech.name}</p>
             </motion.div>
           ))}
         </div>
@@ -92,7 +92,7 @@ const Technology = () => {
                   className=" p-3  object-contain"
                 />
               </div>
-              <p className="text-lg  text-white/80">{tech.name}</p>
+              <p className="text-lg  text-white">{tech.name}</p>
             </motion.div>
           ))}
         </div>
@@ -123,7 +123,7 @@ const Technology = () => {
                       className=" p-3  object-contain"
                     />
                   </div>
-                  <p className="text-lg text-white/80">{tech.name}</p>
+                  <p className="text-lg text-white">{tech.name}</p>
                 </motion.div>
               ))}
             </div>
@@ -156,7 +156,7 @@ const Technology = () => {
                       className=" p-3 object-contain"
                     />
                   </div>
-                  <p className="text-lg  text-white/80">{tech.name}</p>
+                  <p className="text-lg  text-white">{tech.name}</p>
                 </motion.div>
               ))}
             </div>

@@ -68,7 +68,7 @@ const BlogDetails = () => {
       {/* Blog Content */}
       <div className="mt-6 space-y-6 text-white/90 leading-relaxed">
         <div
-          className="prose prose-lg"
+          className="text-white/90 leading-relaxed text-lg mb-10"
           dangerouslySetInnerHTML={{ __html: blog?.content }}
         />
       </div>

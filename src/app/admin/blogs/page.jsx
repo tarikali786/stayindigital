@@ -56,11 +56,13 @@ export default function AdminBlogsListPage() {
         </Link>
       </div>
 
-      {loading && <p className="text-white/80">Loading...</p>}
-      {error && <p className="text-red-400">{error}</p>}
-
+      {loading && <div className="flex justify-center items-center py-10"><svg className="animate-spin h-6 w-6 text-white mr-2" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> <span className="text-white/80">Loading...</span></div>}
+      {error && <div className="bg-red-900/80 text-red-300 px-4 py-2 rounded mb-4">{error}</div>}
       {!loading && blogs.length === 0 && (
-        <p className="text-white/80">No blogs yet.</p>
+        <div className="flex flex-col items-center py-20">
+          <svg className="h-16 w-16 text-white/20 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /></svg>
+          <p className="text-white/60 text-lg">No blogs yet. Click <span className="underline">New Blog</span> to get started!</p>
+        </div>
       )}
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
