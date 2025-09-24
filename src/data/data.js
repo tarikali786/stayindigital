@@ -49,26 +49,26 @@ import Communication from "../../public/Course/trans-communication.webp";
 
 // Technology
 
-import Angular from "../../public/technology/18.webp";
-import React from "../../public/technology/7.webp";
-import JavaScript from "../../public/technology/15.webp";
-import TypeScript from "../../public/technology/11.webp";
-import HTML5 from "../../public/technology/13.webp";
-import Core from "../../public/technology/9.webp";
-import MVC from "../../public/technology/19.webp";
-import Laravel from "../../public/technology/10.webp";
-import Node from "../../public/technology/1.webp";
-import Swift from "../../public/technology/6.webp";
-import Objective from "../../public/technology/8.webp";
-import Kotlin from "../../public/technology/4.webp";
-import Java from "../../public/technology/5.webp";
-import Flutter from "../../public/technology/2.webp";
-import Native from "../../public/technology/12.webp";
-import SQL from "../../public/technology/3.webp";
-import MySQL from "../../public/technology/3.webp";
-import Mongo from "../../public/technology/17.webp";
-import Azure from "../../public/technology/18.webp";
-import AWS from "../../public/technology/16.webp";
+import Angular from "../../public/Techhnology/18.webp";
+import React from "../../public/Techhnology/7.webp";
+import JavaScript from "../../public/Techhnology/15.webp";
+import TypeScript from "../../public/Techhnology/11.webp";
+import HTML5 from "../../public/Techhnology/13.webp";
+import Core from "../../public/Techhnology/9.webp";
+import MVC from "../../public/Techhnology/19.webp";
+import Laravel from "../../public/Techhnology/10.webp";
+import Node from "../../public/Techhnology/1.webp";
+import Swift from "../../public/Techhnology/6.webp";
+import Objective from "../../public/Techhnology/8.webp";
+import Kotlin from "../../public/Techhnology/4.webp";
+import Java from "../../public/Techhnology/5.webp";
+import Flutter from "../../public/Techhnology/2.webp";
+import Native from "../../public/Techhnology/12.webp";
+import SQL from "../../public/Techhnology/3.webp";
+import MySQL from "../../public/Techhnology/3.webp";
+import Mongo from "../../public/Techhnology/17.webp";
+import Azure from "../../public/Techhnology/18.webp";
+import AWS from "../../public/Techhnology/16.webp";
 
 export const HeaderData = [
   { id: 1, name: "Home", link: "/" },
